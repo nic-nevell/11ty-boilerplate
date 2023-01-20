@@ -10,8 +10,8 @@ collections:
     label: "Blog"
     folder: "scr/blog"
     create: true
-        slug: "{{post}}-{{slug}}"
-        fields:
+    slug: "{{post}}-{{slug}}"
+    fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Content", name: "content", widget: "string"}
       - {label: "Featured Image", name: "image", widget: "image"}
