@@ -66,3 +66,38 @@ hr {
 article span {
   display: block;
 }
+
+article img {
+  display: block;
+}
+picture {
+  /* flex-grow: 0; */
+  align-self: flex-start;
+  /* justify-self: flex-end; */
+  width: 50%;
+  display: block;
+  padding-bottom: 50%;
+  position: relative;
+}
+
+picture img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+article .content {
+  padding: 1em;
+  flex-grow: 9999;
+  flex-basis: 60%;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.row {
+  display: flex;
+}

@@ -12,13 +12,17 @@ permalink: "/blog.html"
 		{%- for post in collections.post -%}
 		<hr>
 		<li>
-			<article class="blog-post-article">
-				<h3 class="post-heading">{{ post.data.title }}</h3>
-				<span>{{ post.data.author}}</span>
-				<span>{{ post.data.date | postDate}}</span>
-				<img src="{{ post.data.image}}" alt="">
-				<p>{{ post.data.content }}</p>
-				<a href="{{ post.url}}">Weberdy</a>
+			<article class="blog-post-article | row ">
+				<div class="content">
+					<h3 class="post-heading">{{ post.data.title }}</h3>
+					<span>{{ post.data.author}}</span>
+					<span>{{ post.data.date | postDate}}</span>
+					<p>{{ post.data.content }}</p>
+					<a href="{{ post.url}}">Weberdy</a>
+				</div>
+				<picture>
+					<img src="{{ post.data.image}}" alt="">
+				</picture>
 			</article>
 		</li>
 		{% endfor %}
