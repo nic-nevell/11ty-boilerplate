@@ -1,0 +1,27 @@
+---
+title: blog page
+layout: 'base.njk'
+permalink: "/blog.html"
+---
+
+<!-- ** blog-section ** -->
+<h1>Blog</h1>
+<section class="section blog-section | block-spacing-flow-sm">
+
+	<ul role="list" class="articles-list">
+		{%- for post in collections.post -%}
+		<hr>
+		<li>
+			<article class="blog-post-article">
+				<h3 class="post-heading">{{ post.data.title }}</h3>
+				<span>{{ post.data.author}}</span>
+				<span>{{ post.data.date | postDate}}</span>
+				<img src="{{ post.data.image}}" alt="">
+				<p>{{ post.data.content }}</p>
+				<a href="{{ post.url}}">Weberdy</a>
+			</article>
+		</li>
+		{% endfor %}
+	</ul>
+
+</section>
