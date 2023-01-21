@@ -1,13 +1,14 @@
 ---
 tags: ['post', 'featured']
-permalink: /blog/{{ url }}.html
+permalink: /blog/{{ slug }}.html
 
 title: My Fifth Post
 author: Nic Nevell
-date: 2023-01-20
+date: 2023-01-05
 image: /images/blog/article-4.jpg
 imageALt: image description
-url: post-005
+# url: 2023-01-05-my-fifth-post
+slug: 2023-01-05-my-fifth-post
 
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga? Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi non distinctio.
 ---

@@ -128,13 +128,13 @@ article span {
   display: block;
 }
 
-article {
+.article-snippet {
   display: grid;
   gap: 1em;
 }
 
 @media (min-width: 45em) {
-  article {
+  .article-snippet {
     grid-template-columns: 1fr 40%;
     gap: 2em;
   }

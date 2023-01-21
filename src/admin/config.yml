@@ -10,10 +10,10 @@ collections:
     label: "Blog"
     folder: "src/blog"
     create: true
-    slug: "{{post}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "content", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Image Description", name: "imageAlt", widget: "string"}
       - {label: "Tags", name: "tags", widget: "list", default: ["post"]}

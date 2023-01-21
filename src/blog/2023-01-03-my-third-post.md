@@ -1,14 +1,15 @@
 ---
 tags: post
-permalink: /blog/{{ url }}.html
+permalink: /blog/{{ slug }}.html
 
-title: My First Post
+title: My Third Post
 author: Nic Nevell
-date: 2023-01-20
-
-image: /images/blog/article-1.jpg
+date: 2023-01-03
+image: /images/blog/article-3.jpg
 imageALt: image description
-url: post-001
+# url: 2023-01-03-my-third-post
+slug: 2023-01-03-my-third-post
+
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga? Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi non distinctio.
 ---
 
