@@ -1,14 +1,11 @@
 ---
 tags: ['post', 'featured']
-permalink: /blog/{{ slug }}.html
 
 title: My Forth Post
 author: Nic Nevell
 date: 2023-01-04
 image: /images/blog/article-4.jpg
 imageALt: image description
-# url: 2023-01-04-my-forth-post
-slug: 2023-01-04-my-forth-post
 
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga? Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi non distinctio.
 ---

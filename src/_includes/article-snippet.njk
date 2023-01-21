@@ -5,7 +5,7 @@
 			<span>{{ post.data.author}}</span>
 			<span>{{ post.data.date | postDate}}</span>
 			<p>{{ post.data.description }}</p>
-			<a class="btn btn--primary" href="./blog/{{ post.data.slug }}.html">Read
+			<a class="btn btn--primary" href="{{ post.url }}">Read
 				More</a>
 
 		</div>

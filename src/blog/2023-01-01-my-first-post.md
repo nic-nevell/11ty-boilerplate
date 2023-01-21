@@ -1,14 +1,11 @@
 ---
 tags: post
-permalink: /blog/{{ slug }}.html
 
 title: My First Post
 author: Nic Nevell
 date: 2023-01-01
 image: /images/blog/article-1.jpg
 imageALt: image description
-# url: 2023-01-01-my-first-post
-slug: 2023-01-01-my-first-post
 
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga? Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi non distinctio.
 ---
