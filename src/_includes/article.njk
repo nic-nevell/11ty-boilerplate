@@ -1,22 +1,16 @@
-<!-- article name-article -->
-<!-- /----------------------/ -->
-<article class="article name-article">
-	<header class="article__header">
-		<h2 class="article__title">Article Title</h2>
-	</header>
+---
+layout: 'base.njk'
+---
 
-	<div class="article__content">
-		<h3 class="article__heading">Article Heading</h3>
-		<div class="image-frame portrait-frame">
-			<img class="article__image" src="https://picsum.photos/600/400" alt="random image" width="1200" height="auto">
-		</div>
+<section class="section | ptb-lg">
+	<div class="wrapper">
+		<article class="article name-article">
+			<div class="block-spacing">
+				<h1>{{ title }}</h1>
+				<img src="{{ image }}" alt="{{ imageAlt }}">
 
-		<p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quam enim adipisci odit.
-			Rerum nesciunt quas quis impedit nostrum. Ipsum architecto natus temporibus est nulla, debitis atque tempore
-			distinctio nihil!</p>
+				{{ content | safe }}
+			</div>
+		</article>
 	</div>
-
-	<footer class="article__footer">
-		<q class="article__quote">The simple solutions are almost always the best!</q>
-	</footer>
-</article>
+</section>

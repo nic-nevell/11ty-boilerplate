@@ -4,8 +4,31 @@ layout: 'base.njk'
 ---
 
 
-<h1>Content Heading</h1>
+<section class="section | ptb-lg | theme-light">
+	<div class="wrapper | block-spacing ">
+		<h1>Content Heading</h1>
 
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni reiciendis, consectetur, fuga quae consequuntur
-	obcaecati officiis impedit autem, dolorum assumenda error unde adipisci voluptatem! Vel libero maxime non excepturi
-	totam?</p>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni reiciendis, consectetur, fuga quae consequuntur
+			obcaecati officiis impedit autem, dolorum assumenda error unde adipisci voluptatem! Vel libero maxime non
+			excepturi
+			totam?</p>
+		<picture class="aspect-3-2">
+			<img src="https://picsum.photos/400" alt="">
+		</picture>
+
+
+	</div>
+</section>
+
+<!-- ** blog-section ** -->
+<section class="section blog-section | block-spacing-sm | ptb-lg">
+	<div class="wrapper">
+		<h1>Featured News Articles</h1>
+		<ul role="list" class="articles-list | block-spacing | mt-lg">
+
+			{%- for post in collections.featured -%}
+			{% include "article-snippet.njk" %}
+			{% endfor %}
+		</ul>
+	</div>
+</section>

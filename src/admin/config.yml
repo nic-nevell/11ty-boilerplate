@@ -8,12 +8,12 @@ public_folder: "/images"
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "src/posts"
+    folder: "src/blog"
     create: true
     slug: "{{post}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Content", name: "content", widget: "string"}
+      - {label: "Description", name: "content", widget: "string"}
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Image Description", name: "imageAlt", widget: "string"}
       - {label: "Tags", name: "tags", widget: "list", default: ["post"]}
