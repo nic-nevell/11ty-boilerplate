@@ -4,7 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/main.css')
   // eleventyConfig.addPassthroughCopy('./src/assets/media/images/*.+(svg|jpg)')
   eleventyConfig.addPassthroughCopy({
-    './src/assets/media/images': 'images',
+    './src/assets/images': 'images',
   })
 
   eleventyConfig.addPassthroughCopy('./src/admin/')
