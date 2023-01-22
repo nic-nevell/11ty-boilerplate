@@ -3,7 +3,7 @@ title: New Blog Post
 description: One of the key benefits of blog writing is that it can visibility
   for a brand or individual. Blogs can also be used to drive traffic to a
   website. help establish an online presence and increase
-image: /images/hero-001.jpg
+image: /images/blog/default-600x400.jpg
 imageAlt: Cat Stretching
 tags:
   - post
