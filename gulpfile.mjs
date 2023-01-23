@@ -4,6 +4,7 @@ import gulpSass from 'gulp-sass'
 import { deleteAsync } from 'del'
 import { spawn } from 'node:child_process'
 import webpack from 'webpack-stream'
+import purgeCSS from 'gulp-purgecss'
 
 const sass = gulpSass(dartSass)
 const { src, series, parallel, dest, task, watch } = gulp
@@ -39,6 +40,12 @@ export const devCSS = () => {
           errLogToConsole: true,
         })
       )
+      // .pipe(
+      //   purgeCSS({
+      //     content: ['src/**/*.njk', 'src/**/*.js'],
+      //     sourceMap: true,
+      //   })
+      // )
       .on('error', sass.logError)
       .pipe(dest('./dist/css'))
   )
