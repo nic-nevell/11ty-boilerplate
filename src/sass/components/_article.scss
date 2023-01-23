@@ -1,0 +1,37 @@
+article span {
+  display: block;
+}
+
+.article-snippet {
+  display: grid;
+  gap: 1em;
+}
+
+@media (min-width: 45em) {
+  .article-snippet {
+    grid-template-columns: 1fr 40%;
+    gap: 2em;
+  }
+}
+
+article h1 {
+  font-size: 2em;
+  font-style: italic;
+  color: var(--clr-primary-500);
+}
+
+article h3 {
+  font-size: 1.4em;
+  font-style: italic;
+  color: var(--clr-primary-500);
+}
+
+article .content {
+  display: flex;
+  flex-direction: column;
+}
+
+article .content {
+  display: flex;
+  flex-direction: column;
+}

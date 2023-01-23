@@ -1,0 +1,9 @@
+.space-x > * + * {
+  margin-top: 1.5em;
+}
+.space-x-sm > * + * {
+  margin-top: 1em;
+}
+.space-x-flow-sm * + * {
+  margin-top: 1em;
+}

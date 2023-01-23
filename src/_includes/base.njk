@@ -7,20 +7,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
 
-	<link rel="stylesheet" href="/main.css">
+	<link rel="stylesheet" href="/css/main.css">
 	<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
-	{% include 'header.njk' %}
+	<div class="page-wrapper">
+		{% include 'header.njk' %}
 
-	<div class="page-body">
-		<main class="main-content">
-			{{ content | safe }}
-		</main>
+		<div class="page-body">
+			<main class="main-content">
+				{{ content | safe }}
+			</main>
+		</div>
+
+		{% include 'footer.njk' %}
 	</div>
-
-	{% include 'footer.njk' %}
+	<script src="/js/main.js"></script>
 	<script>
 		if (window.netlifyIdentity) {
 			window.netlifyIdentity.on("init", user => {

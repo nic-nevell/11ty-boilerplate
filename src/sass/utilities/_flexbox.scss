@@ -1,0 +1,21 @@
+.f-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.f-column {
+  @extend .f-row;
+  flex-direction: column;
+}
+
+.f-nowrap {
+  flex-wrap: nowrap;
+}
+
+.f-grow {
+  flex-grow: 9999;
+}
+
+.f-shrink {
+  flex-grow: 0;
+}

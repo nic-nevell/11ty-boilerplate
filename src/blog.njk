@@ -5,10 +5,10 @@ permalink: "/blog.html"
 ---
 
 <!-- ** blog-section ** -->
-<section class="section blog-section | block-spacing-sm | ptb-lg">
+<section class="section blog-section | ptb-lg">
 	<div class="wrapper">
 		<h1>News Articles</h1>
-		<ul role="list" class="articles-list | block-spacing | mt-lg">
+		<ul role="list" class="articles-list | space-x | mt-lg">
 
 			{%- for post in collections.post -%}
 			{% include "article-snippet.njk" %}
