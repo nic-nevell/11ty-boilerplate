@@ -47,7 +47,7 @@ export const devCSS = () => {
       //   })
       // )
       .on('error', sass.logError)
-      .pipe(dest('./dist/css'))
+      .pipe(dest('./dist/'))
   )
 }
 
