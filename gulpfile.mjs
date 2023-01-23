@@ -1,12 +1,12 @@
 import gulp from 'gulp'
-import sass from 'sass'
+import dartSass from 'sass'
 import gulpSass from 'gulp-sass'
 import { deleteAsync } from 'del'
 import { spawn } from 'node:child_process'
 import webpack from 'webpack-stream'
 import purgeCSS from 'gulp-purgecss'
 
-const sass = gulpSass(dartSass)
+const sassComp = gulpSass(dartSass)
 
 const { src, series, parallel, dest, task, watch } = gulp
 
@@ -35,7 +35,7 @@ export const devCSS = () => {
     src('src/sass/**/*.scss')
       // .pipe(sass({ outputStyle: 'compressed' }))
       .pipe(
-        sass({
+        sassComp({
           // outputStyle: 'compressed',
           precision: 10,
           errLogToConsole: true,
@@ -47,7 +47,7 @@ export const devCSS = () => {
       //     sourceMap: true,
       //   })
       // )
-      .on('error', sass.logError)
+      .on('error', sassComp.logError)
       .pipe(dest('./dist/css/'))
   )
 }
