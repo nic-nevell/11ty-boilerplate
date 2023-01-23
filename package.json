@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "start": "gulp build & gulp serve & eleventy --serve",
-    "build": "gulp build & gulp serve & eleventy"
+    "build": "eleventy && gulp build"
   },
   "keywords": [],
   "author": "",

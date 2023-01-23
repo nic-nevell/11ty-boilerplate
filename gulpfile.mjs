@@ -1,5 +1,5 @@
 import gulp from 'gulp'
-import dartSass from 'sass'
+import sass from 'sass'
 import gulpSass from 'gulp-sass'
 import { deleteAsync } from 'del'
 import { spawn } from 'node:child_process'
@@ -7,6 +7,7 @@ import webpack from 'webpack-stream'
 import purgeCSS from 'gulp-purgecss'
 
 const sass = gulpSass(dartSass)
+
 const { src, series, parallel, dest, task, watch } = gulp
 
 export const render = () => {
@@ -47,7 +48,7 @@ export const devCSS = () => {
       //   })
       // )
       .on('error', sass.logError)
-      .pipe(dest('./dist/'))
+      .pipe(dest('./dist/css/'))
   )
 }
 
@@ -56,7 +57,7 @@ export const devCSS = () => {
 export const devJS = () => {
   return src('./src/js/**/*.js')
     .pipe(webpack({ mode: 'development', devtool: 'source-map' }))
-    .pipe(dest('./dist/js'))
+    .pipe(dest('./dist/js/'))
 }
 
 export const gulpWatch = () => {
