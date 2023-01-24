@@ -14,6 +14,9 @@ import { loadFaviconLink } from './library/link-loader.js'
 import { loadElement } from './library/element-loader.js'
 import { create, body, select } from './library/utilities.js'
 
+// hot reload test
+// alert('Assets Loaded')
+
 // load assets
 //----------------------------------
 window.addEventListener('load', loadLAssets)
@@ -27,7 +30,6 @@ function loadLAssets() {
       loadYoutubeApi()
     }
     window.removeEventListener('load', loadLAssets)
-    // alert('Assets Loaded')
   }, 1000)
 }
 

@@ -1,6 +1,5 @@
 ---
 tags: post
-permalink: /blog/{{ slug }}.html
 
 title: My Second Post
 author: Nic Nevell

@@ -22,10 +22,10 @@ layout: 'base.njk'
 </section>
 
 <!-- ** blog-section ** -->
-<section class="section blog-section | block-spacing-sm | ptb-lg">
-	<div class="wrapper">
+<section class="section blog-section | ptb-lg">
+	<div class="wrapper | space-x">
 		<h1>Featured News Articles</h1>
-		<ul role="list" class="articles-list | block-spacing | mt-lg">
+		<ul role="list" class="articles-list | space-x | mt-lg">
 
 			{%- for post in collections.featured -%}
 			{% include "article-snippet.njk" %}

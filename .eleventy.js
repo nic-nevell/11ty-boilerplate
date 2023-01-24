@@ -2,9 +2,9 @@ const { DateTime } = require('luxon')
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/admin/')
-  eleventyConfig.addPassthroughCopy({
-    './src/assets/images': 'images',
-  })
+  // eleventyConfig.addPassthroughCopy({
+  //   './src/assets/images': 'images',
+  // })
 
   // eleventyConfig.addWatchTarget('./src/sass/**/*.scss')
 

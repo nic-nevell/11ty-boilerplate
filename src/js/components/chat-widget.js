@@ -16,6 +16,7 @@ class chatWidget extends HTMLElement {
 
         color: white;
         background-color: hsla(169, 100%, 16%, 1);
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25)
       }
     </style>
     `
