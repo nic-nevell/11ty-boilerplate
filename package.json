@@ -6,14 +6,13 @@
   "scripts": {
     "clean": "rm -rf dist",
     "start": "gulp build & gulp serve & eleventy --serve",
-    "build": "npm run clean && gulp build && eleventy"
+    "build": "gulp build && eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
-    "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-purgecss": "^5.0.0",
     "gulp-sass": "^5.1.0",
