@@ -14,7 +14,7 @@ import { config } from './myConfig.mjs'
 const { src, series, parallel, dest, task, watch } = gulp
 const sass = gulpSass(dartSass)
 
-const isProduction = false // TODO: add business logic
+const isProduction = true // TODO: add business logic
 console.log(config.images.src)
 
 export const imgMin = () => {
