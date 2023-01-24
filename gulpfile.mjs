@@ -6,7 +6,7 @@ import { spawn } from 'node:child_process'
 import webpack from 'webpack-stream'
 import purgeCSS from 'gulp-purgecss'
 
-const sassComp = gulpSass(dartSass)
+const sass = gulpSass(dartSass)
 
 const { src, series, parallel, dest, task, watch } = gulp
 
@@ -30,27 +30,33 @@ export const del = () => {
   return deleteAsync(['./public', './dist'])
 }
 
-export const devCSS = () => {
-  return (
-    src('src/sass/**/*.scss')
-      // .pipe(sass({ outputStyle: 'compressed' }))
-      .pipe(
-        sassComp({
-          // outputStyle: 'compressed',
-          precision: 10,
-          errLogToConsole: true,
-        })
-      )
-      // .pipe(
-      //   purgeCSS({
-      //     content: ['src/**/*.njk', 'src/**/*.js'],
-      //     sourceMap: true,
-      //   })
-      // )
-      .on('error', sassComp.logError)
-      .pipe(dest('./dist/css/'))
-  )
+export function devCSS() {
+  return src('./src/sass/**/*.scss')
+    .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(dest('./dist/css'))
 }
+
+// export const devCSS = () => {
+//   return (
+//     src('src/sass/**/*.scss')
+//       // .pipe(sass({ outputStyle: 'compressed' }))
+//       .pipe(
+//         sassComp({
+//           // outputStyle: 'compressed',
+//           precision: 10,
+//           errLogToConsole: true,
+//         })
+//       )
+//       // .pipe(
+//       //   purgeCSS({
+//       //     content: ['src/**/*.njk', 'src/**/*.js'],
+//       //     sourceMap: true,
+//       //   })
+//       // )
+//       .on('error', sassComp.logError)
+//       .pipe(dest('./dist/css/'))
+//   )
+// }
 
 // JS
 //----------------------------------
