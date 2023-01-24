@@ -5,18 +5,3 @@ command = "npm run build"
 
 [functions]
 node_bundler = "esbuild"
-
-[[headers]]
-
-for = "/*"
-[headers.values]
-
-X-Frame-Options = "SAMEORIGIN"
-X-XSS-Protection = "0"
-X-Content-Type-Options = "nosniff"
-
-Access-Control-Allow-Origin = "https://wwww.brightwaterfilters.com"
-
-Origin = "*"
-
-Set-Cookie = "cname=cvalue; SameSite=None; Secure"
