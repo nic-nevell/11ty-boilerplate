@@ -16,12 +16,13 @@ const sass = gulpSass(dartSass)
 
 const isProduction = true // TODO: add business logic
 console.log(config.images.src)
+console.log(config.images.dest)
 
 export const imgMin = () => {
   return src(config.images.src)
     .pipe(gulpif(isProduction, imagemin({ optimizationLevel: 1 })))
     .pipe(fileLog())
-    .pipe(dest(config.images.src))
+    .pipe(dest(config.images.dest))
 
   // .pipe(
   //   gulpif(
@@ -34,12 +35,10 @@ export const imgMin = () => {
 // images
 //----------------------------------
 export const imgWebp = async () => {
-  return (
-    src(config.images.src)
-      .pipe(webp())
-      // .pipe(fileLog())
-      .pipe(dest(config.images.src))
-  )
+  return src(config.images.src)
+    .pipe(webp())
+    .pipe(fileLog())
+    .pipe(dest(config.images.dest))
 }
 
 // HTML
@@ -100,4 +99,4 @@ export const gulpWatch = () => {
 export const serve = series(gulpWatch)
 export const dev = series(devCSS, devJS)
 
-export const build = series(devCSS, devJS, imgMin)
+export const build = series(devCSS, devJS, imgMin, imgWebp)

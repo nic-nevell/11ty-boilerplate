@@ -27,7 +27,7 @@ export const config = {
 
   images: {
     // src: './src/images/**/*.{jpeg,jpg,png,gif}',
-    src: './src/assets/images/**/*',
+    src: './src/assets/images/**/*.*',
     dest: './dist/images/',
   },
 
