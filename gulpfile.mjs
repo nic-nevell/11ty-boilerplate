@@ -100,4 +100,4 @@ export const gulpWatch = () => {
 export const serve = series(gulpWatch)
 export const dev = series(devCSS, devJS)
 
-export const build = series(devCSS, devJS, imgMin, imgWebp)
+export const build = series(devCSS, devJS, imgMin)
