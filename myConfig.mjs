@@ -21,7 +21,7 @@ export const config = {
   assetExtensions: ASSET_EXTENSIONS,
 
   scripts: {
-    src: './src/**/*.js',
+    src: './src/js/**/*.js',
     dest: './dist/js/',
   },
 
@@ -37,8 +37,8 @@ export const config = {
   },
 
   styles: {
-    src: './src/styles.entry.scss',
-    watch: './src/**/*.scss',
+    src: './src/sass/**/*.scss',
+    watch: './src/sass/**/*.scss',
     dest: './dist/css/',
     fileName: 'main.css',
   },
