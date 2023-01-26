@@ -1,0 +1,61 @@
+@use '../../abstracts/' as *;
+
+@mixin btn-burger($bar-bg-color-primary, $bar-bg-color-secondary) {
+  .btn-burger {
+    align-self: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+
+    position: relative;
+    z-index: 9999;
+
+    width: 40px;
+    height: 36px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .bar {
+      position: relative;
+      display: block;
+      width: 36px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: $bar-bg-color-primary;
+      &-top {
+        transform: translateY(-8px);
+      }
+      &-bottom {
+        transform: translateY(8px);
+      }
+    }
+
+    &[aria-expanded='true'] {
+      &:hover {
+        transition: all 500ms linear;
+        transform: rotate(90deg);
+      }
+      .bar {
+        transition: all 250ms linear;
+        background-color: $bar-bg-color-secondary;
+        width: 28px;
+        &-top {
+          transform: translateY(2px) rotate(-45deg);
+        }
+        &-middle {
+          opacity: 0;
+        }
+        &-bottom {
+          transform: translateY(-2px) rotate(45deg);
+        }
+      }
+    }
+    @content;
+  }
+}

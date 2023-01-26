@@ -4,7 +4,7 @@ tags: post
 title: My Third Post
 author: Nic Nevell
 date: 2023-01-03
-image: /images/blog/article-3.jpg
+image: /images/blog/article-3
 imageALt: image description
 
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga? Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi non distinctio.

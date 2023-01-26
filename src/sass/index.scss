@@ -1,13 +1,119 @@
+@use './abstracts/' as *;
 @use './core/base' as *;
 @use './core/layout' as *;
 
 @use './components/article';
-@use './components/buttons' as *;
+@use './components/buttons/btn-default';
 
+// @use './components/nav-menu' as *;
 @use './utilities/' as *;
+
+// navigation
+//=========================================
+@use './components/navigation' as c-nav;
+@use './components/buttons/' as c-btn;
+
+// nav-menu & toggle
+@include c-btn.btn-burger(black, white);
+@include c-nav.nav-menu(from-right, 50vw, 100vh) {
+  min-width: 180px;
+  color: white;
+  background-color: black;
+  // @media (min-width: $laptop) {
+  //   display: none;
+  // }
+}
+
+:root {
+  --icon-sm: 32px;
+  --gap: 1.5em;
+  --gap-xxs: 0.5em;
+}
+
+.d-block {
+  display: block;
+}
 
 body {
   // padding: 1em !important;
+}
+
+.nav-menu a {
+  font-size: 1.3em !important;
+  color: white !important;
+}
+
+.f-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.f-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-bar a {
+  text-decoration: none;
+}
+
+.icon-sm .icon {
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+}
+
+.icon-list .icon {
+  display: block;
+}
+
+// .icon {
+//   width: 50px;
+//   height: 50px;
+// }
+
+/* .icon-sm, */
+.icon-list--sm .icon {
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+}
+
+.row-gap > * + * {
+  margin-left: var(--gap);
+}
+
+.row-gap--xxs > * + * {
+  margin-left: var(--gap-xxs);
+}
+
+.col-gap > * + * {
+  margin-top: var(--gap);
+}
+
+.col-gap--xxs > * + * {
+  margin-top: var(--gap-xxs);
+}
+
+.content-center {
+  place-content: center;
+}
+
+.fill-green .icon,
+.fill-green {
+  fill: green;
+}
+
+.fill-white .icon,
+.fill-white {
+  fill: white;
+}
+
+.fill-blue {
+  fill: blue !important;
+}
+
+.on-hover--fill-red .icon:hover,
+.on-hover--fill-red .icon:focus {
+  fill: red;
 }
 
 .some-unused-selector {

@@ -1,0 +1,33 @@
+//=========================================
+// mixins
+//=========================================
+@use 'variables' as *;
+
+/* themes */
+/* ========================= */
+
+@mixin theme($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+/* contain-width */
+/* ========================= */
+@mixin contain-width($width: null) {
+  max-width: $width;
+  margin: 0 auto;
+}
+
+/* media-querys */
+/* ========================= */
+@mixin media-query($arg1: null, $width: null) {
+  @if $arg1 == 'min' {
+    @media (min-width: $width) {
+      @content;
+    }
+  } @else if $arg1 == 'max' {
+    @media (max-width: $width) {
+      @content;
+    }
+  }
+}

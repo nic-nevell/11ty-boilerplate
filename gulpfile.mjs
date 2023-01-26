@@ -12,15 +12,83 @@ import purgeCss from 'gulp-purgecss'
 import { config } from './myConfig.mjs'
 import minifyCss from 'gulp-minify-css'
 import rename from 'gulp-rename'
+import sharpResponsive from 'gulp-sharp-responsive'
+import svgSprite from 'gulp-svg-sprite'
 
 const { src, series, parallel, dest, task, watch } = gulp
 const sass = gulpSass(dartSass)
 
 let production = true
 
+const spriteConfig = {
+  mode: {
+    css: {
+      // Activate the «css» mode
+      render: {
+        css: true, // Activate CSS output (with default options)
+      },
+    },
+  },
+}
+
+// svg's
+//----------------------------------
+export const svg = async () => {
+  src('./src/assets/images/icons/*.svg')
+    // .pipe(svgSprite(spriteConfig))
+    .pipe(
+      svgSprite({
+        mode: {
+          symbol: {
+            sprite: 'sprite.svg',
+            dest: 'svg',
+          },
+        },
+      })
+    )
+
+    .pipe(fileLog())
+    .pipe(dest('./dist/images/'))
+}
+export const svgLogo = async () => {
+  src('./src/assets/images/site-logo.svg')
+    .pipe(fileLog())
+    .pipe(dest('./dist/images/'))
+}
+
 // images
 //----------------------------------
 export const processImages = () => {
+  return src('./src/assets/images/**/*.{jpg,png}')
+    .pipe(
+      sharpResponsive({
+        includeOriginalFile: true,
+        formats: [
+          {
+            width: 600,
+            rename: { suffix: '-(sm)' },
+            jpegOptions: { quality: 80, progressive: true },
+          },
+
+          {
+            format: 'webp',
+            webpOptions: { quality: 80 },
+          },
+          {
+            format: 'webp',
+            width: (metadata) => metadata.width * 0.5,
+            rename: { suffix: '-(sm)' },
+            webpOptions: { quality: 80 },
+          },
+        ],
+      })
+    )
+    .pipe(fileLog())
+    .pipe(dest('dist/images'))
+}
+
+// imagesMin
+export const minImages = () => {
   return src(config.images.src)
     .pipe(
       gulpIf(
@@ -48,6 +116,7 @@ export const processImages = () => {
     .pipe(dest(config.images.dest))
 }
 
+// imagesWebp
 export const imagesWebp = async () => {
   if (production) {
     return src(config.images.src)
@@ -116,11 +185,20 @@ export const serve = series(gulpWatch)
 export const isProduction = async () => {
   production = true
 }
-export const build = series(compileCss, bundleJs, processImages, imagesWebp)
+export const build = series(
+  compileCss,
+  bundleJs,
+  processImages,
+  svgLogo,
+  // imagesWebp,
+  svg
+)
 
 //----------------------------------
 //----------------------------------
 
 // dev links
 //----------------------------------
-// https://stackoverflow.com/questions/48224037/cannot-build-project-typeerror-processImages-gifsicle-is-not-a-function
+
+// gulp-sharp-responsive
+// https://www.npmjs.com/package/gulp-sharp-responsive?activeTab=readme

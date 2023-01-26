@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "page": [
+      { "name": "author", "description": "nic-nevell" },
+      { "name": "copyright", "description": "2022 www.weberdy.com" }
+    ]
+  },
+  "navigation": {
+    "global": [
+      { "name": "Home", "url": "index.html" },
+      { "name": "Products", "url": "products.html" },
+      { "name": "Blog", "url": "blog.html" },
+      { "name": "Contact", "url": "contact.html" },
+      { "name": "About", "url": "about.html" },
+      {
+        "name": "Open",
+        "url": "javascript:window.open('http://localhost:3000/', '','width=320,height=480')"
+      }
+    ],
+    "media": [
+      {
+        "src": "./icons/facebook-icon.svg",
+        "href": "https://www.facebook.com",
+        "alt": "facebook icon link"
+      },
+      {
+        "src": "./icons/twitter-icon.svg",
+        "href": "https://www.twitter.com",
+        "alt": "twitter icon link"
+      },
+      {
+        "src": "./icons/linkedin-icon.svg",
+        "href": "https://www.linkedin.com",
+        "alt": "linkedin icon link"
+      },
+      {
+        "src": "./icons/github-icon.svg",
+        "href": "https://www.github.com",
+        "alt": "github icon link"
+      }
+    ],
+    "docs": [
+      { "name": "Terms & Conditions", "url": "documents.html" },
+      { "name": "Privacy Policy", "url": "documents.html" },
+      { "name": "Warranty", "url": "documents.html" },
+      { "name": "Delivery", "url": "documents.html" },
+      { "name": "Returns", "url": "documents.html" }
+    ]
+  }
+}

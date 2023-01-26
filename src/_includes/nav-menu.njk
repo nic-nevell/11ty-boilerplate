@@ -1,0 +1,43 @@
+<!-- c-button -->
+<button class="btn-burger | auto-left" aria-expanded="false" aria-controls="navMenu" id="navMenuToggle"
+  aria-label="toggle for navigation menu">
+  <span class="bar bar-top"></span>
+  <span class="bar bar-middle"></span>
+  <span class="bar bar-bottom"></span>
+</button>
+
+<!-- c-nav-menu -->
+<nav class="nav-menu | font-lg | col-gap | p-lg | dark-theme" id="navMenu" aria-expanded="false">
+  <a href="/">Home</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/about.html">About</a>
+
+  <div class="icon-bar icon-sm | f-column | col-gap--xxs  | fill-white on-hover--fill-red">
+
+    <a href="https://www.instagram.com">
+      <svg class="icon fill-blue">
+        <use href="/images/svg/sprite.svg#twitter-icon"></use>
+      </svg>
+    </a>
+
+    <a href="https://www.facebook.com">
+      <svg class="icon">
+        <use href="/images/svg/sprite.svg#facebook-icon"></use>
+      </svg>
+    </a>
+
+    <a href="https://www.linkedin.com">
+      <svg class="icon">
+        <use href="/images/svg/sprite.svg#linkedin-icon"></use>
+      </svg>
+    </a>
+
+    <a href="https://www.facebook.com">
+      <svg class="icon">
+        <use href="/images/svg/sprite.svg#github-icon"></use>
+      </svg>
+    </a>
+  </div>
+
+  {# {% include "components/navigation/nav-global.njk" %} #}
+</nav>

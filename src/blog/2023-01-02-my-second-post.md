@@ -5,7 +5,7 @@ title: My Second Post
 author: Nic Nevell
 date: 2023-01-02
 
-image: /images/blog/article-2.jpg
+image: /images/blog/article-2
 imageALt: image description
 # url: 2023-01-02-my-second-post
 slug: 2023-01-02-my-second-post

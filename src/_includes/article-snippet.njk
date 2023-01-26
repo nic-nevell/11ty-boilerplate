@@ -11,7 +11,10 @@
 		</div>
 
 		<picture class="aspect-1-1">
-			<img src="{{ post.data.image}}" alt="">
+			<source type="image/webp" srcset="{{ post.data.image}}.webp">
+			<source type="image/jpeg" srcset="{{ post.data.image}}.jpg">
+
+			<img src="{{ post.data.image}}.jpg" alt="">
 		</picture>
 	</article>
 </li>
