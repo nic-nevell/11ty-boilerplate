@@ -19,23 +19,23 @@
     ],
     "media": [
       {
-        "src": "./icons/facebook-icon.svg",
-        "href": "https://www.facebook.com",
+        "src": "/images/svg/sprite.svg#icons--facebook-icon",
+        "link": "https://www.facebook.com",
         "alt": "facebook icon link"
       },
       {
-        "src": "./icons/twitter-icon.svg",
-        "href": "https://www.twitter.com",
+        "src": "/images/svg/sprite.svg#icons--twitter-icon",
+        "link": "https://www.twitter.com",
         "alt": "twitter icon link"
       },
       {
-        "src": "./icons/linkedin-icon.svg",
-        "href": "https://www.linkedin.com",
+        "src": "/images/svg/sprite.svg#icons--linkedin-icon",
+        "link": "https://www.linkedin.com",
         "alt": "linkedin icon link"
       },
       {
-        "src": "./icons/github-icon.svg",
-        "href": "https://www.github.com",
+        "src": "/images/svg/sprite.svg#icons--github-icon",
+        "link": "https://www.github.com",
         "alt": "github icon link"
       }
     ],

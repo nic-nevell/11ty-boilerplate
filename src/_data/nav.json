@@ -1,0 +1,28 @@
+{
+  "media": [
+    {
+      "src": "/images/svg/sprite.svg#icons--facebook-icon",
+      "link": "https://www.facebook.com",
+      "alt": "facebook icon link",
+      "fill": "red"
+    },
+    {
+      "src": "/images/svg/sprite.svg#icons--twitter-icon",
+      "link": "https://www.twitter.com",
+      "alt": "twitter icon link",
+      "fill": "green"
+    },
+    {
+      "src": "/images/svg/sprite.svg#icons--linkedin-icon",
+      "link": "https://www.linkedin.com",
+      "alt": "linkedin icon link",
+      "fill": "blue"
+    },
+    {
+      "src": "/images/svg/sprite.svg#icons--github-icon",
+      "link": "https://www.github.com",
+      "alt": "github icon link",
+      "fill": "yellow"
+    }
+  ]
+}

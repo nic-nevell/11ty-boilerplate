@@ -1,0 +1,14 @@
+.ec-cart-widget {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	border-radius: 50%;
+	top: 10px;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	box-shadow: 0 0 6px 1px;
+	z-index: 9999;
+}

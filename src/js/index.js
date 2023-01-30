@@ -14,6 +14,11 @@ import { loadFaviconLink } from './library/link-loader.js'
 import { loadElement } from './library/element-loader.js'
 import { create, body, select } from './library/utilities.js'
 
+// vendor imports
+//----------------------------------
+
+// chatWootWidget.init()
+
 // hot reload test
 // alert('Assets Loaded')
 

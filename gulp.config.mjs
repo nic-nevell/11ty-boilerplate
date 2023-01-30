@@ -21,8 +21,12 @@ export const config = {
   assetExtensions: ASSET_EXTENSIONS,
 
   scripts: {
-    src: './src/js/**/*.js',
+    src: './src/js/index.js',
     dest: './dist/js/',
+  },
+  svg: {
+    src: './src/assets/images/**/*.svg',
+    dest: './dist/images/',
   },
 
   images: {

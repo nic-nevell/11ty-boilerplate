@@ -26,8 +26,23 @@
 
 :root {
   --icon-sm: 32px;
+  --icon-md: 48px;
+  --icon-lg: 60px;
   --gap: 1.5em;
   --gap-xxs: 0.5em;
+
+  --scale-md: 60px;
+  --scale-lg: 90px;
+  --site-logo-aspect: 2.25;
+}
+
+.site-logo {
+  $ratio: var(--site-logo-aspect);
+  &-md {
+    display: block;
+    height: var(--scale-md);
+    width: calc($ratio * var(--scale-md));
+  }
 }
 
 .d-block {
@@ -61,6 +76,14 @@ body {
   width: var(--icon-sm);
   height: var(--icon-sm);
 }
+.icon-md .icon {
+  width: var(--icon-md);
+  height: var(--icon-md);
+}
+.icon-lg .icon {
+  width: var(--icon-lg);
+  height: var(--icon-lg);
+}
 
 .icon-list .icon {
   display: block;
@@ -77,12 +100,11 @@ body {
   height: var(--icon-sm);
 }
 
-.row-gap > * + * {
+.row-gap > *:not(:last-child) {
   margin-left: var(--gap);
 }
-
-.row-gap--xxs > * + * {
-  margin-left: var(--gap-xxs);
+.row-gap--xxs > *:not(:last-child) {
+  margin-right: var(--gap-xxs);
 }
 
 .col-gap > * + * {
@@ -97,9 +119,19 @@ body {
   place-content: center;
 }
 
+.fill-red .icon,
+.fill-red {
+  fill: red;
+}
+
 .fill-green .icon,
 .fill-green {
   fill: green;
+}
+
+.fill-blue .icon,
+.fill-blue {
+  fill: blue;
 }
 
 .fill-white .icon,
@@ -107,8 +139,9 @@ body {
   fill: white;
 }
 
-.fill-blue {
-  fill: blue !important;
+.fill-black .icon,
+.fill-black {
+  fill: black;
 }
 
 .on-hover--fill-red .icon:hover,

@@ -1,43 +1,51 @@
 import gulp from 'gulp'
-import dartSass from 'sass'
-import gulpSass from 'gulp-sass'
+import dartsass from 'sass'
+import gulpsass from 'gulp-sass'
 import { spawn } from 'node:child_process'
 import webpack from 'webpack-stream'
-import fileLog from 'gulp-filelog'
-import imagesMin, { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin'
+import filelog from 'gulp-filelog'
 import cache from 'gulp-cache'
-import gulpIf from 'gulp-if'
+import gulpif from 'gulp-if'
 import webp from 'gulp-webp'
-import purgeCss from 'gulp-purgecss'
-import { config } from './myConfig.mjs'
-import minifyCss from 'gulp-minify-css'
+import purgecss from 'gulp-purgecss'
+import { config } from './gulp.config.mjs'
+import minifycss from 'gulp-minify-css'
 import rename from 'gulp-rename'
-import sharpResponsive from 'gulp-sharp-responsive'
-import svgSprite from 'gulp-svg-sprite'
+import sharp from 'gulp-sharp-responsive'
+import sprite from 'gulp-svg-sprite'
+import { deleteAsync } from 'del'
+import svgo from 'gulp-svgo'
+import { resolve } from 'node:path'
 
-const { src, series, parallel, dest, task, watch } = gulp
-const sass = gulpSass(dartSass)
+const { src, series, parallel, dest, watch } = gulp
+const sass = gulpsass(dartsass)
+let env = process.env.NODE_ENV
+let production = false
 
-let production = true
+// production state
+//----------------------------------
+export const isProduction = async () => {
+  production = true
+}
 
-const spriteConfig = {
-  mode: {
-    css: {
-      // Activate the «css» mode
-      render: {
-        css: true, // Activate CSS output (with default options)
-      },
-    },
-  },
+// svgGo
+//----------------------------------
+export const minSvg = async () => {
+  src('./src/assets/images/site-logo.svg')
+    .pipe(svgo())
+    .pipe(filelog())
+    .pipe(dest('./dist/images/'))
 }
 
 // svg's
 //----------------------------------
-export const svg = async () => {
-  src('./src/assets/images/icons/*.svg')
-    // .pipe(svgSprite(spriteConfig))
+export const processSvgs = async () => {
+  src('./src/assets/images/**/*.svg')
+    // .pipe(svgo())
+    .pipe(filelog())
+
     .pipe(
-      svgSprite({
+      sprite({
         mode: {
           symbol: {
             sprite: 'sprite.svg',
@@ -46,13 +54,8 @@ export const svg = async () => {
         },
       })
     )
+    .pipe(filelog())
 
-    .pipe(fileLog())
-    .pipe(dest('./dist/images/'))
-}
-export const svgLogo = async () => {
-  src('./src/assets/images/site-logo.svg')
-    .pipe(fileLog())
     .pipe(dest('./dist/images/'))
 }
 
@@ -61,69 +64,50 @@ export const svgLogo = async () => {
 export const processImages = () => {
   return src('./src/assets/images/**/*.{jpg,png}')
     .pipe(
-      sharpResponsive({
-        includeOriginalFile: true,
-        formats: [
-          {
-            width: 600,
-            rename: { suffix: '-(sm)' },
-            jpegOptions: { quality: 80, progressive: true },
-          },
+      gulpif(
+        env === 'production',
+        sharp({
+          includeOriginalFile: true,
+          formats: [
+            {
+              width: 600,
+              rename: { suffix: '-(sm)' },
+              jpegOptions: { quality: 80, progressive: true },
+            },
 
-          {
-            format: 'webp',
-            webpOptions: { quality: 80 },
-          },
-          {
-            format: 'webp',
-            width: (metadata) => metadata.width * 0.5,
-            rename: { suffix: '-(sm)' },
-            webpOptions: { quality: 80 },
-          },
-        ],
-      })
-    )
-    .pipe(fileLog())
-    .pipe(dest('dist/images'))
-}
-
-// imagesMin
-export const minImages = () => {
-  return src(config.images.src)
-    .pipe(
-      gulpIf(
-        production,
-        imagesMin([
-          gifsicle({ interlaced: true }),
-          mozjpeg({ quality: 50, progressive: true }),
-          optipng({ optimizationLevel: 5 }),
-          svgo({
-            plugins: [
-              {
-                name: 'removeViewBox',
-                active: true,
-              },
-              {
-                name: 'cleanupIDs',
-                active: false,
-              },
-            ],
-          }),
-        ])
+            {
+              format: 'webp',
+              webpOptions: { quality: 80 },
+            },
+            {
+              format: 'webp',
+              width: (metadata) => metadata.width * 0.5,
+              rename: { suffix: '-(sm)' },
+              webpOptions: { quality: 80 },
+            },
+          ],
+        })
       )
     )
-    .pipe(fileLog())
-    .pipe(dest(config.images.dest))
-}
 
-// imagesWebp
-export const imagesWebp = async () => {
-  if (production) {
-    return src(config.images.src)
-      .pipe(webp({ quality: 50 }))
-      .pipe(fileLog())
-      .pipe(dest(config.images.dest))
-  }
+    .pipe(
+      gulpif(
+        env === 'development',
+        sharp({
+          includeOriginalFile: true,
+          formats: [
+            {
+              format: 'webp',
+              webpOptions: { lossless: true },
+            },
+          ],
+        })
+      ),
+      filelog()
+    )
+
+    .pipe(filelog())
+    .pipe(dest('dist/images'))
 }
 
 // HTML
@@ -142,17 +126,18 @@ export function compileCss() {
   return src(config.styles.src)
     .pipe(sass.sync({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(
-      gulpIf(
-        production,
-        purgeCss({
+      gulpif(
+        env === 'production',
+        purgecss({
           content: ['src/**/*.njk', 'src/**/*.js'],
           sourceMap: true,
         })
       )
     )
-    .pipe(gulpIf(production, minifyCss()))
+    .pipe(gulpif(env == 'production', minifycss()))
+
+    .pipe(filelog())
     .pipe(rename(config.styles.fileName))
-    .pipe(fileLog())
     .pipe(dest(config.styles.dest))
 }
 
@@ -160,13 +145,15 @@ export function compileCss() {
 //----------------------------------
 export const bundleJs = () => {
   return src(config.scripts.src)
-    .pipe(gulpIf(production, webpack({ mode: 'production' })))
+    .pipe(gulpif(env === 'production', webpack({ mode: 'production' })))
+
     .pipe(
-      gulpIf(
-        !production,
+      gulpif(
+        env === 'development',
         webpack({ mode: 'development', devtool: 'source-map' })
       )
     )
+
     .pipe(dest(config.scripts.dest))
 }
 
@@ -178,20 +165,37 @@ export const gulpWatch = () => {
   watch('./src/assets/images/', parallel(processImages))
 }
 
+// clean
+//----------------------------------
+export const clean = async () => {
+  await Promise.resolve(deleteAsync(['dist'], { dryRun: false }))
+
+  await new Promise((resolve) => {
+    resolve(deleteAsync(['./dist', './public'], { dryRun: false }))
+  })
+}
+
 // Build and Dev Commands
 //----------------------------------
-export const serve = series(gulpWatch)
-
-export const isProduction = async () => {
-  production = true
-}
-export const build = series(
+export const test = series(
+  clean,
+  clean,
   compileCss,
   bundleJs,
   processImages,
-  svgLogo,
-  // imagesWebp,
-  svg
+  processSvgs
+)
+
+export const serve = series(gulpWatch)
+
+export const dev = series(compileCss, bundleJs, processImages, processSvgs)
+
+export const build = series(
+  clean,
+  compileCss,
+  bundleJs,
+  processImages,
+  processSvgs
 )
 
 //----------------------------------
