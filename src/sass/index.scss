@@ -34,6 +34,7 @@
   --scale-md: 60px;
   --scale-lg: 90px;
   --site-logo-aspect: 2.25;
+  --red: red;
 }
 
 .site-logo {
@@ -119,9 +120,11 @@ body {
   place-content: center;
 }
 
+/* purgecss start ignore */
+
 .fill-red .icon,
 .fill-red {
-  fill: red;
+  fill: var(--red);
 }
 
 .fill-green .icon,
@@ -143,6 +146,8 @@ body {
 .fill-black {
   fill: black;
 }
+
+/* purgecss end ignore */
 
 .on-hover--fill-red .icon:hover,
 .on-hover--fill-red .icon:focus {
