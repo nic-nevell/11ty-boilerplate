@@ -26,8 +26,8 @@ collections:
     delete: true
     files:
       - file: "src/_data/sass/test.json"
-        label: "Home"
-        name: "index"
+        label: "Themes"
+        name: "theme"
         fields:
           - {label: "Background", name: bg-color, widget: string}
           - {label: "Text", name: text-color, widget: string}
