@@ -1,26 +1,27 @@
-@use './abstracts/' as *;
+// @use './abstracts/' as *;
 @import '../_data/sass/sass-vars.json';
+// @import '../_data/sass/test.json';
 
-// core
-@use './core/root' as *;
-@use './core/base' as *;
-@use './core/layout' as *;
-@use './core/custom' as *;
-@use './core/components' as *;
+// // core
+// @use './core/root' as *;
+// @use './core/base' as *;
+// @use './core/layout' as *;
+// @use './core/custom' as *;
+// @use './core/components' as *;
 
-// components
-@use './components/article';
-@use './components/buttons/btn-default';
-@use './components/navigation/nav-menu' as *;
+// // components
+// @use './components/article';
+// @use './components/buttons/btn-default';
+// @use './components/navigation/nav-menu' as *;
 
-// utilities
-@use './utilities/' as *;
+// // utilities
+// @use './utilities/' as *;
 
 // custom
 //=========================================
 /*! purgecss start ignore */
 
-$bg-base: map-get($bg-color, base);
+$bg-base: map-get($background-colors, bg-base);
 $bg-primary: map-get($bg-color, primary);
 $bg-secondary: map-get($bg-color, secondary);
 
@@ -30,17 +31,17 @@ $text-secondary: map-get($text-color, secondary);
 
 .theme-base {
   background-color: $bg-base;
-  color: $text-base;
+  // color: $text-base;
 }
 
-.theme-primary {
-  background-color: $bg-primary;
-  color: $text-primary;
-}
+// .theme-primary {
+//   background-color: $bg-primary;
+//   color: $text-primary;
+// }
 
-.theme-secondary {
-  background-color: $bg-secondary;
-  color: $text-secondary;
-}
+// .theme-secondary {
+//   background-color: $bg-secondary;
+//   color: $text-secondary;
+// }
 
 /*! purgecss end ignore */

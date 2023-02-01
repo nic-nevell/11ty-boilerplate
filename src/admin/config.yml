@@ -23,19 +23,19 @@ collections:
 
   - name: "custom"
     label: "Custom"
-    description: "Upcoming tours and their availability"
+    description: "Custom Themes"
     files:
       - label: "themes"
         name: "Themes"
-        file: "src/_data/sass/test.json"
+        file: "src/_data/sass/sass-vars.json"
         fields:
           - label: "Background Colors"
-            name: "background-colors"
+            name: "bg-colors"
             widget: "list"
             fields:
-              - {label: "Base", name: "bg-base", widget: "color"}
-              - {label: "Primary", name: "bg-primary", widget: "color"}
-              - {label: "Secondary", name: "bg-secondary", widget: "color"}
+              - {label: "Base", name: "base", widget: "color"}
+              - {label: "Primary", name: "primary", widget: "color"}
+              - {label: "Secondary", name: "secondary", widget: "color"}
       
 
   - name: "pages"
