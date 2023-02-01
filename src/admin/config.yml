@@ -45,7 +45,7 @@ collections:
       - file: "src/_data/sass/test.json"
         label: "Themes"
         name: "theme"
-            fields:
+        fields:
           - {label: "Background", name: bg-color, widget: string}
           - {label: "Text", name: text-color, widget: string}
 
