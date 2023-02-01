@@ -29,7 +29,7 @@ collections:
     extension: json
     format: json
     slug: test
-      - fields:
-        - {label: Background Color, name: bg-primary, widget: color}
-        - {label: Text Color, name: text-primary, widget: color}
-   
+    fields:
+      - {label: Background Color, name: bg-primary, widget: color}
+      - {label: Text Color, name: text-primary, widget: color}
+  
