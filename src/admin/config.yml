@@ -25,23 +25,13 @@ collections:
     label: "Custom"
     create: false
     delete: true
+    folder: ./src/sass/
     extension: json
     format: json
+    slug: test
     editor:
       preview: true
-    files:
-      - label: "Themes"
-        name: "themes"
-        file: "./src/_data/sass/sass-vars.json"
-        fields:
-          - name: items
-            label: Colors
-            widget: list
-            fields:
-              - name: bg-color
-                label: Background Color
-                widget: string
-              - name: text-color
-                label: Text Color
-                widget: string
-  
+      - fields:
+        - {label: Background Color, name: bg-primary, widget: color}
+        - {label: Text Color, name: text-primary, widget: color}
+   
