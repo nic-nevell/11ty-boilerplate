@@ -22,16 +22,14 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: 'sass-vars' 
-      label: 'Themes'
-      label_singular: 'Team Member'
-      editor:
-      preview: false
-      delete: false
-      preview_path: 'sass-vars'
-      files:
-          - label: 'Themes'
-            name: 'Themes'
-            file: './src/data/sass-vars.json'
-            fields:
-                
-                  
+    label: 'Themes'
+    label_singular: 'Team Member'
+    editor:
+    preview: false
+    delete: false
+    preview_path: 'sass-vars'
+    files:
+        - label: 'Themes'
+          name: 'Themes'
+          file: './src/data/sass-vars.json'
+          fields:
