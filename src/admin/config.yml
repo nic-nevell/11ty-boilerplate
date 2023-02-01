@@ -29,9 +29,16 @@ collections:
           name: 'themes'
           file: './src/data/sass-vars.json'
           fields:
-            - { label: 'Background Color', name: 'bg-color', widget: 'list' }
-            - label: Team
-              name: team
+            - label: 'Text Colors'
+              name: bg-colors
+              widget: list
+              fields:
+                - {label: Base, name: name, widget: color}
+                - {label: primary, name: position, widget: color}
+                - {label: Secondary, name: secondary, widget: color}
+          fields:
+            - label: 'Text Colors'
+              name: text-colors
               widget: list
               fields:
                 - {label: Base, name: name, widget: color}
