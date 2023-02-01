@@ -2,12 +2,12 @@ backend:
   name: git-gateway
   branch: main
 
+    media_folder: "src/assets/images/blog/"
+    public_folder: "/images/blog/"
 
 collections:
   - name: "blog"
     label: "Blog"
-    media_folder: "src/assets/images/blog/"
-    public_folder: "/images/blog/"
     folder: "src/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -23,7 +23,7 @@ collections:
 
   - name: "custom"
     label: "Custom"
-    public_folder: "/data/"
+    folder: "/data/"
     folder: "src/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
