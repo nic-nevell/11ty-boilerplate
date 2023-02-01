@@ -1,6 +1,5 @@
 {
-<<<<<<< HEAD
-  "colors": [
+  "themes": [
     {
       "bg-color": {
         "base": "gray",
@@ -15,19 +14,3 @@
     }
   ]
 }
-=======
-  "tags": "sass",
-  "bg-color": {
-    "base": "gray",
-    "primary": "blue",
-    "secondary": "pink"
-  },
-  "text-color": {
-    "base": "gray",
-    "primary": "darkgray",
-    "secondary": "white"
-  },
-  "title": "New Theme",
-  "bg-primary": "green"
-}
->>>>>>> 7f2bb27ea32d0c771a5ee4c3a34f0abbf05d4a5a

@@ -29,17 +29,9 @@ collections:
       delete: false
       preview_path: 'sass-vars'
       files:
-          - label: 'the'
+          - label: 'Themes'
             name: 'Themes'
             file: './src/data/sass-vars.json'
             fields:
-                - label: Members
-                  name: members
-                  widget: list
-                  allow_add: true
-                  fields:
-                      - { label: 'Name', name: 'colors', widget: 'string' }
-                      - label: 'Image'
-                        name: 'image'
-                        widget: 'object
+                
                   
