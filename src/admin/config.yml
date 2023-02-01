@@ -21,9 +21,9 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "custom" # Used in routes, e.g., /admin/collections/blog
-    label: "Custom" # Used in the UI
-    create: false # Allow users to create new documents in this collection
+  - name: "./src/_data/sass/"
+    label: "Custom"
+    create: false
     delete: true
     extension: json
     format: json
@@ -66,33 +66,3 @@ collections:
                 label: Beschreibung
                 widget: text
   
-
-
-  - label: "Pages"
-    name: "pages"
-    files:
-      - label: "About Page"
-        name: "about"
-        file: "./src/_data/sass/sass-vars.json"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
-      - label: "SEO"
-        name: "locations"
-        file: "./src/_data/meta/tags.json"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Locations
-            name: locations
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Address, name: address, widget: string}
