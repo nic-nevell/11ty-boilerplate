@@ -27,6 +27,8 @@ collections:
     files:
       - label: "About Page"
         name: "about"
+        extension: json
+        format: json
         file: "./src/_data/sass/sass-vars.json"
         fields:
           - {label: Title, name: title, widget: string}
@@ -38,9 +40,11 @@ collections:
               - {label: Name, name: name, widget: string}
               - {label: Position, name: position, widget: string}
               - {label: Photo, name: photo, widget: image}
-      - label: "Locations Page"
+      - label: "SEO"
         name: "locations"
-        file: "site/content/locations.yml"
+        extension: json
+        format: json
+        file: "./src/_data/meta/tags.json"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
