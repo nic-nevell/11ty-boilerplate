@@ -28,7 +28,7 @@ collections:
     extension: json
     format: json
     editor:
-    preview: true
+      preview: true
     files:
       - label: "Themes"
         name: "themes"
