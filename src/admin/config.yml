@@ -21,15 +21,16 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "meta"
+  - name: "sass-vars"
     label: "Themes"
     folder: "src/_data/sass"
     create: true
-    delete: false
+    delete: true
     extension: json
     format: json
     editor:
       preview: true
     slug: "meta"
     fields:
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Primary", name: "bg-primary", widget: "string"}
