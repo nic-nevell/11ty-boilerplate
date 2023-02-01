@@ -8,5 +8,12 @@
     "base": "gray",
     "primary": "darkgray",
     "secondary": "white"
-  }
+  },
+  "bg-colors": [
+    {
+      "base": "#ae0e0e",
+      "primary": "#6de508",
+      "secondary": "#f6e215"
+    }
+  ]
 }
