@@ -32,37 +32,16 @@ collections:
     files:
       - label: "Themes"
         name: "themes"
-        file: "./scr/_data/sass/test-vars.json"
+        file: "./scr/_data/sass/sass-vars.json"
         fields:
           - name: items
             label: Kalendereintrag
             widget: list
             fields:
-              - name: day
-                label: Tag
-                required: false
-                widget: "select"
-                options:
-                  ["monday", "tuesday", "wednesday", "thursday", "friday"]
-              - name: name
-                label: Titel
+              - name: bg-color
+                label: Background Color
                 widget: string
-              - name: image
-                label: Bild
-                required: false
-                widget: image
-              - name: start_time
-                label: Start
+              - name: text-color
+                label: Text Color
                 widget: string
-              - name: end_time
-                label: Ende
-                widget: string
-              - name: color
-                hint: "von 1-3 wird die Farbe immer satter, 4 ist grau."
-                label: Farbe
-                widget: "select"
-                options: ["1", "2", "3", "4"]
-              - name: description
-                label: Beschreibung
-                widget: text
   
