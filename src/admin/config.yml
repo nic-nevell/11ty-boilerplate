@@ -21,7 +21,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "./src/_data/sass/"
+  - name: "custom"
     label: "Custom"
     create: false
     delete: true
