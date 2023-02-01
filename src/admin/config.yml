@@ -32,10 +32,10 @@ collections:
     files:
       - label: "Themes"
         name: "themes"
-        file: "./scr/_data/sass/sass-vars.json"
+        file: "./src/_data/sass/sass-vars.json"
         fields:
           - name: items
-            label: Kalendereintrag
+            label: Colors
             widget: list
             fields:
               - name: bg-color
