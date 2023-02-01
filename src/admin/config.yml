@@ -21,6 +21,17 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
+  - name: "custom"
+    label: "Custom"
+    delete: true
+    files:
+      - file: "src/_data/sass/test.json"
+        label: "Home"
+        name: "index"
+        fields:
+          - {label: "Background", name: bg-color, widget: string}
+          - {label: "Text", name: text-color, widget: string}
+
   - name: "pages"
     label: "Pages"
     delete: true
