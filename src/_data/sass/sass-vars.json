@@ -1,1 +1,16 @@
-{}
+{
+  "bg-color": [
+    {
+      "base": "#e70303",
+      "primary": "#dcf003",
+      "secondary": "#9f0d4a"
+    }
+  ],
+  "text-color": [
+    {
+      "base": "#e7e3e3",
+      "primary": "#edb1b1",
+      "secondary": "#1b0303"
+    }
+  ]
+}
