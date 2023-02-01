@@ -25,10 +25,10 @@ collections:
     label: "Custom"
     create: true
     delete: true
-    folder: ./src/sass/
-    extension: json
-    format: json
-    slug: test
+    folder: "./src/sass/"
+    extension: "json"
+    format: "json"
+    slug: "test"
     fields:
       - {label: "Title", name: "themes", widget: "string"}
       - {label: "Background Color", name: bg-primary, widget: "color"}
