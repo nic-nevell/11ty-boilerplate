@@ -20,7 +20,6 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-collections:
   - name: "terminkalender" # Used in routes, e.g., /admin/collections/blog
     label: "Terminkalender" # Used in the UI
     media_folder: /content/yoga_meditation/termine/timetable/images
