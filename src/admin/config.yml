@@ -30,6 +30,7 @@ collections:
     format: json
     slug: test
     fields:
-      - {label: Background Color, name: bg-primary, widget: color}
-      - {label: Text Color, name: text-primary, widget: color}
+      - {label: "Title", name: "themes", widget: "string"}
+      - {label: "Background Color", name: bg-primary, widget: "color"}
+      - {label: "Text Color", name: "text-primary", widget: "color"}
   
