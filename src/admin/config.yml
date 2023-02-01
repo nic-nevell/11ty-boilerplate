@@ -21,17 +21,25 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "sass-vars"
-    label: "Themes"
-    public_folder: "src/_data/sass"
-    folder: "src/_data/sass"
-    create: true
-    delete: true
-    extension: json
-    format: json
-    editor:
-    preview: true
-    slug: "sass-vars"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Primary", name: "bg-primary", widget: "string"}
+  - name: 'sass-vars' 
+      label: 'Themes'
+      label_singular: 'Team Member'
+      editor:
+      preview: false
+      delete: false
+      preview_path: 'sass-vars'
+      files:
+          - label: 'the'
+            name: 'Themes'
+            file: './src/data/sass-vars.json'
+            fields:
+                - label: Members
+                  name: members
+                  widget: list
+                  allow_add: true
+                  fields:
+                      - { label: 'Name', name: 'colors', widget: 'string' }
+                      - label: 'Image'
+                        name: 'image'
+                        widget: 'object
+                  
