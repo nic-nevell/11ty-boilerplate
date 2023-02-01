@@ -25,9 +25,7 @@ collections:
     label: "Custom"
     create: true
     delete: true
-    public_folder: "./src/data/sass/"
-    extension: "json"
-    format: "json"
+    folder: "./src/data/sass"
     slug: "test"
     fields:
       - {label: "Title", name: "themes", widget: "string"}
