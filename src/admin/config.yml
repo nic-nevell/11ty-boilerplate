@@ -23,7 +23,7 @@ collections:
 
   - name: "custom"
     label: "Custom"
-    create: false
+    create: true
     delete: true
     folder: ./src/sass/
     extension: json
