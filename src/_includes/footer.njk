@@ -1,13 +1,24 @@
-<footer class="page-footer | space-x">
+<footer class="page-footer | col-gap">
 	<div class="wrapper | col-gap">
 		<h3>Footer</h3>
+
+		{% if page === 'home' %}
+		<a href="/">
+			<svg class="icon icon-xl" alt="site icon home link">
+				<use href="/images/svg/sprite.svg#icons--site-icon"></use>
+			</svg>
+		</a>
+		{% endif %}
+
+
 		<address>
 			101 Bogus Avenue<br>
 			London<br>
 			EW1
 		</address>
 
-		<div class="icon-bar icon-sm | row-gap--xxs  | on-hover--fill-red">
+		<div class="icon-sm | f-row | row-gap-xs  | on-hover--fill-red">
+
 			{% include "media-icons.njk" %}
 		</div>
 

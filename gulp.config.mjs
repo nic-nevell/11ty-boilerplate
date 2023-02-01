@@ -24,9 +24,11 @@ export const config = {
     src: './src/js/index.js',
     dest: './dist/js/',
   },
+
   svg: {
     src: './src/assets/images/**/*.svg',
     dest: './dist/images/',
+    sprite: { fileName: 'sprite.svg', dest: 'svg/' },
   },
 
   images: {
@@ -45,5 +47,6 @@ export const config = {
     watch: './src/sass/**/*.scss',
     dest: './dist/css/',
     fileName: 'main.css',
+    dataSrc: './src/_data/sass/**/*.json',
   },
 }

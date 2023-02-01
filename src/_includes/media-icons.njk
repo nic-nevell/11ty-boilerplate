@@ -1,5 +1,5 @@
-{% for item in nav.media %}
-<a href="{{ item.link }}">
+{% for item in nav.media.list %}
+<a href="{{ item.link }}" alt="{{ item.alt }}">
 	<svg class="icon {{item.class }}">
 		<use href="{{ item.src }}"></use>
 	</svg>

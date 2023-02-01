@@ -1,0 +1,14 @@
+@use '../components/navigation' as c-nav;
+@use '../components/buttons/' as c-btn;
+
+// nav-menu & toggle
+@include c-btn.btn-burger(black, white);
+@include c-nav.nav-menu(from-right, 50vw, 100vh) {
+  color: white;
+  min-width: 180px;
+
+  background-color: black;
+  // @media (min-width: $laptop) {
+  //   display: none;
+  // }
+}

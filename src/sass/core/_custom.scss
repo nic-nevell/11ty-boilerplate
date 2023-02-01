@@ -1,0 +1,38 @@
+@use '../abstracts/' as *;
+
+/*! purgecss start ignore */
+.fill-red .icon,
+.fill-red {
+  fill: var(--red);
+}
+
+.fill-green .icon,
+.fill-green {
+  fill: green;
+}
+
+.fill-blue .icon,
+.fill-blue {
+  fill: blue;
+}
+
+.fill-white .icon,
+.fill-white {
+  fill: white;
+}
+
+.fill-black .icon,
+.fill-black {
+  fill: black;
+}
+
+.keep-me {
+  background-color: pink;
+}
+
+.on-hover--fill-red .icon:hover,
+.on-hover--fill-red .icon:focus {
+  fill: red;
+}
+
+/*! purgecss end ignore */

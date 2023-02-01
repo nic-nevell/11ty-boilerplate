@@ -1,11 +1,17 @@
----
-title: hello world
-layout: 'base.njk'
----
+{% extends "base.njk" %}
 
+{% set page_title = 'Page Title' %}
+{% set page_name = 'home' %}
 
-<section class="section | ptb-lg | theme-light">
-	<div class="wrapper | space-x ">
+{% block meta %}
+{% for item in meta.tags.home %}
+<meta name="{{ item.name }}" content="{{ item.content }}">
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+<section class="section | ptb-lg | theme-primary">
+	<div class=" wrapper | col-gap">
 		<h1>Content Heading</h1>
 
 		<p>Lorem ipsum dolor, test sit amet consectetur adipisicing elit. Magni reiciendis, consectetur, fuga quae
@@ -13,6 +19,7 @@ layout: 'base.njk'
 			obcaecati officiis impedit aute, dolorum assumenda error unde adipisci voluptatem! Vel libero maxime non
 			excepturi
 			totam?</p>
+		{# <span class="d-block">Last Updated: {{ currentDate() }}</span> #}
 
 		<picture class="aspect-3-2">
 			<source type="image/webp" srcset="/images/blog/article-1.webp">
@@ -23,11 +30,10 @@ layout: 'base.njk'
 	</div>
 </section>
 
-<!-- ** blog-section ** -->
 <section class="section blog-section | ptb-lg">
-	<div class="wrapper | space-x">
+	<div class="wrapper | col-gap">
 		<h1>Featured News Articles</h1>
-		<ul role="list" class="articles-list | space-x | mt-lg">
+		<ul role="list" class="articles-list | col-gap | mt-lg">
 
 			{%- for post in collections.featured -%}
 			{% include "article-snippet.njk" %}
@@ -35,3 +41,4 @@ layout: 'base.njk'
 		</ul>
 	</div>
 </section>
+{% endblock %}

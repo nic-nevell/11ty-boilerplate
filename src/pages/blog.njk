@@ -1,14 +1,16 @@
 ---
-title: blog page
 layout: 'base.njk'
 permalink: "/blog.html"
+
+page_title: Weberdy blog page
+page_name: blog
 ---
 
 <!-- ** blog-section ** -->
 <section class="section blog-section | ptb-lg">
 	<div class="wrapper">
 		<h1>News Articles</h1>
-		<ul role="list" class="articles-list | space-x | mt-lg">
+		<ul role="list" class="articles-list | col-gap | mt-lg">
 
 			{%- for post in collections.post -%}
 			{% include "article-snippet.njk" %}

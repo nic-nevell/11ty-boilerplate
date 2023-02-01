@@ -1,10 +1,4 @@
 {
-  "meta": {
-    "page": [
-      { "name": "author", "description": "nic-nevell" },
-      { "name": "copyright", "description": "2022 www.weberdy.com" }
-    ]
-  },
   "navigation": {
     "global": [
       { "name": "Home", "url": "index.html" },

@@ -8,7 +8,6 @@ import cache from 'gulp-cache'
 import gulpif from 'gulp-if'
 import webp from 'gulp-webp'
 import purgecss from 'gulp-purgecss'
-import { config } from './gulp.config.mjs'
 import minifycss from 'gulp-minify-css'
 import rename from 'gulp-rename'
 import sharp from 'gulp-sharp-responsive'
@@ -16,6 +15,9 @@ import sprite from 'gulp-svg-sprite'
 import { deleteAsync } from 'del'
 import svgo from 'gulp-svgo'
 import { resolve } from 'node:path'
+import sitemap from 'gulp-sitemap'
+import { config } from './gulp.config.mjs'
+import sassImportJson from 'gulp-sass-import-json'
 
 const { src, series, parallel, dest, watch } = gulp
 const sass = gulpsass(dartsass)
@@ -40,23 +42,22 @@ export const minSvg = async () => {
 // svg's
 //----------------------------------
 export const processSvgs = async () => {
-  src('./src/assets/images/**/*.svg')
-    // .pipe(svgo())
+  src(config.svg.src)
     .pipe(filelog())
 
     .pipe(
       sprite({
         mode: {
           symbol: {
-            sprite: 'sprite.svg',
-            dest: 'svg',
+            sprite: config.svg.sprite.fileName,
+            dest: config.svg.sprite.dest,
           },
         },
       })
     )
     .pipe(filelog())
 
-    .pipe(dest('./dist/images/'))
+    .pipe(dest(config.svg.dest))
 }
 
 // images
@@ -124,6 +125,7 @@ export const copy = () => {
 //----------------------------------
 export function compileCss() {
   return src(config.styles.src)
+    .pipe(sassImportJson({ isScss: true, cache: false }))
     .pipe(sass.sync({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(
       gulpif(
@@ -160,9 +162,12 @@ export const bundleJs = () => {
 // Gulp Watch
 //----------------------------------
 export const gulpWatch = () => {
-  watch('./src/sass/**/**.scss', parallel(compileCss))
-  watch('./src/js/**/**.js', parallel(bundleJs))
-  watch('./src/assets/images/', parallel(processImages))
+  watch(config.styles.src, parallel(compileCss))
+  watch(config.scripts.src, parallel(bundleJs))
+  watch(config.images.src, parallel(processImages))
+  watch(config.svg.src, parallel(processSvgs))
+
+  watch(config.styles.dataSrc, parallel(compileCss))
 }
 
 // clean
@@ -175,15 +180,37 @@ export const clean = async () => {
   })
 }
 
+// sitemap
+//----------------------------------
+export const siteMap = async () => {
+  src('./dist/**/*.html', {
+    read: false,
+  })
+    .pipe(
+      sitemap({
+        siteUrl: 'https://11ty-boilerplate.netlify.app/',
+      })
+    )
+    .pipe(dest('./dist'))
+}
+
 // Build and Dev Commands
 //----------------------------------
-export const test = series(
-  clean,
+export const testDev = series(
   clean,
   compileCss,
-  bundleJs,
-  processImages,
-  processSvgs
+  // bundleJs,
+  // processImages,
+  // processSvgs
+  gulpWatch
+)
+
+export const testBuild = series(
+  clean,
+  compileCss
+  // bundleJs,
+  // processImages,
+  // processSvgs
 )
 
 export const serve = series(gulpWatch)
@@ -197,6 +224,10 @@ export const build = series(
   processImages,
   processSvgs
 )
+
+if (env === production) {
+  siteMap
+}
 
 //----------------------------------
 //----------------------------------

@@ -1,3 +1,130 @@
+@use '../abstracts/' as *;
+
+svg,
+.icon,
+.logo {
+  display: block;
+  a {
+    text-decoration: none;
+  }
+}
+
+// logos
+.site-logo {
+  padding-bottom: calc(100% / $site-logo-aspect);
+
+  &-xs {
+    height: $logo-xs;
+    width: calc($logo-xs * $site-logo-aspect);
+  }
+  &-sm {
+    height: $logo-sm;
+    width: calc($logo-sm * $site-logo-aspect);
+  }
+  &-md {
+    height: $logo-md;
+    width: calc($logo-md * $site-logo-aspect);
+  }
+  &-lg {
+    height: $logo-lg;
+    width: calc($logo-lg * $site-logo-aspect);
+  }
+  &-xl {
+    height: $logo-xl;
+    width: calc($logo-xl * $site-logo-aspect);
+  }
+  &-xxl {
+    height: $logo-xxl;
+    width: calc($logo-xxl * $site-logo-aspect);
+  }
+  &-xxxl {
+    height: $logo-xxxl;
+    width: calc($logo-xxxl * $site-logo-aspect);
+  }
+}
+
+// icons
+.icon-bar,
+.icon-list {
+  a {
+    text-decoration: none;
+  }
+}
+
+.icon-list .icon {
+  display: block;
+}
+
+.icon-xxxs {
+  .icon,
+  &.icon {
+    width: $icon-xxxs;
+    height: $icon-xxxs;
+  }
+}
+
+.icon-xxs {
+  .icon,
+  &.icon {
+    width: $icon-xxs;
+    height: $icon-xxs;
+  }
+}
+
+.icon-xs {
+  .icon,
+  &.icon {
+    width: $icon-xs;
+    height: $icon-xs;
+  }
+}
+
+.icon-sm {
+  .icon,
+  &.icon {
+    width: $icon-sm;
+    height: $icon-sm;
+  }
+}
+
+.icon-md {
+  .icon,
+  &.icon {
+    width: $icon-md;
+    height: $icon-md;
+  }
+}
+.icon-lg {
+  .icon,
+  &.icon {
+    width: $icon-lg;
+    height: $icon-lg;
+  }
+}
+.icon-xl {
+  .icon,
+  &.icon {
+    width: $icon-xl;
+    height: $icon-xl;
+  }
+}
+.icon-xxl {
+  .icon,
+  &.icon {
+    width: $icon-xxl;
+    height: $icon-xxl;
+  }
+}
+
+.icon-xxxl {
+  .icon,
+  &.icon {
+    width: $icon-xxxl;
+    height: $icon-xxxl;
+  }
+}
+
+// picture
 picture {
   display: block;
   width: 100%;
@@ -14,6 +141,7 @@ picture img {
   height: 100%;
 }
 
+// aspect
 .aspect-1-1 {
   padding-bottom: 100%;
 }

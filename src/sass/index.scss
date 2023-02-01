@@ -1,159 +1,46 @@
 @use './abstracts/' as *;
+@import '../_data/sass/sass-vars.json';
+
+// core
+@use './core/root' as *;
 @use './core/base' as *;
 @use './core/layout' as *;
+@use './core/custom' as *;
+@use './core/components' as *;
 
+// components
 @use './components/article';
 @use './components/buttons/btn-default';
+@use './components/navigation/nav-menu' as *;
 
-// @use './components/nav-menu' as *;
+// utilities
 @use './utilities/' as *;
 
-// navigation
+// custom
 //=========================================
-@use './components/navigation' as c-nav;
-@use './components/buttons/' as c-btn;
+/*! purgecss start ignore */
 
-// nav-menu & toggle
-@include c-btn.btn-burger(black, white);
-@include c-nav.nav-menu(from-right, 50vw, 100vh) {
-  min-width: 180px;
-  color: white;
-  background-color: black;
-  // @media (min-width: $laptop) {
-  //   display: none;
-  // }
+$bg-base: map-get($bg-color, base);
+$bg-primary: map-get($bg-color, primary);
+$bg-secondary: map-get($bg-color, secondary);
+
+$text-base: map-get($text-color, base);
+$text-primary: map-get($text-color, primary);
+$text-secondary: map-get($text-color, secondary);
+
+.theme-base {
+  background-color: $bg-base;
+  color: $text-base;
 }
 
-:root {
-  --icon-sm: 32px;
-  --icon-md: 48px;
-  --icon-lg: 60px;
-  --gap: 1.5em;
-  --gap-xxs: 0.5em;
-
-  --scale-md: 60px;
-  --scale-lg: 90px;
-  --site-logo-aspect: 2.25;
-  --red: red;
+.theme-primary {
+  background-color: $bg-primary;
+  color: $text-primary;
 }
 
-.site-logo {
-  $ratio: var(--site-logo-aspect);
-  &-md {
-    display: block;
-    height: var(--scale-md);
-    width: calc($ratio * var(--scale-md));
-  }
+.theme-secondary {
+  background-color: $bg-secondary;
+  color: $text-secondary;
 }
 
-.d-block {
-  display: block;
-}
-
-body {
-  // padding: 1em !important;
-}
-
-.nav-menu a {
-  font-size: 1.3em !important;
-  color: white !important;
-}
-
-.f-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.f-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.icon-bar a {
-  text-decoration: none;
-}
-
-.icon-sm .icon {
-  width: var(--icon-sm);
-  height: var(--icon-sm);
-}
-.icon-md .icon {
-  width: var(--icon-md);
-  height: var(--icon-md);
-}
-.icon-lg .icon {
-  width: var(--icon-lg);
-  height: var(--icon-lg);
-}
-
-.icon-list .icon {
-  display: block;
-}
-
-// .icon {
-//   width: 50px;
-//   height: 50px;
-// }
-
-/* .icon-sm, */
-.icon-list--sm .icon {
-  width: var(--icon-sm);
-  height: var(--icon-sm);
-}
-
-.row-gap > *:not(:last-child) {
-  margin-left: var(--gap);
-}
-.row-gap--xxs > *:not(:last-child) {
-  margin-right: var(--gap-xxs);
-}
-
-.col-gap > * + * {
-  margin-top: var(--gap);
-}
-
-.col-gap--xxs > * + * {
-  margin-top: var(--gap-xxs);
-}
-
-.content-center {
-  place-content: center;
-}
-
-/* purgecss start ignore */
-
-.fill-red .icon,
-.fill-red {
-  fill: var(--red);
-}
-
-.fill-green .icon,
-.fill-green {
-  fill: green;
-}
-
-.fill-blue .icon,
-.fill-blue {
-  fill: blue;
-}
-
-.fill-white .icon,
-.fill-white {
-  fill: white;
-}
-
-.fill-black .icon,
-.fill-black {
-  fill: black;
-}
-
-/* purgecss end ignore */
-
-.on-hover--fill-red .icon:hover,
-.on-hover--fill-red .icon:focus {
-  fill: red;
-}
-
-.some-unused-selector {
-  background-color: red;
-}
+/*! purgecss end ignore */

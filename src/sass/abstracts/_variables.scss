@@ -4,7 +4,8 @@
 $ratio: 1.5;
 $em-base: 1em;
 $rem-base: 1rem;
-$site-logo-aspect-factor: 2.25;
+$site-logo-aspect: 2.25;
+$line-height-base: 1.5em;
 
 $scale-base: calc($em-base * $ratio); // 24px
 
@@ -93,8 +94,37 @@ $shadow-dark: 0 0 0.7em 0.3em rgba(0, 0, 0, 0.75);
 // gutters
 // =========================
 $gutter-reactive: 8%;
-
 $gutter: $scale-base;
+
+$gap-xxxs: 0.2em;
+$gap-xxs: 0.4em;
+$gap-xs: 0.6em;
+$gap-sm: 0.8em;
+$gap-md: 1em;
+$gap-lg: 1.5em;
+$gap-xl: 2em;
+$gap-xxl: 2.5em;
+$gap-xxxl: 3em;
+$gap-base: $gap-lg;
+
+$em-xxxs: 0.2em;
+$em-xxs: 0.4em;
+$em-xs: 0.6em;
+$em-sm: 0.8em;
+$em-md: 1em;
+$em-lg: 1.5em;
+$em-xl: 2em;
+$em-xxl: 2.5em;
+$em-xxxl: 3em;
+
+$rem-xxs: 0.25;
+$rem-xs: 0.5;
+$rem-sm: 0.75em;
+$rem-md: 1em;
+$rem-lg: 1.5em;
+$rem-xl: 2em;
+$rem-xxl: 2.5em;
+$rem-xxxl: 3em;
 
 /* fonts */
 /* ========================= */
@@ -108,9 +138,9 @@ $font-xxxl: 2rem;
 
 /* icons */
 /* ========================= */
-$icon-xxxs: 0.75; // 12px
-$icon-xxs: 0.875; // 14px
-$icon-xs: 1.25; // 20px
+$icon-xxxs: 0.75em; // 12px
+$icon-xxs: 0.875em; // 14px
+$icon-xs: 1.25em; // 20px
 $icon-sm: 2em; // 32px
 $icon-md: 3em; // 48px
 $icon-lg: 4em; // 64px
@@ -118,9 +148,9 @@ $icon-xl: 5em; // 80px
 $icon-xxl: 6em; // 96px
 $icon-xxxl: 7em; // 112px
 
-$logo-xxxs: 0.75; // 12px
-$logo-xxs: 0.875; // 14px
-$logo-xs: 1.25; // 20px
+$logo-xxxs: 0.75em; // 12px
+$logo-xxs: 0.875em; // 14px
+$logo-xs: 1.25em; // 20px
 $logo-sm: 2em; // 32px
 $logo-md: 3em; // 48px
 $logo-lg: 4em; // 64px

@@ -1,12 +1,250 @@
-.mt-xl {
-  margin-top: 3em;
+@use '../abstracts/' as *;
+
+.auto-top {
+  margin-top: auto;
 }
 
+.auto-bottom {
+  margin-bottom: auto;
+}
+
+.auto-left {
+  margin-left: auto;
+}
+
+.auto-right {
+  margin-right: auto;
+}
+
+.auto-x-center {
+  margin-inline: auto;
+}
+
+.auto-y-center {
+  margin-block: auto;
+}
+
+/*  margin xxxs */
+.m-xxxs,
+.mt-xxxs,
+.mtb-xxxs {
+  margin-top: $em-xxxs;
+}
+
+.m-xxxs,
+.mb-xxxs,
+.mtb-xxxs {
+  margin-bottom: $em-xxxs;
+}
+
+.m-xxxs,
+.ml-xxxs,
+.mlr-xxxs {
+  margin-left: $em-xxxs;
+}
+
+.m-xxxs,
+.mr-xxxs,
+.mlr-xxxs {
+  margin-right: $em-xxxs;
+}
+
+/*  margin xxs */
+.m-xxs,
+.mt-xxs,
+.mtb-xxs {
+  margin-top: $em-xxs;
+}
+
+.m-xxs,
+.mb-xxs,
+.mtb-xxs {
+  margin-bottom: $em-xxs;
+}
+
+.m-xxs,
+.ml-xxs,
+.mlr-xxs {
+  margin-left: $em-xxs;
+}
+
+.m-xxs,
+.mr-xxs,
+.mlr-xxs {
+  margin-right: $em-xxs;
+}
+
+/*  margin xs */
+.m-xs,
+.mt-xs,
+.mtb-xs {
+  margin-top: $em-xs;
+}
+
+.m-xs,
+.mb-xs,
+.mtb-xs {
+  margin-bottom: $em-xs;
+}
+
+.m-xs,
+.ml-xs,
+.mlr-xs {
+  margin-left: $em-xs;
+}
+
+.m-xs,
+.mr-xs,
+.mlr-xs {
+  margin-right: $em-xs;
+}
+
+/*  margin sm */
+.m-sm,
+.mt-sm,
+.mtb-sm {
+  margin-top: $em-sm;
+}
+
+.m-sm,
+.mb-sm,
+.mtb-sm {
+  margin-bottom: $em-sm;
+}
+
+.m-sm,
+.ml-sm,
+.mlr-sm {
+  margin-left: $em-sm;
+}
+
+.m-sm,
+.mr-sm,
+.mlr-sm {
+  margin-right: $em-sm;
+}
+
+/* margin md */
+.m-md,
+.mt-md,
+.mtb-md {
+  margin-top: $em-md;
+}
+
+.m-md,
+.mb-md,
+.mtb-md {
+  margin-bottom: $em-md;
+}
+
+.m-md,
+.ml-md,
+.mlr-md {
+  margin-left: $em-md;
+}
+
+.m-md,
+.mr-md,
+.mlr-md {
+  margin-right: $em-md;
+}
+
+/* margin base */
+.m-base,
+.mt-base,
+.mtb-base {
+  margin-top: $em-base;
+}
+
+.m-base,
+.mb-base,
+.mtb-base {
+  margin-bottom: $em-base;
+}
+
+.m-base,
+.ml-base,
+.mlr-base {
+  margin-left: $em-base;
+}
+
+.m-base,
+.mr-base,
+.mlr-base {
+  margin-right: $em-base;
+}
+
+/* margin lg */
+.m-lg,
 .mt-lg,
 .mtb-lg {
-  margin-top: 2em;
+  margin-top: $em-lg;
 }
+
+.m-lg,
 .mb-lg,
 .mtb-lg {
-  margin-bottom: 2em;
+  margin-bottom: $em-lg;
+}
+
+.m-lg,
+.ml-lg,
+.mlr-lg {
+  margin-left: $em-lg;
+}
+
+.m-lg,
+.mr-lg,
+.mlr-lg {
+  margin-right: $em-lg;
+}
+
+/* margin xl */
+.m-xl,
+.mt-xl,
+.mtb-xl {
+  margin-top: $em-xl;
+}
+
+.m-xl,
+.mb-xl,
+.mtb-xl {
+  margin-bottom: $em-xl;
+}
+
+.m-xl,
+.ml-xl,
+.mlr-xl {
+  margin-left: $em-xl;
+}
+
+.m-xl,
+.mr-xl,
+.mlr-xl {
+  margin-right: $em-xl;
+}
+
+/* margin xxl */
+.m-xxl,
+.mt-xxl,
+.mtb-xxl {
+  margin-top: $em-xxl;
+}
+
+.m-xxl,
+.mb-xxl,
+.mtb-xxl {
+  margin-bottom: $em-xxl;
+}
+
+.m-xxl,
+.ml-xxl,
+.mlr-xxl {
+  margin-left: $em-xxl;
+}
+
+.m-xxl,
+.mr-xxl,
+.mlr-xxl {
+  margin-right: $em-xxl;
 }

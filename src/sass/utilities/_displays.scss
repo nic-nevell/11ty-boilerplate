@@ -1,0 +1,26 @@
+/* displays */
+/* ========================= */
+
+%display-block {
+  display: block !important;
+}
+
+.d-block-flow * {
+  @extend %display-block;
+}
+
+.d-block {
+  @extend %display-block;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-none {
+  display: none !important;
+}

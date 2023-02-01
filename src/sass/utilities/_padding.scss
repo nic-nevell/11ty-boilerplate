@@ -1,12 +1,228 @@
-.pt-lg,
-.ptb-lg {
-  padding-top: 2em;
-}
-.pb-lg,
-.ptb-lg {
-  padding-bottom: 2em;
+@use '../abstracts/' as *;
+
+/* padding */
+/* ========================= */
+
+/*  padding xxxs */
+.p-xxxs,
+.pt-xxxs,
+.ptb-xxxs {
+  padding-top: $em-xxxs;
 }
 
-.p-lg {
-  padding: 2em;
+.p-xxxs,
+.pb-xxxs,
+.ptb-xxxs {
+  padding-bottom: $em-xxxs;
+}
+
+.p-xxxs,
+.pl-xxxs,
+.plr-xxxs {
+  padding-left: $em-xxxs;
+}
+
+.p-xxxs,
+.pr-xxxs,
+.plr-xxxs {
+  padding-right: $em-xxxs;
+}
+/*  padding xxs */
+.p-xxs,
+.pt-xxs,
+.ptb-xxs {
+  padding-top: $em-xxs;
+}
+
+.p-xxs,
+.pb-xxs,
+.ptb-xxs {
+  padding-bottom: $em-xxs;
+}
+
+.p-xxs,
+.pl-xxs,
+.plr-xxs {
+  padding-left: $em-xxs;
+}
+
+.p-xxs,
+.pr-xxs,
+.plr-xxs {
+  padding-right: $em-xxs;
+}
+
+/*  padding xs */
+.p-xs,
+.pt-xs,
+.ptb-xs {
+  padding-top: $em-xs;
+}
+
+.p-xs,
+.pb-xs,
+.ptb-xs {
+  padding-bottom: $em-xs;
+}
+
+.p-xs,
+.pl-xs,
+.plr-xs {
+  padding-left: $em-xs;
+}
+
+.p-xs,
+.pr-xs,
+.plr-xs {
+  padding-right: $em-xs;
+}
+
+/*  padding sm */
+.p-sm,
+.pt-sm,
+.ptb-sm {
+  padding-top: $em-sm;
+}
+
+.p-sm,
+.pb-sm,
+.ptb-sm {
+  padding-bottom: $em-sm;
+}
+
+.p-sm,
+.pl-sm,
+.plr-sm {
+  padding-left: $em-sm;
+}
+
+.p-sm,
+.pr-sm,
+.plr-sm {
+  padding-right: $em-sm;
+}
+
+/* padding md */
+.p-md,
+.pt-md,
+.ptb-md {
+  padding-top: $em-md;
+}
+
+.p-md,
+.pb-md,
+.ptb-md {
+  padding-bottom: $em-md;
+}
+
+.p-md,
+.pl-md,
+.plr-md {
+  padding-left: $em-md;
+}
+
+.p-md,
+.pr-md,
+.plr-md {
+  padding-right: $em-md;
+}
+
+/* padding base */
+.p-base,
+.pt-base,
+.ptb-base {
+  padding-top: $em-base;
+}
+
+.p-base,
+.pb-base,
+.ptb-base {
+  padding-bottom: $em-base;
+}
+
+.p-base,
+.pl-base,
+.plr-base {
+  padding-left: $em-base;
+}
+
+.p-base,
+.pr-base,
+.plr-base {
+  padding-right: $em-base;
+}
+
+/* padding lg */
+.p-lg,
+.pt-lg,
+.ptb-lg {
+  padding-top: $em-lg;
+}
+
+.p-lg,
+.pb-lg,
+.ptb-lg {
+  padding-bottom: $em-lg;
+}
+
+.p-lg,
+.pl-lg,
+.plr-lg {
+  padding-left: $em-lg;
+}
+
+.p-lg,
+.pr-lg,
+.plr-lg {
+  padding-right: $em-lg;
+}
+
+/* padding xl */
+.p-xl,
+.pt-xl,
+.ptb-xl {
+  padding-top: $em-xl;
+}
+
+.p-xl,
+.pb-xl,
+.ptb-xl {
+  padding-bottom: $em-xl;
+}
+
+.p-xl,
+.pl-xl,
+.plr-xl {
+  padding-left: $em-xl;
+}
+
+.p-xl,
+.pr-xl,
+.plr-xl {
+  padding-right: $em-xl;
+}
+
+/* padding xxl */
+.p-xxl,
+.pt-xxl,
+.ptb-xxl {
+  padding-top: $em-xxl;
+}
+
+.p-xxl,
+.pb-xxl,
+.ptb-xxl {
+  padding-bottom: $em-xxl;
+}
+
+.p-xxl,
+.pl-xxl,
+.plr-xxl {
+  padding-left: $em-xxl;
+}
+
+.p-xxl,
+.pr-xxl,
+.plr-xxl {
+  padding-right: $em-xxl;
 }
