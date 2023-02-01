@@ -1,1 +1,9 @@
-{}
+{
+  "bg-colors": [
+    {
+      "base": "#a90f0f",
+      "primary": "#dbd5d5",
+      "secondary": "#1af40a"
+    }
+  ]
+}
