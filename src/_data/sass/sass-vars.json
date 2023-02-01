@@ -1,6 +1,5 @@
 {
   "tags": "sass",
-
   "bg-color": {
     "base": "gray",
     "primary": "blue",
@@ -10,5 +9,7 @@
     "base": "gray",
     "primary": "darkgray",
     "secondary": "white"
-  }
+  },
+  "title": "New Theme",
+  "bg-primary": "green"
 }
