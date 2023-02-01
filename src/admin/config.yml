@@ -27,7 +27,7 @@ collections:
     files:
         - label: 'Themes'
           name: 'themes'
-          file: './src/data/sass-vars.json'
+          file: './src/_data/sass-vars.json'
           fields:
             - label: 'Text Colors'
               name: bg-colors
