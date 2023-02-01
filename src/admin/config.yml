@@ -23,14 +23,15 @@ collections:
 
   - name: "sass-vars"
     label: "Themes"
+    public_folder: "src/_data/sass"
     folder: "src/_data/sass"
     create: true
     delete: true
     extension: json
     format: json
     editor:
-      preview: true
-    slug: "meta"
+    preview: true
+    slug: "sass-vars"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Primary", name: "bg-primary", widget: "string"}
