@@ -29,8 +29,6 @@ collections:
     extension: json
     format: json
     slug: test
-    editor:
-      preview: true
       - fields:
         - {label: Background Color, name: bg-primary, widget: color}
         - {label: Text Color, name: text-primary, widget: color}
