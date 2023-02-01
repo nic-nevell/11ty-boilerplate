@@ -29,8 +29,13 @@ collections:
         label: "Themes"
         name: "theme"
         fields:
-          - {label: "Background", name: bg-color, widget: string}
-          - {label: "Text", name: text-color, widget: string}
+            name: bg-color
+            label: Background Color
+            widget: list
+            fields:
+            - {label: "Base", name: bg-base, widget: string}
+            - {label: "Primary", name: bg-primary, widget: string}
+            - {label: "Secondary", name: bg-secondary, widget: string}
 
   - name: "pages"
     label: "Pages"
