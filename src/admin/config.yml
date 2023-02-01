@@ -25,6 +25,11 @@ collections:
     label: "Themes"
     folder: "src/_data/sass"
     create: true
+    delete: false
+    extension: json
+    format: json
+    editor:
+      preview: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Primary", name: "bg-primary", widget: "string"}
