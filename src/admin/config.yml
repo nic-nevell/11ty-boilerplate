@@ -21,20 +21,32 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: 'custom'
-    label: 'Custom'
-    description: "Change Themes"
-    folder: ./src/_data/sass/
-    public_folder: "./src/_data/sass/"
+
+  - label: "Pages"
+    name: "pages"
     files:
-        - label: 'Themes'
-          name: 'themes'
-          file: './src/_data/sass-vars.json'
-          fields:
-            - label: 'Text Colors'
-              name: bg-colors
-              widget: list
-              fields:
-                - {label: Base, name: name, widget: color}
-                - {label: primary, name: position, widget: color}
-                - {label: Secondary, name: secondary, widget: color}
+      - label: "About Page"
+        name: "about"
+        file: "./src/_data/sass/sass-vars.json"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}
+      - label: "Locations Page"
+        name: "locations"
+        file: "site/content/locations.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Locations
+            name: locations
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Address, name: address, widget: string}
