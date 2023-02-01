@@ -26,15 +26,14 @@ collections:
     description: "Change Themes"
     files:
         - label: 'Themes'
-          name: 'sass-vars'
+          name: 'themes'
           file: './src/data/sass-vars.json'
           fields:
-            - {label: Title, name: title, widget: string}
-            - {label: Intro, name: intro, widget: markdown}
+            - { label: 'Background Color', name: 'bg-color', widget: 'list' }
             - label: Team
               name: team
               widget: list
               fields:
-                - {label: Name, name: name, widget: string}
-                - {label: Position, name: position, widget: string}
-                - {label: Photo, name: photo, widget: image}
+                - {label: Base, name: name, widget: color}
+                - {label: primary, name: position, widget: color}
+                - {label: Secondary, name: secondary, widget: color}
