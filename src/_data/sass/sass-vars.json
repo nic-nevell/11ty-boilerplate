@@ -1,16 +1,12 @@
 {
-  "themes": [
-    {
-      "bg-color": {
-        "base": "gray",
-        "primary": "blue",
-        "secondary": "pink"
-      },
-      "text-color": {
-        "base": "gray",
-        "primary": "darkgray",
-        "secondary": "white"
-      }
-    }
-  ]
+  "bg-color": {
+    "base": "gray",
+    "primary": "blue",
+    "secondary": "pink"
+  },
+  "text-color": {
+    "base": "gray",
+    "primary": "darkgray",
+    "secondary": "white"
+  }
 }
