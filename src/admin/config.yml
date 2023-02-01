@@ -30,7 +30,7 @@ collections:
         file: "src/_data/sass/sass-vars.json"
         fields:
           - label: "Background Colors"
-            name: "bg-colors"
+            name: "bg-color"
             widget: "list"
             fields:
               - {label: "Base", name: "base", widget: "color"}
