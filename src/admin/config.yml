@@ -21,6 +21,23 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
+  - name: "tourInfo"
+    label: "Tour Info"
+    description: "Upcoming tours and their availability"
+    files:
+      - label: "tour"
+        name: "Tour"
+        file: "src/data/sass/tours.json"
+        fields:
+          - label: "Tour List"
+            name: "tourList"
+            widget: "list"
+            fields:
+              - {label: "Tour Date", name: "date", widget: "datetime"}
+              - {label: "Total Places", name: "totalPlaces", widget: "number"}
+              - {label: "Filled Places", name: "filledPlaces", widget: "number"}
+
+
   - name: "custom"
     label: "Custom"
     delete: true
@@ -28,14 +45,9 @@ collections:
       - file: "src/_data/sass/test.json"
         label: "Themes"
         name: "theme"
-        fields:
-            name: bg-color
-            label: Background Color
-            widget: list
             fields:
-            - {label: "Base", name: bg-base, widget: string}
-            - {label: "Primary", name: bg-primary, widget: string}
-            - {label: "Secondary", name: bg-secondary, widget: string}
+          - {label: "Background", name: bg-color, widget: string}
+          - {label: "Text", name: text-color, widget: string}
 
   - name: "pages"
     label: "Pages"
