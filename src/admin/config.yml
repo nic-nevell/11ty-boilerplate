@@ -21,9 +21,11 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - label: 'Custom'
-    name: 'custom'
+  - name: 'custom'
+    label: 'Custom'
     description: "Change Themes"
+    folder: ./src/_data/sass/
+    public_folder: "./src/_data/sass/"
     files:
         - label: 'Themes'
           name: 'themes'
