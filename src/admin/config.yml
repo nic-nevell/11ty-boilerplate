@@ -36,6 +36,13 @@ collections:
               - {label: "Base", name: "base", widget: "color"}
               - {label: "Primary", name: "primary", widget: "color"}
               - {label: "Secondary", name: "secondary", widget: "color"}
+          - label: "Text Colors"
+            name: "text-color"
+            widget: "list"
+            fields:
+              - {label: "Base", name: "base", widget: "color"}
+              - {label: "Primary", name: "primary", widget: "color"}
+              - {label: "Secondary", name: "secondary", widget: "color"}
       
 
   - name: "pages"
