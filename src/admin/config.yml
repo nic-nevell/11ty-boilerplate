@@ -23,7 +23,6 @@ collections:
 
   - name: 'sass-vars' 
     label: 'Themes'
-    label_singular: 'Team Member'
     editor:
     preview: false
     delete: false
