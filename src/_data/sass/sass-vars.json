@@ -2,14 +2,14 @@
   "bg-color": [
     {
       "base": "#e70303",
-      "primary": "#dcf003",
+      "primary": "#0000ff",
       "secondary": "#9f0d4a"
     }
   ],
   "text-color": [
     {
       "base": "#e7e3e3",
-      "primary": "#edb1b1",
+      "primary": "#ededed",
       "secondary": "#1b0303"
     }
   ]
