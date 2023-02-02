@@ -21,6 +21,24 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
+  - name: "meta-tags"
+    label: "Meta Tags"
+    description: "Add and Edit Meta Data Tags"
+    create: true
+    delete: true
+    files:
+      - label: "Home"
+        name: "index"
+        file: "src/_data/meta/home.json"
+        fields:
+          - label: "Home Page Meta Tags"
+            name: "home-tags"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Content", name: "content", widget: "string"}
+      
+
   - name: "custom"
     label: "Custom"
     description: "Custom Themes"
