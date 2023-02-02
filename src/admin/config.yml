@@ -36,7 +36,7 @@ collections:
             widget: "list"
             fields:
               - {label: "Name", name: "name", widget: "string"}
-              - {label: "Content", name: "content", widget: "string"}
+              - {label: "Content", name: "content", widget: "text"}
       
 
   - name: "custom"
