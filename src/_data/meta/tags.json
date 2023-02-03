@@ -21,8 +21,12 @@
   ],
   "page_meta_tags": [
     {
-      "name": "tilllll",
-      "content": "ajdpjfjpoajdfopajdfop"
+      "name": "title",
+      "content": "some title content"
+    },
+    {
+      "name": "description",
+      "content": "some page description"
     }
   ]
 }
