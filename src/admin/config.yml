@@ -27,9 +27,10 @@ collections:
     folder: "/src/_data/"
     create: true
     delete: true
-    slug: "{{ title }}"
+    extension: "json"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Content: "content", widget: "text" }
 
 
   - name: "meta-tags"
