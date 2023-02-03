@@ -30,17 +30,7 @@ collections:
     slug: "{{ title }}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-        files:
-          - label: "File Name"
-            extension: "json"
-            name: "file_name"
-            file: "{{ title }}.json"
-            widget: "list"
-            create: true
-            delete: true
-            fields:
-              - {label: "Name", name: "name", widget: "string" }
-              - {label: "Content", name: "content", widget: "text" }
+
 
   - name: "meta-tags"
     label: "Meta Tags"
