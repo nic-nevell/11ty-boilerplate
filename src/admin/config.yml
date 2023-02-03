@@ -32,9 +32,6 @@ collections:
     widget: list
     fields:
       - { label: "Page", name: page, widget: "list" }
-        fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Content", name: "content", widget: "text" }
 
 
   - name: "meta-tags"
@@ -43,12 +40,12 @@ collections:
     create: true
     delete: true
     files:
-      - label: "Home"
+      - label: "tags"
         name: "index"
-        file: "src/_data/meta/home.json"
+        file: "src/_data/meta/tags.json"
         fields:
-          - label: "Home Page Meta Tags"
-            name: "home_tags"
+          - label: "Page Meta Tags"
+            name: "page_meta_tags"
             widget: "list"
             fields:
               - {label: "Name", name: "name", widget: "string"}
