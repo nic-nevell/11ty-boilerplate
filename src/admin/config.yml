@@ -40,9 +40,10 @@ collections:
     create: true
     delete: true
     files:
-      - label: "tags"
+      - label: "Tags"
         name: "index"
         file: "src/_data/meta/tags.json"
+        widget: "list"
         fields:
           - label: "Page Meta Tags"
             name: "page_meta_tags"
