@@ -4,7 +4,7 @@
 {% set page_name = 'home' %}
 
 {% block meta %}
-{% for item in meta.tags.home %}
+{% for item in meta.home.home_tags %}
 <meta name="{{ item.name }}" content="{{ item.content }}">
 {% endfor %}
 {% endblock %}

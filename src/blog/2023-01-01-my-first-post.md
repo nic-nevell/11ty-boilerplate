@@ -4,7 +4,7 @@ tags: post
 title: My First Post
 author: Nic Nevell
 date: 2023-01-01
-image: /images/blog/article-1
+image: /images/blog/article-1.jgp
 imageALt: image description
 
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga? Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi non distinctio.

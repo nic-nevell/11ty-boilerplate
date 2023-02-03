@@ -21,6 +21,27 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
+  - name: "data"
+    label: "Data"
+    create: true
+    delete: true
+    folder: "./src/_data/"
+    slug: "{{ title }}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+        files:
+          - label: "File Name"
+            extension: "json"
+            name: "file_name"
+            file: "{{ title }}.json"
+            widget: "list"
+            create: true
+            delete: true
+            - fields:
+              - {label: "Name", name: "name", widget: "string" }
+              - {label: "Content", name: "content", widget: "text" }
+
+
   - name: "meta-tags"
     label: "Meta Tags"
     description: "Add and Edit Meta Data Tags"
@@ -32,13 +53,12 @@ collections:
         file: "src/_data/meta/home.json"
         fields:
           - label: "Home Page Meta Tags"
-            name: "home-tags"
+            name: "home_tags"
             widget: "list"
             fields:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Content", name: "content", widget: "text"}
       
-
   - name: "custom"
     label: "Custom"
     description: "Custom Themes"
@@ -62,7 +82,6 @@ collections:
               - {label: "Primary", name: "primary", widget: "color"}
               - {label: "Secondary", name: "secondary", widget: "color"}
       
-
   - name: "pages"
     label: "Pages"
     delete: true

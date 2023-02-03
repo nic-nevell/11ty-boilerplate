@@ -2,6 +2,7 @@
 	<article class="article-snippet">
 		<div class="content | col-gap-sm">
 			<h3 class="post-heading">{{ post.data.title }}</h3>
+			<span>{{ post.data.cleanImage }}</span>
 			<span>{{ post.data.author}}</span>
 			<span>{{ post.data.date | postDate}}</span>
 			<p>{{ post.data.description }}</p>
@@ -11,10 +12,10 @@
 		</div>
 
 		<picture class="aspect-1-1">
-			<source type="image/webp" srcset="{{ post.data.image}}.webp">
-			<source type="image/jpeg" srcset="{{ post.data.image}}.jpg">
+			<source type="image/webp" srcset="{{ post.data.cleanImage}}.webp">
+			<source type="image/jpeg" srcset="{{ post.data.cleanImage}}.jpg">
 
-			<img src="{{ post.data.image}}.jpg" alt="">
+			<img src="{{ post.data.cleanImage}}.jpg" alt="{{ post.data.imageAlt }}">
 		</picture>
 	</article>
 </li>
