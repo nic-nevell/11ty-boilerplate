@@ -31,6 +31,7 @@ collections:
     slug: "{{slug}}"
     widget: list
     fields:
+      - { label: "Page", name: title, widget: "list" }
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Content", name: "content", widget: "text" }
 
