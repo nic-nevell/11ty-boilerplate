@@ -30,7 +30,7 @@ collections:
     extension: "json"
     fields:
       - { label: "Name", name: "name", widget: "string" }
-      - { label: "Content: "content", widget: "text" }
+      - { label: "Content", name: "content", widget: "text" }
 
 
   - name: "meta-tags"
