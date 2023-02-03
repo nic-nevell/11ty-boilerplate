@@ -30,9 +30,12 @@ collections:
     extension: "json"
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Content", name: "content", widget: "text" }
+      - label: "Page"
+        name: "title"
+        widget: "list"
+        fields:
+        - { label: "Name", name: "name", widget: "string" }
+        - { label: "Content", name: "content", widget: "text" }
 
 
   - name: "meta-tags"
