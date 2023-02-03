@@ -28,12 +28,13 @@ collections:
     create: true
     delete: true
     extension: "json"
-    slug: "{{slug}}"
+    slug: "{{page}}"
     widget: list
     fields:
       - { label: "Page", name: page, widget: "list" }
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Content", name: "content", widget: "text" }
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Content", name: "content", widget: "text" }
 
 
   - name: "meta-tags"
