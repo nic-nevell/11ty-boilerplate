@@ -28,9 +28,9 @@ collections:
     create: true
     delete: true
     extension: "json"
-    slug: "{{title}}"
+    slug: "{{slug}}"
     fields:
-      - { label: "Page", name: "title", widget: "list" }
+      - {label: "Title", name: "title", widget: "string"}
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Content", name: "content", widget: "text" }
 
