@@ -34,8 +34,6 @@ collections:
       - label: "Meta Tags"
         name: "meta_tags"
         widget: "list"
-        create: true
-        delete: true
         - { label: "Name", name: "name", widget: "string" }
         - { label: "Content", name: "content", widget: "text" }
 
