@@ -1,9 +1,14 @@
 {
   "global": [
-    { "name": "author", "content": "nic-nevell" },
-    { "name": "copyright", "content": "2022 www.weberdy.com" }
+    {
+      "name": "author",
+      "content": "nic-nevell"
+    },
+    {
+      "name": "copyright",
+      "content": "2022 www.weberdy.com"
+    }
   ],
-
   "home": [
     {
       "name": "title",
@@ -12,6 +17,12 @@
     {
       "name": "description",
       "content": "Meta descriptions can technically be any length, but Google generally truncates snippets to ~155-160 characters. It's best to keep meta descriptions long enough that they're sufficiently descriptive, so we recommend descriptions between 50 and 160 characters."
+    }
+  ],
+  "page_meta_tags": [
+    {
+      "name": "tilllll",
+      "content": "ajdpjfjpoajdfopajdfop"
     }
   ]
 }
