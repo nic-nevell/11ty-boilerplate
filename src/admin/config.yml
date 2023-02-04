@@ -18,7 +18,7 @@ collections:
             name: tags
             widget: list
             fields:
-            - {label: Content, name: content, widget: text}
+            - {label: Name , name: name, widget: spring}
             - {label: Content, name: content, widget: text}
 
       - label: "Blog Page"
