@@ -6,6 +6,36 @@ media_folder: "src/assets/images/blog/"
 public_folder: "/images/blog/"
 
 collections:
+  - label: "Meta Tags"
+    name: "meta_tags"
+    description: Add and Edit Meta Tags
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "src/_data/meta/about.json"
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Content, name: content, widget: text}
+      - label: "Blog Page"
+        name: "blog"
+        file: "src/_data/meta/blog.json"
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Content, name: content, widget: text}
+      - label: "Global Page"
+        name: "Global"
+        file: "src/_data/meta/Global.json"
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Content, name: content, widget: text}
+      - label: "Home Page"
+        name: "home"
+        file: "src/_data/meta/home.json"
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Content, name: content, widget: text}
+          
+collections:
   - name: "blog"
     label: "Blog"
     folder: "src/blog"
