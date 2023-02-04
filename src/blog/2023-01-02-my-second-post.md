@@ -6,8 +6,7 @@ description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   non distinctio.
 image: /images/blog/article-2.jpg
 imageAlt: Cat Stretching
-tags:
-  - post
+tags: post
 author: Nic Nevell
 date: 2023-01-02
 ---

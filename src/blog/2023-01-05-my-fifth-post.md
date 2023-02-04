@@ -3,8 +3,7 @@ title: My Fifth Post
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga? Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi non distinctio.
 image: /images/blog/article-4
 imageALt: image description
-tags:
-	- ['post', 'featured']
+tags: ['post', 'featured']
 author: Nic Nevell
 date: 2023-01-05
 ---

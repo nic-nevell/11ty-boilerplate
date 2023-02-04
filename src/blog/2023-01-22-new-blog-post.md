@@ -6,8 +6,7 @@ description: Blog writing is a form of online content creation that involves
   opinions, and advice.
 image: /images/blog/hero-001.jpg
 imageAlt: Cat Stretching
-tags:
-  - post
+tags: post
 author: Nic Nevell
 date: 2023-01-22T08:29:43.231Z
 ---

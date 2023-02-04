@@ -3,8 +3,7 @@ title: 'Latest PosT '
 description: Breaking Newa
 image: /images/blog/article-5.jpg
 imageAlt: laptop
-tags:
-  - post
+tags: post
 author: nic nev
 date: 2023-02-01T16:39:57.073Z
 ---
