@@ -15,7 +15,7 @@ collections:
         file: "src/_data/meta/about.json"
         fields:
           - label: About Page Meta Tags
-            name: meta_tags
+            name: tags
             widget: list
             fields:
             - {label: Content, name: content, widget: text}
