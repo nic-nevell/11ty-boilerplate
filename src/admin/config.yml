@@ -14,20 +14,27 @@ collections:
         name: "about"
         file: "src/_data/meta/about.json"
         fields:
-          - {label: Name, name: name, widget: string}
-          - {label: Content, name: content, widget: text}
+          - label: About Page Meta Tags
+            name: meta_tags
+            widget: list
+            fields:
+            - {label: Content, name: content, widget: text}
+            - {label: Content, name: content, widget: text}
+
       - label: "Blog Page"
         name: "blog"
         file: "src/_data/meta/blog.json"
         fields:
           - {label: Name, name: name, widget: string}
           - {label: Content, name: content, widget: text}
+
       - label: "Global Page"
         name: "Global"
         file: "src/_data/meta/Global.json"
         fields:
           - {label: Name, name: name, widget: string}
           - {label: Content, name: content, widget: text}
+
       - label: "Home Page"
         name: "home"
         file: "src/_data/meta/home.json"
