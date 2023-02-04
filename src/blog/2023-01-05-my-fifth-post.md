@@ -1,13 +1,12 @@
 ---
-tags: ['post', 'featured']
-
 title: My Fifth Post
-author: Nic Nevell
-date: 2023-01-05
+description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga? Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi non distinctio.
 image: /images/blog/article-4
 imageALt: image description
-
-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga? Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi non distinctio.
+tags:
+	- ['post', 'featured']
+author: Nic Nevell
+date: 2023-01-05
 ---
 
 Blog writing is a form of online content creation that involves creating and publishing written content on a website or platform. Blogs can be written on a wide range of topics, including personal experiences, news, opinions, and advice. Blogging has become increasingly popular in recent years, as it allows individuals and organizations to share their thoughts and ideas with a global audience.

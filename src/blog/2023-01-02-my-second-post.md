@@ -1,6 +1,4 @@
 ---
-author: Nic Nevell
-slug: 2023-01-02-my-second-post
 title: My Second Post
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga?
@@ -8,8 +6,9 @@ description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   non distinctio.
 image: /images/blog/article-2.jgp
 imageAlt: Cat Stretching
-imageALt: image description
-tags: post
+tags:
+  - post
+author: Nic Nevell
 date: 2023-01-02
 ---
 
