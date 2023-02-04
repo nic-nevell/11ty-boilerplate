@@ -35,7 +35,6 @@ collections:
           - {label: Name, name: name, widget: string}
           - {label: Content, name: content, widget: text}
           
-collections:
   - name: "blog"
     label: "Blog"
     folder: "src/blog"
