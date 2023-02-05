@@ -12,10 +12,10 @@
 		</div>
 
 		<picture class="aspect-1-1">
-			<source type="image/webp" srcset="{{ post.data.image | cleanImageExtension }}.webp">
-			<source type="image/jpeg" srcset="{{ post.data.image | cleanImageExtension }}.jpg">
+			<source type="image/webp" srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}.webp">
+			<source type="image/jpeg" srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}.jpg">
 
-			<img src="{{ post.data.image | cleanImageExtension }}.jpg" alt="{{ post.data.imageAlt }}">
+			<img src="/images/uploads/{{ post.data.image | cleanImageExtension }}.jpg" alt="{{ post.data.imageAlt }}">
 		</picture>
 	</article>
 </li>

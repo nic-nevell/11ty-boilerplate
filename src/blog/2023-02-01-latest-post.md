@@ -1,7 +1,7 @@
 ---
 title: 'Latest PosT '
 description: Breaking Newa
-image: /images/blog/article-5.jpg
+image: article-5.jpg
 imageAlt: laptop
 tags: post
 author: nic nev
