@@ -1,10 +1,16 @@
 ---
-title: My Fifth Post
-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga? Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi non distinctio.
-image: article-4
-imageALt: image description
-tags: ['post', 'featured']
+imageAlt: someone typing on a laptop
 author: Nic Nevell
+imageALt: image description
+title: My Fifth Post
+description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+  Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga?
+  Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi
+  non distinctio.
+image: /images/uploads/article-5.jpg
+tags:
+  - post
+  - featured
 date: 2023-01-05
 ---
 
