@@ -11,6 +11,11 @@
 	<meta name="{{ item.name }}" content="{{ item.content }}">
 	{% endfor %}
 
+	{% for item in meta.{{ page_name }} -%}
+	<meta name="{{ item.name }}" content="{{ item.content }}">
+	{% endfor %}
+
+
 	{% if title %}
 	<meta name="title" content="{{ title }}">
 	{% endif %}

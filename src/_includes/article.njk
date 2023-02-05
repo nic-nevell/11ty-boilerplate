@@ -8,10 +8,10 @@ layout: 'base.njk'
 			<h1>{{ title }}</h1>
 			<!-- picture -->
 			<picture class="aspect-3-2">
-				<source type="image/webp" srcset="{{ image | cleanImageExtension }}.webp">
-				<source type="image/jpeg" srcset="{{ image | cleanImageExtension }}.jpg">
+				<source type="image/webp" srcset="/images/uploads/{{ image | cleanImageExtension }}.webp">
+				<source type="image/jpeg" srcset="/images/uploads/{{ image | cleanImageExtension }}.jpg">
 
-				<img src="{{ image | cleanImageExtension }}.jpg" alt="{{ imageAlt }}">
+				<img src="/images/uploads/{{ image | cleanImageExtension }}.jpg" alt="{{ imageAlt }}">
 			</picture>
 
 			{{ content | safe }}
