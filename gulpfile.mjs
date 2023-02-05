@@ -198,9 +198,9 @@ export const siteMap = async () => {
 //----------------------------------
 export const testDev = series(
   clean,
-  compileCss,
+  // compileCss,
   // bundleJs,
-  // processImages,
+  processImages,
   // processSvgs
   gulpWatch
 )

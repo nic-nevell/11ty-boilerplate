@@ -7,6 +7,7 @@ public_folder: "/images/uploads/"
 site_url: "https://11ty-boilerplate.netlify.app/"
 display_url: "https://11ty-boilerplate.netlify.app/"
 # logo_url: https://your-site.com/images/logo.svg
+publish_mode: editorial_workflow
 
 collections:
   - label: "Meta Tags"
@@ -51,6 +52,7 @@ collections:
     create: true
     delete: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: blog/{{slug}}
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
