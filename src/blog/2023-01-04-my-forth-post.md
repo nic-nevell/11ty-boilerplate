@@ -7,7 +7,7 @@ description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga?
   Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi
   non distinctio.
-image: /images/uploads/article-4.jpg
+image: article-4.jpg
 tags:
   - post
   - featured
