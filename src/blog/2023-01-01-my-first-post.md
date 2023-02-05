@@ -1,10 +1,14 @@
 ---
-title: My First Post
-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga? Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi non distinctio.
-image: article-1.jgp
-imageALt: image description
-tags: post
+imageAlt: Laptop on chair
 author: Nic Nevell
+imageALt: image description
+title: My First Post
+description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+  Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga?
+  Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi
+  non distinctio.
+image: /images/uploads/article-1.jpg
+tags: post
 date: 2023-01-01
 ---
 
