@@ -3,13 +3,30 @@ backend:
   branch: main
 
 media_folder: "src/assets/images/uploads/"
-public_folder: "/images/uploads/"
+# public_folder: "/images/uploads/"
 site_url: "https://11ty-boilerplate.netlify.app/"
 display_url: "https://11ty-boilerplate.netlify.app/"
 # logo_url: https://your-site.com/images/logo.svg
 publish_mode: editorial_workflow
 
 collections:
+  - label: "Blog"
+    name: "blog"
+    folder: "src/blog"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: blog/{{slug}}
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Image Description", name: "imageAlt", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "string", default: ["post"]}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - label: "Meta Tags"
     name: "meta_tags"
     description: "Add and Edit Meta Tags"
@@ -44,31 +61,14 @@ collections:
         file: "src/_data/meta/home.json"
         fields:
           - {label: Name, name: name, widget: string}
-          - {label: Content, name: content, widget: text}
-          
-  - name: "blog"
-    label: "Blog"
-    folder: "src/blog"
-    create: true
-    delete: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    preview_path: blog/{{slug}}
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Featured Image", name: "image", widget: "image"}
-      - {label: "Image Description", name: "imageAlt", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "string", default: ["post"]}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+          - {label: Content, name: content, widget: text}         
       
-  - name: "custom"
-    label: "Custom"
+  - label: "Themes"
+    name: "themes"
     description: "Custom Themes"
     files:
-      - label: "themes"
-        name: "Themes"
+      - label: "Theme Colors"
+        name: "themes_colors"
         file: "src/_data/sass/sass-vars.json"
         fields:
           - label: "Background Colors"
@@ -85,24 +85,3 @@ collections:
               - {label: "Base", name: "base", widget: "color"}
               - {label: "Primary", name: "primary", widget: "color"}
               - {label: "Secondary", name: "secondary", widget: "color"}
-      
-  - name: "pages"
-    label: "Pages"
-    delete: true
-    files:
-      - file: "src/pages/index.md"
-        label: "Home"
-        name: "index"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: "Over de Europeanen titel", name: about_title, widget: string}
-          - {label: "Over de Europeanen content", name: about_content, widget: text}
-          - {label: "Over de Europeanen meer knop titel", name: about_button_title, widget: string}
-          - {label: "Nieuws titel", name: news_title, widget: string}
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title hoofdkaart", name: "title", widget: "string"}
-          - {label: "Body hoofdkaart", name: "body", widget: "markdown"}
