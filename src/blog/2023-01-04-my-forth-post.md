@@ -1,10 +1,16 @@
 ---
-title: My Forth Post
-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga? Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi non distinctio.
-image: article-4.jgp
-imageALt: image description
-tags: ['post', 'featured']
+imageAlt: people working on laptops
 author: Nic Nevell
+imageALt: image description
+title: My Forth Post
+description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+  Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga?
+  Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi
+  non distinctio.
+image: /images/uploads/article-4.jpg
+tags:
+  - post
+  - featured
 date: 2023-01-04
 ---
 
