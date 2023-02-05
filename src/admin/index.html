@@ -15,18 +15,7 @@
 
 	<script>CMS.registerPreviewStyle('./post.css');</script>
 
-	<script>
-		var PostPreview = createClass({
-			render: function () {
-				var entry = this.props.entry;
-				var image = entry.getIn(['data', 'image']);
-				var bg = this.props.getAsset(image);
-				return h('div', { "className": "text" }, this.props.widgetFor('body'));
-			}
-		}); /* simple preview with only the body, easy to see the difference */
 
-		CMS.registerPreviewTemplate("blog", PostPreview);
-	</script>
 
 </body>
 
