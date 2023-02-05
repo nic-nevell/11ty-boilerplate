@@ -2,13 +2,16 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "src/assets/images/blog/"
-public_folder: "/images/blog/"
+media_folder: "src/assets/images/uploads/"
+public_folder: "/images/uploads/"
+site_url: "https://11ty-boilerplate.netlify.app/"
+display_url: "https://11ty-boilerplate.netlify.app/"
+# logo_url: https://your-site.com/images/logo.svg
 
 collections:
   - label: "Meta Tags"
     name: "meta_tags"
-    description: Add and Edit Meta Tags
+    description: "Add and Edit Meta Tags"
     files:
       - label: "About Page"
         name: "about"
