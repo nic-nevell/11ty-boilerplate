@@ -24,7 +24,6 @@ collections:
             fields:
               - {label: Name , name: name, widget: string}
               - {label: Content, name: content, widget: text}
-
       - label: "Blog Page"
         name: "blog"
         file: "src/_data/meta/blog.json"
@@ -35,6 +34,7 @@ collections:
             fields:
               - {label: Name , name: name, widget: select}
               - {label: Content, name: content, widget: text}
+
 
   - label: "Themes"
     name: "themes"
