@@ -10,6 +10,20 @@ display_url: "https://11ty-boilerplate.netlify.app/"
 publish_mode: editorial_workflow
 
 collections:
+  - label: "Widgets"
+    name: "widgets"
+    description: "Edit Widgets"
+    files:
+      - label: "Banner Widget"
+        name: "banner_widget"
+        file: "src/_data/widgets/banner-widget.json"
+        preview_path: /index.html
+        fields:
+          - {label: Banner Text, name: text, widget: text}
+          - {label: Background Color, name: bg_color, widget: color}
+          - {label: Text Color, name: text_color, widget: color}
+          - {label: Font Family, name: font_family, widget: string}
+
   - label: "Meta Tags"
     name: "meta_tags"
     preview_path: /index.html
