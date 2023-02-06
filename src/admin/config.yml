@@ -58,7 +58,7 @@ collections:
             name: tags
             widget: list
             fields:
-              - {label: Name , name: name, widget: string}
+              - {label: Name , name: name, widget: string, pattern: ['/^[a-z]+$/', use lowercase]}
               - {label: Content, name: content, widget: text}
 
       - label: "Blog Page"
@@ -79,7 +79,7 @@ collections:
           - label: Global Meta Tags
             name: tags
             widget: list
-              fields:
+            fields:
               - {label: Name , name: name, widget: string}
               - {label: Content, name: content, widget: text}
 
