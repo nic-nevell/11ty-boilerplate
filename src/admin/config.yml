@@ -32,8 +32,6 @@ collections:
             name: tags
             widget: list
             fields:
-              - {label: Name , name: name, widget: select}
-              - {label: Content, name: content, widget: text}
 
 
   - label: "Themes"
