@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	{# my page tags #}
-	{% for item in meta.global -%}
+	{% for item in meta.global.tags -%}
 	<meta name="{{ item.name }}" content="{{ item.content }}">
 	{% endfor %}
 

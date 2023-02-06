@@ -19,9 +19,9 @@ collections:
     preview_path: blog/{{slug}}
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Description", name: "description", widget: "string", pattern: ['^.{50,80}$', "Between 50-80 characters"]}
       - {label: "Featured", name: "featured", widget: "boolean", default: false}
-      - {label: "Featured Image", name: "image", widget: "image" }
+      - {label: "Featured Image", name: "image", widget: "image", hint: Whether or no to include article snippet in featured section }
       - {label: "Image Description", name: "imageAlt", widget: "string" , description: "Not visible when published"}
       - {label: "Tags", name: "tags", widget: "string", default: ["post"], hide: true }
       - {label: "Author", name: "author", widget: "string"}
@@ -40,7 +40,7 @@ collections:
             name: tags
             widget: list
             fields:
-            - {label: Name , name: name, widget: string}
+            - {label: Name , name: name, widget: string, pattern: '/^[a-z]+$/' use lowercase}
             - {label: Content, name: content, widget: text}
 
       - label: "Blog Page"
@@ -51,12 +51,12 @@ collections:
             name: tags
             widget: list
             fields:
-            - {label: Name , name: name, widget: string}
+            - {label: Name , name: name, widget: select,  options: ["author", "description", "keywords"]}
             - {label: Content, name: content, widget: text}
 
       - label: "Global"
         name: "Global"
-        file: "src/_data/meta/Global.json"
+        file: "src/_data/meta/global.json"
         fields:
           - label: Global Meta Tags
             name: tags
