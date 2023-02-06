@@ -30,7 +30,7 @@ collections:
     files:
       - label: "Cards"
         name: "cards"
-        file: "src/_data/meta/reviews/cards.json"
+        file: "src/_data/reviews/cards.json"
         fields:
           - label: Review Cards Info
             name: info
