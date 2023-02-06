@@ -90,7 +90,7 @@ collections:
           - label: home Page Meta Tags
             name: tags
             widget: list
-              fields:
+            fields:
               - {label: Name , name: name, widget: string}
               - {label: Content, name: content, widget: text}       
       
