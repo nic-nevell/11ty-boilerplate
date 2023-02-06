@@ -1,3 +1,6 @@
 {
-  "text": "This is an Info Banner"
+  "text": "Flash Sale 50% Off, Use CODE50",
+  "bg_color": "#f20808",
+  "text_color": "#e0ec02",
+  "font_family": "Arial"
 }
