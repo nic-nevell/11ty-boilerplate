@@ -6,7 +6,11 @@
     },
     {
       "name": "description",
-      "content": "Blog page title description, some content that refers to the tiles page"
+      "content": "Lorem ipsum dolor sit amet. Ab necessitatibus dolorem et debitis unde non rerum neque ea ducimus sunt. Non maiores dolorem eum labore pariatur et doloremque quia qui maiores optio sed quod enim?"
+    },
+    {
+      "name": "keywords",
+      "content": "Some word, another work, more works, bla, bla"
     }
   ]
 }
