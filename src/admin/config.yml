@@ -20,11 +20,11 @@ collections:
     preview_path: blog/{{slug}}
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string", pattern: ['^.{50,80}$', "Between 50-80 characters"]}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - {label: "Description", name: "description", widget: "string"}
+      # - {label: "Featured", name: "featured", widget: "boolean", default: false}
       - {label: "Featured Image", name: "image", widget: "image", hint: Whether or no to include article snippet in featured section }
       - {label: "Image Description", name: "imageAlt", widget: "string" , description: "Not visible when published"}
-      - {label: "Tags", name: "tags", widget: "string", default: ["post"], hide: true }
+      - {label: "Tags", name: "tags", widget: "string", default: ["post"] }
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
