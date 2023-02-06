@@ -16,13 +16,26 @@ collections:
     files:
       - label: "Banner Widget"
         name: "banner_widget"
-        file: "src/_data/widgets/banner-widget.json"
+        file: "src/_data/widgets/banner_widget.json"
         preview_path: /index.html
         fields:
           - {label: Banner Text, name: text, widget: text}
           - {label: Background Color, name: bg_color, widget: color}
           - {label: Text Color, name: text_color, widget: color}
           - {label: Font Family, name: font_family, widget: string}
+ 
+      - label: "Reviews Widget"
+        name: "cards"
+        file: "src/_data/widgets/reviews/cards.json"
+        fields:
+          - label: Review Cards Info
+            name: info
+            widget: list
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Text , name: text, widget: text, pattern: ['.{0,150}', "No more than 150 characters long"]}
+              - {label: Author, name: author, widget: string}
+              - {label: Rating, name: rating, widget: number}
 
   - label: "Meta Tags"
     name: "meta_tags"
@@ -90,24 +103,6 @@ collections:
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
-
-  - label: "Reviews Widget"
-    name: "reviews_widget"
-    description: "Add and Edit Review Cards"
-    preview_path: /index.html
-    files:
-      - label: "Cards"
-        name: "cards"
-        file: "src/_data/reviews/cards.json"
-        fields:
-          - label: Review Cards Info
-            name: info
-            widget: list
-            fields:
-              - {label: Heading, name: heading, widget: string}
-              - {label: Text , name: text, widget: text, pattern: ['.{0,150}', "No more than 150 characters long"]}
-              - {label: Author, name: author, widget: string}
-              - {label: Rating, name: rating, widget: number}
 
   - label: "Themes"
     name: "themes"
