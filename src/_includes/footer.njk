@@ -1,14 +1,13 @@
 <footer class="page-footer | col-gap">
 	<div class="wrapper | col-gap">
-		<h3>Footer</h3>
 
-		{% if page === 'home' %}
+		{% include "review-widget.njk" %}
+
 		<a href="/">
 			<svg class="icon icon-xl" alt="site icon home link">
 				<use href="/images/svg/sprite.svg#icons--site-icon"></use>
 			</svg>
 		</a>
-		{% endif %}
 
 
 		<address>

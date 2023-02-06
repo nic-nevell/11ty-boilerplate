@@ -25,8 +25,8 @@ collections:
           - {label: Font Family, name: font_family, widget: string}
  
       - label: "Reviews Widget"
-        name: "cards"
-        file: "src/_data/widgets/reviews/cards.json"
+        name: "reviews_widget"
+        file: "src/_data/widgets/reviews_widget.json"
         fields:
           - label: Review Cards Info
             name: info
