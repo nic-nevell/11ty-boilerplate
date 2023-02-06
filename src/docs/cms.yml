@@ -1,0 +1,98 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/images/uploads/"
+# public_folder: "/images/uploads/"
+site_url: "https://11ty-boilerplate.netlify.app/"
+display_url: "https://11ty-boilerplate.netlify.app/"
+# logo_url: https://your-site.com/images/logo.svg
+publish_mode: editorial_workflow
+
+collections:
+
+  - label: "Reviews Widget"
+    name: "reviews_widget"
+    description: "Add and Edit Review Cards"
+    preview_path: /index.html
+    files:
+      - label: "Cards"
+        name: "cards"
+        file: "src/_data/meta/reviews/cards.json"
+        fields:
+        - label: Review Cards Info
+          name: info
+          widget: list
+          fields:
+          - {label: Heading, name: heading, widget: string}
+          - {label: Text , name: text, widget: text, pattern: ['.{0,150}', "No more than 150 characters long"]}
+          - {label: Author, name: author, widget: string}
+          - {label: Rating, name: rating, widget: number}
+
+  - label: "Blog"
+    name: "blog"
+    folder: "src/blog"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: blog/{{slug}}
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string", pattern: ['^.{50,80}$', "Between 50-80 characters"]}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - {label: "Featured Image", name: "image", widget: "image", hint: Whether or no to include article snippet in featured section }
+      - {label: "Image Description", name: "imageAlt", widget: "string" , description: "Not visible when published"}
+      - {label: "Tags", name: "tags", widget: "string", default: ["post"], hide: true }
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - label: "Meta Tags"
+    name: "meta_tags"
+    description: "Add and Edit Meta Tags"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "src/_data/meta/about.json"
+        fields:
+          - label: About Page Meta Tags
+            name: tags
+            widget: list
+            fields:
+              - {label: Name , name: name, widget: string}
+              - {label: Content, name: content, widget: text}
+
+      - label: "Blog Page"
+        name: "blog"
+        file: "src/_data/meta/blog.json"
+        fields:
+          - label: Blog Page Meta Tags
+            name: tags
+            widget: list
+            fields:
+              - {label: Name , name: name, widget: select}
+              - {label: Content, name: content, widget: text}
+
+      - label: "Global"
+        name: "Global"
+        file: "src/_data/meta/global.json"
+        fields:
+          - label: Global Meta Tags
+            name: tags
+            widget: list
+            fields:
+              - {label: Name , name: name, widget: string}
+              - {label: Content, name: content, widget: text}
+
+      - label: "Home Page"
+        name: "home"
+        file: "src/_data/meta/home.json"
+        fields:
+          - label: home Page Meta Tags
+            name: tags
+            widget: list
+            fields:
+              - {label: Name , name: name, widget: string}
+              - {label: Content, name: content, widget: text}       
+      
+  - label: "Themes"
