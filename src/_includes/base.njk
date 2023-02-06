@@ -11,19 +11,20 @@
 	<meta name="{{ item.name }}" content="{{ item.content }}">
 	{% endfor %}
 
-
 	{% if page_name === "about" %}
-	{% for item in meta.about.tags -%}
+	{% for item in meta.about.tags %}
 	<meta name="{{ item.name }}" content="{{ item.content }}">
 	{% endfor %}
 	{% endif %}
+
 	{% if page_name === "blog" %}
-	{% for item in meta.blog.tags -%}
+	{% for item in meta.blog.tags %}
 	<meta name="{{ item.name }}" content="{{ item.content }}">
 	{% endfor %}
 	{% endif %}
+
 	{% if page_name === "home" %}
-	{% for item in meta.about.tags -%}
+	{% for item in meta.home.tags %}
 	<meta name="{{ item.name }}" content="{{ item.content }}">
 	{% endfor %}
 	{% endif %}
@@ -35,7 +36,6 @@
 	{% if description %}
 	<meta name="description" content="{{ description }}">
 	{% endif %}
-
 
 
 	{% block meta %}

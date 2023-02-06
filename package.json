@@ -40,9 +40,8 @@
     "gulp-webp": "^4.0.1",
     "imagemin-mozjpeg": "^10.0.0",
     "sass": "^1.57.1",
-    "webpack-stream": "^7.0.0"
-  },
-  "dependencies": {
+    "webpack-stream": "^7.0.0",
+    "debug": "^4.3.4",
     "gulp-sass-import-json": "^1.0.2",
     "node-sass-json-importer": "^4.3.0"
   }
