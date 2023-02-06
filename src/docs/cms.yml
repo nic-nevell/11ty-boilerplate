@@ -10,6 +10,14 @@ display_url: "https://11ty-boilerplate.netlify.app/"
 publish_mode: editorial_workflow
 
 collections:
+  - label: "Banner"
+    name: "banner"
+    description: "Edit Banner"
+    files:
+      - label: "Banner Text"
+        name: "text"
+        file: "src/_data/banner.json"
+        widget: "text"
 
   - label: "Reviews Widget"
     name: "reviews_widget"

@@ -10,54 +10,7 @@ display_url: "https://11ty-boilerplate.netlify.app/"
 publish_mode: editorial_workflow
 
 collections:
-  - label: "Meta Tags"
-    name: "meta_tags"
-    description: "Add and Edit Meta Tags"
-    files:
-      - label: "About Page"
-        name: "about"
-        file: "src/_data/meta/about.json"
-        fields:
-          - label: About Page Meta Tags
-            name: tags
-            widget: list
-            fields:
-              - {label: Name , name: name, widget: string}
-              - {label: Content, name: content, widget: text}
-
-      - label: "Blog Page"
-        name: "blog"
-        file: "src/_data/meta/blog.json"
-        fields:
-          - label: Blog Page Meta Tags
-            name: tags
-            widget: list
-            fields:
-              - {label: Name , name: name, widget: select}
-              - {label: Content, name: content, widget: text}
-
-      - label: "Global"
-        name: "Global"
-        file: "src/_data/meta/global.json"
-        fields:
-          - label: Global Meta Tags
-            name: tags
-            widget: list
-            fields:
-              - {label: Name , name: name, widget: string}
-              - {label: Content, name: content, widget: text}
-
-      - label: "Home Page"
-        name: "home"
-        file: "src/_data/meta/home.json"
-        fields:
-          - label: home Page Meta Tags
-            name: tags
-            widget: list
-            fields:
-              - {label: Name , name: name, widget: string}
-              - {label: Content, name: content, widget: text}       
-      
+    
   - label: "Themes"
     name: "themes"
     description: "Custom Themes"
