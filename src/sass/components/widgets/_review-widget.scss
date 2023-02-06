@@ -1,0 +1,38 @@
+.review-card {
+  background-color: white;
+  color: #333;
+  border-radius: 0.6em;
+  flex-direction: column;
+  padding: 1em;
+  display: flex;
+  box-shadow: 0 0 10px 1px #00000040;
+}
+
+.review-card > :not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.review-card * {
+  display: block;
+}
+
+.review-card .card-name {
+  font-style: italic;
+}
+
+.review-card .card-text {
+  flex-grow: 1;
+}
+
+.review-card .logo-text {
+  text-align: right;
+}
+
+.tp-stars--4 .tp-star:nth-of-type(-n + 4) .tp-star__canvas,
+.tp-stars--4 .tp-star:nth-of-type(-n + 4) .tp-star__canvas--half,
+.tp-stars--4-point-5 .tp-star:nth-of-type(-n + 4) .tp-star__canvas,
+.tp-stars--4-point-5 .tp-star:nth-of-type(-n + 5) .tp-star__canvas--half,
+.tp-stars--5 .tp-star:nth-of-type(-n + 5) .tp-star__canvas,
+.tp-stars--5 .tp-star:nth-of-type(-n + 5) .tp-star__canvas--half {
+  fill: #00b67a;
+}

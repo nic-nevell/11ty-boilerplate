@@ -12,6 +12,7 @@
 @use './components/article';
 @use './components/buttons/btn-default';
 @use './components/navigation/nav-menu' as *;
+@use './components/widgets/review-widget' as *;
 
 // utilities
 @use './utilities/' as *;
