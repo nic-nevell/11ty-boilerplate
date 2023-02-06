@@ -58,7 +58,7 @@ collections:
             name: tags
             widget: list
             fields:
-              - {label: Name , name: name, widget: string, pattern: ['/^[a-z]+$/', "use lowercase"]}
+              - {label: Name , name: name, widget: string}
               - {label: Content, name: content, widget: text}
 
       - label: "Blog Page"
@@ -69,7 +69,7 @@ collections:
             name: tags
             widget: list
             fields:
-              - {label: Name , name: name, widget: select,  options: ["author", "description", "keywords"]}
+              - {label: Name , name: name, widget: select}
               - {label: Content, name: content, widget: text}
 
       - label: "Global"
@@ -80,7 +80,7 @@ collections:
             name: tags
             widget: list
             fields:
-              - {label: Name , name: name, widget: string, pattern: ['/^[a-z]+$/', "use lowercase"]}
+              - {label: Name , name: name, widget: string}
               - {label: Content, name: content, widget: text}
 
       - label: "Home Page"
@@ -91,7 +91,7 @@ collections:
             name: tags
             widget: list
             fields:
-              - {label: Name , name: name, widget: string, pattern: ['/^[a-z]+$/', "use lowercase"]}
+              - {label: Name , name: name, widget: string}
               - {label: Content, name: content, widget: text}       
       
   - label: "Themes"
