@@ -10,23 +10,6 @@ display_url: "https://11ty-boilerplate.netlify.app/"
 publish_mode: editorial_workflow
 
 collections:
-  - label: "Reviews Widget"
-    name: "reviews_widget"
-    description: "Add and Edit Review Cards"
-    preview_path: /index.html
-    files:
-      - label: "Cards"
-        name: "cards"
-        file: "src/_data/meta/reviews/cards.json"
-        fields:
-        - label: Review Cards Info
-          name: info
-          widget: list
-          fields:
-          - {label: Heading, name: heading, widget: string}
-          - {label: Text , name: text, widget: text, pattern: ['.{0,150}', "No more than 150 characters long"]}
-          - {label: Author, name: author, widget: string}
-          - {label: Rating, name: rating, widget: number}
 
   - label: "Blog"
     name: "blog"
