@@ -1,6 +1,8 @@
 ---
 title: Review Post
-description: 'This post is a review post '
+description: "This post is a review post With the online text generator you can
+  process your. "
+featured: true
 image: default-600x400.jpg
 imageAlt: brain
 tags:
