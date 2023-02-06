@@ -43,36 +43,6 @@ collections:
             fields:
               - {label: Name , name: name, widget: string}
               - {label: Content, name: content, widget: text}
-      - label: "Blog Page"
-        name: "blog"
-        file: "src/_data/meta/blog.json"
-        fields:
-          - label: Blog Page Meta Tags
-            name: tags
-            widget: list
-            fields:
-              - {label: Name , name: name, widget: string}
-              - {label: Content, name: content, widget: text}
-      - label: "Global"
-        name: "global"
-        file: "src/_data/meta/global.json"
-        fields:
-          - label: Global Meta Tags
-            name: tags
-            widget: list
-            fields:
-              - {label: Name , name: name, widget: string}
-              - {label: Content, name: content, widget: text} 
-      - label: "Home"
-        name: "home"
-        file: "src/_data/meta/home.json"
-        fields:
-          - label: Home Meta Tags
-            name: tags
-            widget: list
-            fields:
-              - {label: Name , name: name, widget: string}
-              - {label: Content, name: content, widget: text}
 
   - label: "Themes"
     name: "themes"
