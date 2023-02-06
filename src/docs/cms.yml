@@ -7,7 +7,7 @@ media_folder: "src/assets/images/uploads/"
 site_url: "https://11ty-boilerplate.netlify.app/"
 display_url: "https://11ty-boilerplate.netlify.app/"
 # logo_url: https://your-site.com/images/logo.svg
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 collections:
   - label: "Widgets"
