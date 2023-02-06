@@ -10,6 +10,21 @@ display_url: "https://11ty-boilerplate.netlify.app/"
 publish_mode: editorial_workflow
 
 collections:
+  - label: "Meta Tags"
+    name: "meta_tags"
+    preview_path: /index.html
+    description: "Add and Edit Meta Tags"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "src/_data/meta/about.json"
+        fields:
+          - label: About Page Meta Tags
+            name: tags
+            widget: list
+            fields:
+              - {label: Name , name: name, widget: string}
+              - {label: Content, name: content, widget: text}
 
   - label: "Blog"
     name: "blog"
