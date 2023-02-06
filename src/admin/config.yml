@@ -58,7 +58,7 @@ collections:
             name: tags
             widget: list
             fields:
-              - {label: Name , name: name, widget: string, pattern: ['/^[a-z]+$/', use lowercase]}
+              - {label: Name , name: name, widget: string, pattern: ['/^[a-z]+$/', "use lowercase"]}
               - {label: Content, name: content, widget: text}
 
       - label: "Blog Page"
