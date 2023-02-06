@@ -47,6 +47,17 @@ export const processSvgs = async () => {
 
     .pipe(
       sprite({
+        svg: {
+          // General options for created SVG files
+          xmlDeclaration: true, // Add XML declaration to SVG sprite
+          doctypeDeclaration: true, // Add DOCTYPE declaration to SVG sprite
+          namespaceIDs: false, // Add namespace token to all IDs in SVG shapes
+          namespaceIDPrefix: '', // Add a prefix to the automatically generated namespaceIDs
+          namespaceClassnames: false, // Add namespace token to all CSS class names in SVG shapes
+          dimensionAttributes: true, // Width and height attributes on the sprite
+        },
+        namespaceClassnames: false,
+        namespaceIDs: false,
         mode: {
           symbol: {
             sprite: config.svg.sprite.fileName,
@@ -198,11 +209,11 @@ export const siteMap = async () => {
 //----------------------------------
 export const testDev = series(
   clean,
-  compileCss,
+  // compileCss,
   // bundleJs,
   // processImages,
-  // processSvgs
-  gulpWatch
+  processSvgs
+  // gulpWatch
 )
 
 export const testBuild = series(
