@@ -26,8 +26,8 @@ collections:
           - {label: Text Color, name: text_color, widget: color}
           - {label: Font Family, name: font_family, widget: string}
  
-      - label: "Review Widget"
-        name: "review_widget"
+      - label: "Reviews Widget"
+        name: "reviews_widget"
         file: "src/_data/widgets/reviews_widget.json"
         fields:
           - label: Review Cards Info
