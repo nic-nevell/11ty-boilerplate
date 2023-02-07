@@ -1,0 +1,27 @@
+html,
+body {
+  color: #444;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+.frame-content {
+  padding: 2em;
+}
+
+.frame-content * {
+  display: block;
+}
+
+.frame-content * + * {
+  margin-top: 1.5em;
+}
+
+.frame-content img {
+  max-width: 100%;
+}

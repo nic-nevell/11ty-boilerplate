@@ -40,6 +40,9 @@
 
 	{% block meta %}
 	{% endblock %}
+	{{ tit }}
+	<h1>{{ renderData.title }}</h1>
+
 
 	<title>{{ page_title }}</title>
 
@@ -53,7 +56,7 @@
 <body class="page {{ page_name }}-page">
 	<div class="page-wrapper">
 
-		{% include 'header.njk' %}
+		{% include 'common/header.njk' %}
 
 		<div class="page-body">
 			<main class="main-content">
@@ -64,7 +67,7 @@
 			</main>
 		</div>
 
-		{% include 'footer.njk' %}
+		{% include 'common/footer.njk' %}
 	</div>
 	<script src="/js/main.js"></script>
 	<script>
