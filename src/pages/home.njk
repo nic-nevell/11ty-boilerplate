@@ -1,15 +1,12 @@
-{% extends "base.njk" %}
+---
+tag: pages
+permalink: "/index.html"
 
-{% set page_title = 'Page Title' %}
-{% set page_name = 'home' %}
+page_title: Weberdy home page
+page_name: home
+---
 
-{% block meta %}
-{% for item in meta.home_tags %}
-<meta name="{{ item.name }}" content="{{ item.content }}">
-{% endfor %}
-{% endblock %}
 
-{% block content %}
 <section class="section | ptb-lg | theme-primary">
 	<div class=" wrapper | col-gap">
 		<h1>Content Heading</h1>
@@ -35,9 +32,8 @@
 		<ul role="list" class="articles-list | col-gap | mt-lg">
 
 			{%- for post in collections.featured -%}
-			{% include "articles/article-snippet.njk" %}
+			{% include "snippets/article-snippet.njk" %}
 			{% endfor %}
 		</ul>
 	</div>
 </section>
-{% endblock %}

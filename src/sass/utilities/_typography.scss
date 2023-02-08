@@ -1,0 +1,65 @@
+@use '../abstracts/' as *;
+%font-line-height-base {
+  line-height: 1.5em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.font {
+  &-xs {
+    font-size: $font-xs;
+    @extend %font-line-height-base;
+  }
+  &-sm {
+    font-size: $font-sm;
+    @extend %font-line-height-base;
+  }
+  &-md {
+    font-size: $font-md;
+    @extend %font-line-height-base;
+  }
+  &-lg {
+    font-size: $font-lg;
+    @extend %font-line-height-base;
+  }
+  &-xl {
+    font-size: $font-xl;
+    @extend %font-line-height-base;
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.underline-none {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.text {
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-light {
+    color: $text-color-light;
+  }
+  &-dark {
+    color: $text-color-dark;
+  }
+}

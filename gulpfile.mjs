@@ -210,16 +210,16 @@ export const siteMap = async () => {
 export const testDev = series(
   clean,
   // compileCss,
-  // bundleJs,
+  bundleJs,
   // processImages,
-  processSvgs
+  // processSvgs
   // gulpWatch
 )
 
 export const testBuild = series(
   clean,
-  compileCss
-  // bundleJs,
+  // compileCss
+  bundleJs,
   // processImages,
   // processSvgs
 )

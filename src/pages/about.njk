@@ -10,7 +10,12 @@ page_name: about
 	<div class="wrapper | col-gap-sm">
 		{{ content | safe }}
 
-		<h1>About: {{ test }}</h1>
+		<h1>About: </h1>
+
+
+		{%- for post in collections.post_test -%}
+		{% include "snippets/post-snippet.njk" %}
+		{% endfor %}
 
 		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, molestiae veniam molestias error quaerat
 			illo optio debitis reiciendis reprehenderit obcaecati esse, enim mollitia inventore doloribus cupiditate impedit.
