@@ -1,0 +1,45 @@
+@use '../abstracts/' as *;
+
+.expand-image-on-hover {
+  overflow: hidden;
+  img {
+    transition: all 2s linear;
+  }
+  &:hover {
+    img {
+      transform: scale(106%);
+    }
+  }
+}
+
+.filter {
+  &-light {
+    background-color: rgb(247, 247, 247);
+  }
+  &-dark {
+    background-color: rgb(0, 0, 0);
+  }
+  &-smoked {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  &-smoked-light {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  &-smoked-dark {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+// shadow
+.shadow {
+  box-shadow: $shadow-medium;
+  &-very-light {
+    box-shadow: $shadow-very-light;
+  }
+  &-light {
+    box-shadow: $shadow-light;
+  }
+  &-dark {
+    box-shadow: $shadow-dark;
+  }
+}
