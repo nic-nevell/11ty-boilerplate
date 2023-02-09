@@ -39,7 +39,6 @@ export const minSvg = async () => {
     .pipe(dest('./dist/images/svg/'))
 }
 
-
 export const spriteSvg = async () => {
   src(config.svg.src)
     .pipe(filelog())
@@ -53,22 +52,21 @@ export const spriteSvg = async () => {
           namespaceIDs: true, // Add namespace token to all IDs in SVG shapes
           namespaceIDPrefix: '', // Add a prefix to the automatically generated namespaceIDs
           namespaceClassnames: false, // Add namespace token to all CSS class names in SVG shapes
-          dimensionAttributes: true, // Width and height attributes on the sprite
+          dimensionAttributes: true // Width and height attributes on the sprite
         },
-   
+
         mode: {
           symbol: {
             sprite: config.svg.sprite.fileName,
-            dest: config.svg.sprite.dest,
-          },
-        },
+            dest: config.svg.sprite.dest
+          }
+        }
       })
     )
     .pipe(filelog())
 
     .pipe(dest(config.svg.dest))
 }
-console.log(config.svg.src)
 
 // images
 //----------------------------------
@@ -83,20 +81,20 @@ export const processImages = () => {
             {
               width: 600,
               rename: { suffix: '-(sm)' },
-              jpegOptions: { quality: 80, progressive: true },
+              jpegOptions: { quality: 80, progressive: true }
             },
 
             {
               format: 'webp',
-              webpOptions: { quality: 80 },
+              webpOptions: { quality: 80 }
             },
             {
               format: 'webp',
-              width: (metadata) => metadata.width * 0.5,
+              width: metadata => metadata.width * 0.5,
               rename: { suffix: '-(sm)' },
-              webpOptions: { quality: 80 },
-            },
-          ],
+              webpOptions: { quality: 80 }
+            }
+          ]
         })
       )
     )
@@ -109,9 +107,9 @@ export const processImages = () => {
           formats: [
             {
               format: 'webp',
-              webpOptions: { lossless: true },
-            },
-          ],
+              webpOptions: { lossless: true }
+            }
+          ]
         })
       ),
       filelog()
@@ -133,7 +131,7 @@ export const copy = () => {
 
 // CSS
 //----------------------------------
-export function compileCss() {
+export function compileCss () {
   return src(config.styles.src)
     .pipe(sassImportJson({ isScss: true, cache: false }))
     .pipe(sass.sync({ outputStyle: 'expanded' }).on('error', sass.logError))
@@ -142,7 +140,7 @@ export function compileCss() {
         env === 'production',
         purgecss({
           content: ['src/**/*.njk', 'src/**/*.js'],
-          sourceMap: true,
+          sourceMap: true
         })
       )
     )
@@ -159,7 +157,13 @@ export const bundleJs = () => {
   return src(config.scripts.src)
     .pipe(gulpif(env === 'production', webpack({ mode: 'production' })))
 
-    .pipe(webpack({ mode: 'development', devtool: 'source-map' }))
+    .pipe(
+      gulpif(
+        env === 'development',
+        webpack({ mode: 'development', devtool: 'source-map' })
+      )
+    )
+
     .pipe(dest(config.scripts.dest))
 }
 
@@ -183,7 +187,7 @@ export const cleanIndexJs = async () => {
 export const clean = async () => {
   await Promise.resolve(deleteAsync(['dist'], { dryRun: false }))
 
-  await new Promise((resolve) => {
+  await new Promise(resolve => {
     resolve(deleteAsync(['./dist', './public'], { dryRun: false }))
   })
 }
@@ -192,11 +196,11 @@ export const clean = async () => {
 //----------------------------------
 export const siteMap = async () => {
   src('./dist/**/*.html', {
-    read: false,
+    read: false
   })
     .pipe(
       sitemap({
-        siteUrl: 'https://11ty-boilerplate.netlify.app/',
+        siteUrl: 'https://11ty-boilerplate.netlify.app/'
       })
     )
     .pipe(dest('./dist'))
@@ -204,20 +208,25 @@ export const siteMap = async () => {
 
 // Build and Dev Commands
 //----------------------------------
+export const testJs = () => {
+  return src(config.scripts.src).pipe(webpack()).pipe(dest(config.scripts.dest))
+}
+
 export const testDev = series(
   clean,
   // compileCss,
-  // bundleJs,
+  bundleJs
   // processImages,
-  spriteSvg,
-  minSvg,
-  // gulpWatch
+  // spriteSvg,
+  // minSvg,
+  // gulpWatch,
+  // testJs
 )
 
 export const testBuild = series(
   clean,
   // compileCss
-  bundleJs,
+  bundleJs
   // processImages,
   // spriteSvg
 )
@@ -229,7 +238,7 @@ export const dev = series(
   bundleJs,
   processImages,
   spriteSvg,
-  // minSvg
+  minSvg
 )
 
 export const build = series(
@@ -238,7 +247,7 @@ export const build = series(
   bundleJs,
   processImages,
   spriteSvg,
-  // minSvg
+  minSvg
 )
 
 if (env === production) {
