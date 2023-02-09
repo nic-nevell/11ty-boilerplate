@@ -30,18 +30,17 @@ export const isProduction = async () => {
   production = true
 }
 
-// svgGo
-//----------------------------------
-export const minSvg = async () => {
-  src('./src/assets/images/site-logo.svg')
-    .pipe(svgo())
-    .pipe(filelog())
-    .pipe(dest('./dist/images/'))
-}
-
 // svg's
 //----------------------------------
-export const processSvgs = async () => {
+export const minSvg = async () => {
+  src('./src/assets/images/*.svg')
+    .pipe(svgo())
+    .pipe(filelog())
+    .pipe(dest('./dist/images/svg/'))
+}
+
+
+export const spriteSvg = async () => {
   src(config.svg.src)
     .pipe(filelog())
 
@@ -51,13 +50,12 @@ export const processSvgs = async () => {
           // General options for created SVG files
           xmlDeclaration: true, // Add XML declaration to SVG sprite
           doctypeDeclaration: true, // Add DOCTYPE declaration to SVG sprite
-          namespaceIDs: false, // Add namespace token to all IDs in SVG shapes
+          namespaceIDs: true, // Add namespace token to all IDs in SVG shapes
           namespaceIDPrefix: '', // Add a prefix to the automatically generated namespaceIDs
           namespaceClassnames: false, // Add namespace token to all CSS class names in SVG shapes
           dimensionAttributes: true, // Width and height attributes on the sprite
         },
-        namespaceClassnames: false,
-        namespaceIDs: false,
+   
         mode: {
           symbol: {
             sprite: config.svg.sprite.fileName,
@@ -70,6 +68,7 @@ export const processSvgs = async () => {
 
     .pipe(dest(config.svg.dest))
 }
+console.log(config.svg.src)
 
 // images
 //----------------------------------
@@ -160,13 +159,7 @@ export const bundleJs = () => {
   return src(config.scripts.src)
     .pipe(gulpif(env === 'production', webpack({ mode: 'production' })))
 
-    .pipe(
-      gulpif(
-        env === 'development',
-        webpack({ mode: 'development', devtool: 'source-map' })
-      )
-    )
-
+    .pipe(webpack({ mode: 'development', devtool: 'source-map' }))
     .pipe(dest(config.scripts.dest))
 }
 
@@ -174,15 +167,19 @@ export const bundleJs = () => {
 //----------------------------------
 export const gulpWatch = () => {
   watch(config.styles.src, parallel(compileCss))
-  watch(config.scripts.src, parallel(bundleJs))
+  watch(config.scripts.src, series(bundleJs, cleanIndexJs))
   watch(config.images.src, parallel(processImages))
-  watch(config.svg.src, parallel(processSvgs))
+  watch(config.svg.src, parallel(spriteSvg, minSvg))
 
   watch(config.styles.dataSrc, parallel(compileCss))
 }
 
 // clean
 //----------------------------------
+export const cleanIndexJs = async () => {
+  await Promise.resolve(deleteAsync(['dist/js/index.js'], { dryRun: false }))
+}
+
 export const clean = async () => {
   await Promise.resolve(deleteAsync(['dist'], { dryRun: false }))
 
@@ -210,9 +207,10 @@ export const siteMap = async () => {
 export const testDev = series(
   clean,
   // compileCss,
-  bundleJs,
+  // bundleJs,
   // processImages,
-  // processSvgs
+  spriteSvg,
+  minSvg,
   // gulpWatch
 )
 
@@ -221,19 +219,26 @@ export const testBuild = series(
   // compileCss
   bundleJs,
   // processImages,
-  // processSvgs
+  // spriteSvg
 )
 
 export const serve = series(gulpWatch)
 
-export const dev = series(compileCss, bundleJs, processImages, processSvgs)
+export const dev = series(
+  compileCss,
+  bundleJs,
+  processImages,
+  spriteSvg,
+  // minSvg
+)
 
 export const build = series(
   clean,
   compileCss,
   bundleJs,
   processImages,
-  processSvgs
+  spriteSvg,
+  // minSvg
 )
 
 if (env === production) {

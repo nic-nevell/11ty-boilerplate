@@ -25,11 +25,10 @@ import { create, body, select } from './library/utilities.js'
 // load assets
 //----------------------------------
 window.addEventListener('load', loadLAssets)
-
 function loadLAssets() {
   setTimeout(() => {
-    loadFaviconLink('./icons/favicon.svg')
-    loadElement(create('chat-widget'), 'after', '.page-footer')
+    // loadFaviconLink('/images/svg/favicon.svg')
+    // loadElement(create('chat-widget'), 'after', '.page-footer')
 
     if (select('.youtube-player')) {
       loadYoutubeApi()

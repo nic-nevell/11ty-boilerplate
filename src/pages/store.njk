@@ -7,8 +7,17 @@ page_title: This is the Weberdy Store page
 
 <script>
 	window.addEventListener('hashchange', function hashChange() {
-		// alert('hash-change')
-		// location.reload()
-		// window.scrollTo(0, 0)
+		console.log('hash change')
+		if (window.location.href.endsWith("store.html")) {
+			// alert('match')
+			location.reload()
+			window.scrollTo(0, 0)
+		}
+
+		if (!!window.location.href.match(/store.html/)) {
+			// alert('match')
+			// console.log('match store')
+			// alert('hash-change')
+		}
 	})
 </script>

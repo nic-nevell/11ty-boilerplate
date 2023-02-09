@@ -26,7 +26,7 @@ export const config = {
   },
 
   svg: {
-    src: './src/assets/images/**/*.svg',
+    src: ['./src/assets/images/icons/*.svg', './src/assets/images/logos/*.svg'],
     dest: './dist/images/',
     sprite: { fileName: 'sprite.svg', dest: 'svg/' },
   },

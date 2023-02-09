@@ -11,7 +11,7 @@
 		"open_product_in": "in_page",
 		"button_position": "inline",
 		"product_default_sorting_order": "product_order",
-		"product_pagination_limit": "3",
+		"product_pagination_limit": "6",
 		"hide_out_of_stock": "0"
 	},
 	"includes": {

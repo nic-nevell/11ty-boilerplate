@@ -21,9 +21,15 @@
 // utilities
 @use './utilities/' as *;
 
+
 // custom
 //=========================================
 /*! purgecss start ignore */
+.store-page {
+  .page-body {
+    min-height: 100vh;
+  }
+}
 
 $bg-base: map-get($bg-color, base);
 $bg-primary: map-get($bg-color, primary);
