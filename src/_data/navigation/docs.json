@@ -1,1 +1,9 @@
-{}
+{
+	"list": [
+		{ "name": "Terms & Conditions", "url": "documents.html" },
+		{ "name": "Privacy Policy", "url": "documents.html" },
+		{ "name": "Warranty", "url": "documents.html" },
+		{ "name": "Delivery", "url": "documents.html" },
+		{ "name": "Returns", "url": "documents.html" }
+	]
+}

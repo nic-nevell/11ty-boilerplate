@@ -1,12 +1,12 @@
 {
-  "tags": [
+  "list": [
     {
       "name": "title",
       "content": "This is the about page meta title"
     },
     {
       "name": "description",
-      "content": "Lorem ipsum dolor sit amet. "
+      "content": "A description of the content of the about page should be max of 160 chars"
     }
   ]
 }

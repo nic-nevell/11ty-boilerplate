@@ -5,7 +5,6 @@ featured: true
 image: article-5.jpg
 imageAlt: Lorem ipsum dolor sit amet. Et totam iusto 33 sequi voluptatem qui
   rerum Quis ut aliquid amet et harum sequi id veritatis quod. Et null
-tags: post
 author: Jonti
 date: 2023-02-01T16:39:57.073Z
 ---

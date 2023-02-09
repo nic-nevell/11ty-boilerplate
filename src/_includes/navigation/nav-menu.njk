@@ -8,13 +8,9 @@
 
 <!-- c-nav-menu -->
 <nav class="nav-menu | font-lg | col-gap | p-lg | dark-theme" id="navMenu" aria-expanded="false">
-  <a href="/">Home</a>
-  <a href="/blog.html">Blog</a>
-  <a href="/about.html">About</a>
+  {% include "./page-links.njk" %}
 
   <div class="icon-list icon-xs | f-column col-gap-xs | fill-white | on-hover--fill-red">
     {% include "widgets/media-icons-widget.njk" %}
   </div>
-
-  {# {% include "components/navigation/nav-global.njk" %} #}
 </nav>

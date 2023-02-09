@@ -6,40 +6,43 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	{# my page tags #}
-	{% for item in meta.global.tags -%}
+	{# global tags #}
+	{% for item in meta.global_tags.list -%}
 	<meta name="{{ item.name }}" content="{{ item.content }}">
 	{% endfor %}
 
+	{# page tags #}
 	{% if page_name === "about" %}
-	{% for item in meta.about.tags %}
+	{% for item in meta.about_tags.list %}
 	<meta name="{{ item.name }}" content="{{ item.content }}">
 	{% endfor %}
 	{% endif %}
 
 	{% if page_name === "blog" %}
-	{% for item in meta.blog.tags %}
+	{% for item in meta.blog_tags.list %}
 	<meta name="{{ item.name }}" content="{{ item.content }}">
 	{% endfor %}
 	{% endif %}
 
 	{% if page_name === "home" %}
-	{% for item in meta.home.tags %}
+	{% for item in meta.home_tags.list %}
 	<meta name="{{ item.name }}" content="{{ item.content }}">
 	{% endfor %}
 	{% endif %}
 
+	{% if page_name === "store" %}
+	{% for item in meta.store_tags.list %}
+	<meta name="{{ item.name }}" content="{{ item.content }}">
+	{% endfor %}
+	{% endif %}
 
+	{# dynamic Tags #}
 	{% if title %}
-	<meta name="title" content="{{ title }} | {{site.site_name}}">
+	<meta name="title" content="{{ title }} | {{global.site_name}}">
 	{% endif %}
 	{% if description %}
 	<meta name="description" content="{{ description }}">
 	{% endif %}
-
-
-	{% block meta %}
-	{% endblock %}
 
 	<title>{{ page_title }}</title>
 

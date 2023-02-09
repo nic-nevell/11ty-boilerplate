@@ -1,12 +1,12 @@
 {
-  "tags": [
+  "list": [
     {
       "name": "title",
       "content": "Blog page title tag content | Weberdy Ltd"
     },
     {
       "name": "description",
-      "content": "Lorem ipsum dolor sit amet. Ab necessitatibus dolorem et debitis unde non rerum neque ea ducimus sunt. Non maiores dolorem eum labore pariatur et doloremque quia qui maiores optio sed quod enim?"
+      "content": "A description of the content of the blog page should be max of 160 chars"
     },
     {
       "name": "keywords",

@@ -8,9 +8,7 @@ description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi
   non distinctio.
 image: article-5.jpg
-tags:
-  - post
-  - featured
+tags: featured
 date: 2023-01-05
 ---
 

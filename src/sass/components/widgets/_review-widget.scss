@@ -3,7 +3,7 @@
 .review-widget {
   font-size: clamp(0.5em, 3vw, 1em);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1em;
 }
 .review-card {
@@ -44,4 +44,4 @@
 .tp-stars--5 .tp-star:nth-of-type(-n + 5) .tp-star__canvas--half {
   fill: #00b67a;
 }
-/*! purgecss end ignore */
+/*! purgecss start ignore */

@@ -5,8 +5,6 @@ description: "This post is a review post With the online text generator you can
 featured: true
 image: default-600x400.jpg
 imageAlt: brain
-tags:
-  - post
 author: Nic Nev
 date: 2023-02-05T10:44:23.046Z
 ---

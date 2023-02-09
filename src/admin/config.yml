@@ -47,10 +47,10 @@ collections:
     files:
       - label: "About Page"
         name: "about"
-        file: "src/_data/meta/about.json"
+        file: "src/_data/meta/about_tags.json"
         fields:
           - label: About Page Meta Tags
-            name: tags
+            name: list
             widget: list
             fields:
               - {label: Name , name: name, widget: string}
@@ -58,11 +58,11 @@ collections:
 
       - label: "Blog Page"
         name: "blog"
-        file: "src/_data/meta/blog.json"
+        file: "src/_data/meta/blog_tags.json"
         preview_path: /blog.html
         fields:
           - label: Blog Page Meta Tags
-            name: tags
+            name: list
             widget: list
             fields:
               - {label: Name , name: name, widget: string}
@@ -70,7 +70,7 @@ collections:
 
       - label: "Global"
         name: "global"
-        file: "src/_data/meta/global.json"
+        file: "src/_data/meta/global_tags.json"
         preview_path: /index.html
         fields:
           - label: Global Meta Tags
@@ -82,11 +82,23 @@ collections:
 
       - label: "Home"
         name: "home"
-        file: "src/_data/meta/home.json"
+        file: "src/_data/meta/home_tags.json"
         preview_path: /index.html
         fields:
           - label: Home Meta Tags
-            name: tags
+            name: list
+            widget: list
+            fields:
+              - {label: Name , name: name, widget: string}
+              - {label: Content, name: content, widget: text}
+
+      - label: "Store"
+        name: "Store"
+        file: "src/_data/meta/Store_tags.json"
+        preview_path: /store.html
+        fields:
+          - label: Store Meta Tags
+            name: list
             widget: list
             fields:
               - {label: Name , name: name, widget: string}

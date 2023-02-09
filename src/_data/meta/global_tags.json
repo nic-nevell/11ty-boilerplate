@@ -1,12 +1,12 @@
 {
-  "tags": [
+  "list": [
     {
-      "name": "authour",
+      "name": "author",
       "content": "@nic-nevell"
     },
     {
       "name": "copyright",
-      "content": "weberdy ltd"
+      "content": "Weberdy Ltd"
     }
   ]
 }

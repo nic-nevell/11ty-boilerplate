@@ -1,0 +1,12 @@
+{
+  "list": [
+    { "name": "Home", "url": "/" },
+    { "name": "Store", "url": "store.html" },
+    { "name": "Blog", "url": "blog.html" },
+    { "name": "About", "url": "about.html" },
+    {
+      "name": "Open",
+      "url": "javascript:window.open('http://localhost:8080/', '','width=360,height=750')"
+    }
+  ]
+}

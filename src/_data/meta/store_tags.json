@@ -1,0 +1,12 @@
+{
+  "list": [
+    {
+      "name": "title",
+      "content": "This is the Store Page title | Weberdy Ltd"
+    },
+    {
+      "name": "description",
+      "content": "A description of the content of the store page should be max of 160 chars"
+    }
+  ]
+}

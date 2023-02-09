@@ -2,18 +2,21 @@
 @import '../_data/styles/sass_vars.json';
 
 // core
-@use './core/root' as *;
-@use './core/base' as *;
-@use './core/layout' as *;
-@use './core/custom' as *;
-@use './core/components' as *;
+@use './core/root';
+@use './core/base';
+@use './core/layout';
+@use './core/custom';
+@use './core/components';
 
 // components
 @use './components/article';
 @use './components/buttons/btn-default';
-@use './components/navigation/nav-menu' as *;
-@use './components/widgets/review-widget' as *;
-@use './components/widgets/banner-widget' as *;
+@use './components/navigation/nav-menu';
+@use './components/widgets/review-widget';
+@use './components/widgets/banner-widget';
+
+// plugins
+@use './plugins/store-plugin';
 
 // utilities
 @use './utilities/' as *;
