@@ -18,11 +18,25 @@ import { resolve } from 'node:path'
 import sitemap from 'gulp-sitemap'
 import { config } from './gulp.config.mjs'
 import sassImportJson from 'gulp-sass-import-json'
+import minifyClassNames from './tools/minifyClassNames.js'
 
 const { src, series, parallel, dest, watch } = gulp
 const sass = gulpsass(dartsass)
 let env = process.env.NODE_ENV
 let production = false
+
+// production state
+//----------------------------------
+
+gulp.task('minify-css-names', done => {
+  minifyClassNames([
+    { input: 'src/index.html', output: 'build/index.html' },
+    { input: 'src/assets/js/app.js', output: 'build/assets/js/app.js' },
+    { input: 'src/assets/css/main.css', output: 'build/assets/css/main.css' }
+  ])
+
+  done()
+})
 
 // production state
 //----------------------------------
@@ -228,7 +242,7 @@ export const testBuild = series(
   // compileCss
   bundleJs
   // processImages,
-  // spriteSvg
+  // spriteSv,
 )
 
 export const serve = series(gulpWatch)

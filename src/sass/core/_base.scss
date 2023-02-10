@@ -49,18 +49,19 @@ ul {
   list-style: none;
 }
 
-[class~='wrapper'] {
+.wrapper-sm {
   padding-inline: 8%;
+  max-width: 600px;
   margin-inline: auto;
 }
 
 .wrapper {
+  padding-inline: 8%;
+  margin-inline: auto;
   max-width: 720px;
 }
 .wrapper-lg {
+  padding-inline: 8%;
   max-width: 989px;
-}
-
-.wrapper-sm {
-  max-width: 600px;
+  margin-inline: auto;
 }
