@@ -10,19 +10,23 @@ display_url: "https://11ty-boilerplate.netlify.app/"
 publish_mode: editorial_workflow
 
 collections:
-# faqs
-  - label: "FAQs"
-    name: "faqs"
+# Accordions
+  - label: "Accordions"
+    name: "Accordions"
     preview_path: /documents.html
-    description: "Add and Edit FAQs"
+    description: "Add and Edit Accordions"
     files:
-      - label: Documents Page Meta Tags
-        name: list
-        widget: list
+      - label: "FAQs"
+        name: "faqs"
+        file: "src/_data/accordion/faqs.json"
         fields:
-          - {label: Question , name: question, widget: string}
-          - {label: heading, name: heading, widget: string}
-          - {label: Content, name: content, widget: text}
+          - label: List Of FAQs
+            name: list
+            widget: list
+            fields:
+              - {label: Question , name: question, widget: string}
+              - {label: heading, name: heading, widget: string}
+              - {label: Content, name: content, widget: text}
 
 # posts
   - label: "Posts"
