@@ -1,0 +1,15 @@
+{% for item in accordion.faqs.list %}
+<div class="accordion | column">
+	<button class="toggle-accordion | row nowrap | ptb-md plr-sm | font-md | theme-branded"
+		aria-controls="accordion-content-A" aria-expanded="false">{{ item.question }}<span
+			class="auto-y-center auto-left | plr-sm">&#x2193</span></button>
+
+	<div class="accordion-content" id="accordion-content-A" aria-expanded="false">
+		<h2>{{ item.heading }}</h2>
+
+		<p>{{ item.content }}</p>
+
+	</div>
+</div>
+<hr>
+{% endfor %}

@@ -15,6 +15,7 @@
 @use './components/navigation/nav-menu';
 @use './components/widgets/review-widget';
 @use './components/widgets/banner-widget';
+@use './components/toggles/toggle-accordion';
 
 // plugins
 @use './plugins/store-plugin';
@@ -22,10 +23,45 @@
 // utilities
 @use './utilities/' as *;
 
-
 // custom
 //=========================================
 /*! purgecss start ignore */
+.theme-branded {
+  background-color: $brand-color;
+  color: white;
+  border: none;
+}
+.documents-page {
+  .page-body {
+    // @include toggle-accordion;
+    .toggle-accordion {
+      display: flex;
+      width: 100%;
+      span {
+        transition: all 250ms linear;
+      }
+      &[aria-expanded='false'] {
+        + div {
+          display: none;
+        }
+      }
+      &[aria-expanded='true'] {
+        span {
+          transform: rotate(180deg);
+        }
+        + div {
+          display: block;
+        }
+      }
+    }
+    hr {
+      border: none;
+      height: 1px;
+      background-color: $brand-color;
+    }
+  }
+}
+
 .store-page {
   .page-body {
     background-color: white;

@@ -8,17 +8,14 @@ permalink: /documents.html
 ---
 {# {% renderFile "./_includes/blocks/text.md" %} #}
 
+{% include "accordion.njk" %}
+
 {% renderTemplate "md" %}
 # FAQ's
-
 This is the frequently ask question page, written in markdown
-
-* I am a list
-* I am a list
-
 {% endrenderTemplate %}
 
 {% markdown %}
-{%- include "./_includes/blocks/text.md" -%}
+{%- include "blocks/text.md" -%}
 {%- include "content/intro.md" -%}
 {% endmarkdown%}

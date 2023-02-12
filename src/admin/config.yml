@@ -10,6 +10,19 @@ display_url: "https://11ty-boilerplate.netlify.app/"
 publish_mode: editorial_workflow
 
 collections:
+# faqs
+  - label: "FAQs"
+    name: "faqs"
+    preview_path: /documents.html
+    description: "Add and Edit FAQs"
+    files:
+      - label: Documents Page Meta Tags
+        name: list
+        widget: list
+        fields:
+          - {label: Question , name: question, widget: string}
+          - {label: heading, name: heading, widget: string}
+          - {label: Content, name: content, widget: text}
 
 # posts
   - label: "Posts"
@@ -18,9 +31,9 @@ collections:
     create: true
     delete: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    preview_path: posts/{{slug}}
+    preview_path: posts/{{page_name}}
     fields:
-      - {label: "Page Name", name: "page_name", widget: "string", hint: Page Name will be used as page Url, keep it SEO friendly }
+      - {label: "Page Name", name: "page_name", widget: "string", hint: Page Name will be used as page Url so keep it SEO friendly }
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string", pattern: ['^.{50,80}$', "Between 50-80 characters"]}
       - {label: "Featured", name: "featured", widget: "boolean", required: false}
