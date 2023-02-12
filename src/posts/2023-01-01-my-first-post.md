@@ -9,9 +9,7 @@ description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   non.
 image: article-1.jpg
 date: 2023-01-01
-page_name: First Post
-
-# permalink: /posts/first-post.html
+page_name: My First Post about blogging 
 ---
 
 Blog writing is a form of online content creation that involves creating and publishing written content on a website or platform. Blogs can be written on a wide range of topics, including personal experiences, news, opinions, and advice. Blogging has become increasingly popular in recent years, as it allows individuals and organizations to share their thoughts and ideas with a global audience.

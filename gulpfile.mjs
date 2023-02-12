@@ -6,7 +6,6 @@ import webpack from 'webpack-stream'
 import filelog from 'gulp-filelog'
 import cache from 'gulp-cache'
 import gulpif from 'gulp-if'
-import webp from 'gulp-webp'
 import purgecss from 'gulp-purgecss'
 import minifycss from 'gulp-minify-css'
 import rename from 'gulp-rename'
@@ -14,25 +13,23 @@ import sharp from 'gulp-sharp-responsive'
 import sprite from 'gulp-svg-sprite'
 import { deleteAsync } from 'del'
 import svgo from 'gulp-svgo'
-import { resolve } from 'node:path'
 import sitemap from 'gulp-sitemap'
 import { config } from './gulp.config.mjs'
 import sassImportJson from 'gulp-sass-import-json'
-import minifyClassNames from './tools/minifyClassNames.js'
+import minifyClassNames from './my-modules/minifyClassNames.js'
 
 const { src, series, parallel, dest, watch } = gulp
 const sass = gulpsass(dartsass)
 let env = process.env.NODE_ENV
 let production = false
 
-// production state
+// development
 //----------------------------------
-
 gulp.task('minify-css-names', done => {
   minifyClassNames([
-    { input: 'src/index.html', output: 'build/index.html' },
-    { input: 'src/assets/js/app.js', output: 'build/assets/js/app.js' },
-    { input: 'src/assets/css/main.css', output: 'build/assets/css/main.css' }
+    { input: 'index.html', output: 'build/index.html' },
+    // { input: 'src/assets/js/app.js', output: 'build/assets/js/app.js' },
+    { input: 'main.css', output: 'build/assets/css/main.css' }
   ])
 
   done()

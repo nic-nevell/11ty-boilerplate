@@ -1,0 +1,24 @@
+---
+layout: section.njk
+page_name: documents
+page_title: Weberdy documents page
+
+test: testing
+permalink: /documents.html
+---
+{# {% renderFile "./_includes/blocks/text.md" %} #}
+
+{% renderTemplate "md" %}
+# FAQ's
+
+This is the frequently ask question page, written in markdown
+
+* I am a list
+* I am a list
+
+{% endrenderTemplate %}
+
+{% markdown %}
+{%- include "./_includes/blocks/text.md" -%}
+{%- include "content/intro.md" -%}
+{% endmarkdown%}
