@@ -1,16 +1,19 @@
 ---
-imageAlt: Laptop on chair
-author: Nic Nevell
-imageALt: image description
+page_name: My First Post about blogging 
 title: My First Post
+featured: true
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga?
   Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi
   non.
 image: article-1.jpg
+imageAlt: Laptop on chair
 date: 2023-01-01
-page_name: My First Post about blogging 
+author: Nic Nevell
 ---
+
+<!-- {{ featured }} -->
+{{ tags }}
 
 Blog writing is a form of online content creation that involves creating and publishing written content on a website or platform. Blogs can be written on a wide range of topics, including personal experiences, news, opinions, and advice. Blogging has become increasingly popular in recent years, as it allows individuals and organizations to share their thoughts and ideas with a global audience.
 

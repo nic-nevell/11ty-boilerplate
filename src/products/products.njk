@@ -1,15 +1,18 @@
 ---
-pagination: {
-data: products,
-size: 1,
-alias: product
+{
+"layout": "base.njk",
+"pagination": {
+"data": "products",
+"size": 1,
+"alias": "product"
+},
+
+"permalink": "products/{{ product.name }}/"
 }
-permalink: "products/{{ product.name | slug }}/"
 ---
 
-{{ product.name }}
-is
-{{ product.age }}
-years old
 
-{% for item in iterator %}{% endfor %}
+<h1>{{ product.name }}</h1>
+<p>{{ product.description }}</p>
+{% for item in product %}
+{% endfor %}

@@ -3,7 +3,6 @@ page_name: home
 page_title: Weberdy home page
 ---
 
-
 <section class="section | ptb-lg | theme-primary">
 	<div class=" wrapper | col-gap">
 		<h1>Content Heading</h1>
@@ -29,8 +28,10 @@ page_title: Weberdy home page
 		<h1>Featured News Articles</h1>
 		<ul role="list" class="articles-list | col-gap | mt-lg">
 
-			{%- for post in collections.featured -%}
-			{% include "snippets/article-snippet.njk" %}
+			{%- for post in collections.posts -%}
+			{% if post.data.featured === true %}
+			{% include "snippets/post-snippet.njk" %}
+			{% endif %}
 			{% endfor %}
 		</ul>
 	</div>

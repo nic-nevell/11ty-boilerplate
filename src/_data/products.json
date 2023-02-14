@@ -1,0 +1,22 @@
+[
+  {
+    "name": "hats",
+    "description": "This is a hat description"
+  },
+  {
+    "name": "shorts",
+    "description": "This is a shorts description"
+  },
+  {
+    "name": "t-shirts",
+    "description": "This is a t-shirts description"
+  },
+  {
+    "name": "gloves",
+    "description": "This is a gloves description"
+  },
+  {
+    "name": "scarves",
+    "description": "This is a scarves description"
+  }
+]

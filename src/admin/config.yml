@@ -34,16 +34,15 @@ collections:
     folder: "src/posts"
     create: true
     delete: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{page_name}}"
     preview_path: posts/{{page_name}}
     fields:
       - {label: "Page Name", name: "page_name", widget: "string", hint: Page Name will be used as page Url so keep it SEO friendly }
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string", pattern: ['^.{50,80}$', "Between 50-80 characters"]}
-      - {label: "Featured", name: "featured", widget: "boolean", required: false}
+      - {label: "Short Description", name: "description", widget: "text", pattern: ['^.{160,220}$', "Between 160-220 characters"], description: Used to display snippets of the main article, hint: Between 160 and 220 characters}
+      - {label: "Featured", name: "featured", widget: "boolean", required: false, description: Choose whether to display snippet of this article in the featured section}
       - {label: "Featured Image", name: "image", widget: "image", hint: Whether or no to include article snippet in featured section }
       - {label: "Image Description", name: "imageAlt", widget: "string" , description: "Not visible when published"}
-      - {label: "Tags", name: "tags", widget: "string", default: ["post"], hide: true }
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}

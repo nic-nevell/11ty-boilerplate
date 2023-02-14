@@ -6,19 +6,19 @@
     },
     {
       "name": "Store",
-      "url": "store.html"
+      "url": "/store.html"
     },
     {
       "name": "Blog",
-      "url": "blog.html"
+      "url": "/blog.html"
     },
     {
       "name": "About",
-      "url": "about.html"
+      "url": "/about.html"
     },
     {
       "name": "FAQ'S",
-      "url": "documents.html"
+      "url": "/documents.html"
     },
     {
       "name": "Open",

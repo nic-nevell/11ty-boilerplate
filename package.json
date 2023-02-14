@@ -13,7 +13,8 @@
     "eleventy": "npm run clean && eleventy --serve",
     "start": "npm run clean && npm run dev",
     "dev": "NODE_ENV=development gulp dev & gulp serve & eleventy --serve",
-    "build": "NODE_ENV=production gulp build && eleventy && gulp siteMap"
+    "build": "NODE_ENV=production gulp build && eleventy && gulp siteMap",
+    "debug-11ty": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",

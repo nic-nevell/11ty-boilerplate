@@ -1,14 +1,14 @@
 ---
-imageAlt: someone typing on a laptop
-author: Nic Nevell
-imageALt: image description
+page_name: Fifth Post
 title: My Fifth Post
+featured: false
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga?
   Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi
   non distinctio.
 image: article-5.jpg
-tags: featured
+imageAlt: someone typing on a laptop
+author: Nic Nevell
 date: 2023-01-05
 ---
 

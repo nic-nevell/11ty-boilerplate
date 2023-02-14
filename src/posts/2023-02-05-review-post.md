@@ -1,8 +1,8 @@
 ---
-title: Review Post
-description: "This post is a review post With the online text generator you can
-  process your. "
+page_name: Review Post
+title: This is a Review Post
 featured: true
+description: "This post is a review post With the online text generator you can process your. simply dummy text of the printing"
 image: default-600x400.jpg
 imageAlt: brain
 author: Nic Nev

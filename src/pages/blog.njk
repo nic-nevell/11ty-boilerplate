@@ -9,8 +9,8 @@ page_title: Weberdy blog page
 		<h1>News Articles</h1>
 		<ul role="list" class="articles-list | col-gap | mt-lg">
 
-			{%- for post in collections.post -%}
-			{% include "snippets/article-snippet.njk" %}
+			{%- for post in collections.posts -%}
+			{% include "snippets/post-snippet.njk" %}
 			{% endfor %}
 		</ul>
 	</div>
