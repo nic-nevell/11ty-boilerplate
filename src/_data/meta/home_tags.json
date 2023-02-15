@@ -7,6 +7,10 @@
     {
       "name": "description",
       "content": "A description of the content of the home page should be max of 160 chars"
+    },
+    {
+      "name": "keywords",
+      "content": "keywork one, keyword two"
     }
   ]
 }
