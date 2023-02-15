@@ -1,15 +1,15 @@
 ---
-page_name: My First Post about blogging 
+page_name: My First Post about blogging
 title: My First Post
-featured: true
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   Cupiditate facilis doloribus omnis, facere inventore eos rem dicta fuga?
   Provident quisquam incidunt autem accusamus nobis sit fugit pariatur excepturi
   non.
+featured: false
 image: article-1.jpg
 imageAlt: Laptop on chair
-date: 2023-01-01
 author: Nic Nevell
+date: 2023-01-01
 ---
 
 <!-- {{ featured }} -->
