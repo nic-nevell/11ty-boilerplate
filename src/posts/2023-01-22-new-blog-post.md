@@ -1,11 +1,10 @@
 ---
 page_name: New Post
 title: New Blog Post
-featured: false
 description: Blog writing is a form of online content creation that involves
   creating and publishing written content on a website or platform. Blogs can be
-  written on a wide range of topics, including personal experiences, news,
-  opinions, and advice.
+  written on a wide range of topics, including personal experiences.
+featured: true
 image: hero-001.jpg
 imageAlt: Cat Stretching
 author: Nic Nevell
