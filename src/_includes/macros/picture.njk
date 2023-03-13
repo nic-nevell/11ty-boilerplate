@@ -1,4 +1,4 @@
-{% macro data(image_url, class="", width="1800", height="1800", alt="a random image") %}
+{% macro data(image_url, class="", width="1800", height="1800", alt="a random image", loading="eager") %}
 
 <picture class="picture {{ class }}">
   {#
@@ -13,7 +13,8 @@
   <source media="(min-width: 400px)" srcset="/images/{{ image_url }}-(1200).webp" type="image/webp">
   <source media="(min-width: 400px)" srcset="/images/{{ image_url }}-(1200).jpg" type="image/webp">
 
-  <img src="/images/{{ image_url }}-(1200).jpg" width="{{ width }}" height="{{ height }}" alt="{{ alt }}">
+  <img src="/images/{{ image_url }}-(1200).jpg" width="{{ width }}" height="{{ height }}" alt="{{ alt }}"
+    loading="{{ loading }} ">
 </picture>
 {% endmacro %}
 

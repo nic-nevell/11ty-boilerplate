@@ -1,13 +1,19 @@
+{% import "macros/svg.njk" as svg %}
+
 <footer class="page-footer | col-gap | shadow-light">
 	<div class="wrapper wrapper-lg | col-gap">
 
 		{# {% include "widgets/reviews-widget.njk" %} #}
 
 		<a href="/">
+			{{ svg.data(src_url="/images/svg/sprite.svg#site-icon", class="icon-xl",titleId="footerLogoTitleId", title="footer logo", descId="footerLogoDescId", desc="site logo icon link to home page")}}
+		</a>
+
+		{# <a href="/">
 			<svg class="icon icon-xl" alt="site icon home link">
 				<use href="/images/svg/sprite.svg#site-icon"></use>
 			</svg>
-		</a>
+		</a> #}
 
 
 		<address>

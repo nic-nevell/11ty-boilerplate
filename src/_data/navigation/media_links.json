@@ -1,24 +1,40 @@
 {
   "list": [
     {
+      "titleId": "facebookTitleId",
+      "title": "facebook icon link",
+      "descId": "facebookDescId",
+      "desc": "facebook icon logo link",
       "src": "/images/svg/sprite.svg#facebook-icon",
       "link": "https://www.facebook.com",
       "alt": "facebook icon link",
       "color": "facebook"
     },
     {
+      "titleID": "twitterTitleId",
+      "title": "twitter icon link",
+      "descID": "twitterDescId",
+      "desc": "twitter icon logo link",
       "src": "/images/svg/sprite.svg#twitter-icon",
       "link": "https://www.twitter.com",
       "alt": "twitter icon link",
       "color": "twitter"
     },
     {
+      "titleId": "linkedinTitleId",
+      "title": "linkedin icon link",
+      "descId": "linkedinDescId",
+      "iconDesc": "linkedin icon logo link",
       "src": "/images/svg/sprite.svg#linkedin-icon",
       "link": "https://www.linkedin.com",
       "alt": "linkedin icon link",
       "color": "linkedin"
     },
     {
+      "titleId": "githubTitleId",
+      "title": "github icon link",
+      "descId": "githubDescId",
+      "iconDesc": "github icon logo link",
       "src": "/images/svg/sprite.svg#github-icon",
       "link": "https://www.github.com",
       "alt": "github icon link",

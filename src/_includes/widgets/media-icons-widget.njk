@@ -1,6 +1,8 @@
 {% for item in navigation.media_links.list %}
-<a href="{{ item.link }}" alt="{{ item.alt }}">
-	<svg class="icon icon-fill-{{item.color }}">
+<a href="{{ item.link }}">
+	<svg class="icon icon-fill-{{item.color }}" aria-labelledby="{{ item.titleId}} {{ item.descId }}" role="img">
+		<title id="{{ item.titleId }}">{{ item.title }}</title>
+		<desc id="{{ item.descId }}">{{ item.desc }}</desc>
 		<use href="{{ item.src }}"></use>
 	</svg>
 </a>

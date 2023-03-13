@@ -1,0 +1,10 @@
+{% macro data(src_url="", class="", titleId="titleId", title="title", descId="descId", desc="desc") %}
+<svg class="icon {{ class }}" aria-labelledby="{{ titleId}} {{ descId }}" role="img">
+
+	<title id="{{ titleId }}">{{ title }}</title>
+	<desc id="{{ descId }}">{{ desc }}</desc>
+
+	<use href="{{ src_url }}"></use>
+</svg>
+
+{% endmacro %}

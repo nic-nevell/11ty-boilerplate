@@ -72,6 +72,8 @@
 		{% include 'common/footer.njk' %}
 	</div>
 	<script src="/js/main.js"></script>
+
+	{% if page_name === "contact" %}
 	<script>
 		if (window.netlifyIdentity) {
 			window.netlifyIdentity.on("init", user => {
@@ -83,6 +85,7 @@
 			});
 		}
 	</script>
+	{% endif %}
 </body>
 
 </html>

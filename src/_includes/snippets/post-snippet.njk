@@ -24,8 +24,8 @@
       <source media="(min-width: 400px)" srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}-(1200).jpg"
         type="image/webp">
 
-      <img loading="lazy" src="/images/uploads/{{ post.data.image | cleanImageExtension }}.jpg" width="1200"
-        height="1200" alt="{{ post.data.imageAlt  }}">
+      <img src="/images/uploads/{{ post.data.image | cleanImageExtension }}.jpg" width="1200" height="1200"
+        alt="{{ post.data.imageAlt  }}" loading="lazy">
     </picture>
   </article>
 </li>

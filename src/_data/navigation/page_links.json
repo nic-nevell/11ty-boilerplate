@@ -21,6 +21,10 @@
       "url": "/documents.html"
     },
     {
+      "name": "Contact",
+      "url": "/contact.html"
+    },
+    {
       "name": "Open",
       "url": "javascript:window.open('http://localhost:8080/', '','width=360,height=750')"
     }
