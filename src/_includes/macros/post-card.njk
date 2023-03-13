@@ -1,0 +1,18 @@
+{# {% from 'macros/tags.njk' import tagsList %} #}
+
+{% macro postCard(post, class = 'w-full', cardClass = '', element = 'div', headingElement = 'h2') %}
+    <{{ element }} class="{{ class }}">
+        <div class="{{ cardClass }}">
+            <{{ headingElement }}>
+                <a href="{{ post.url or post.data.linkUrl }}">
+                    <span>{{ post.data.title }}</span>
+                </a>
+            </{{ headingElement }}>
+            <time datetime="{{ post.date | w3date }}">{{ post.date | date }}</time>
+            <p>{{ post.data.metaDesc }}</p>
+            {# {% if post.data.tags | length %}
+                {{ tagsList(post.data.tags) }}
+            {% endif %} #}
+        </div>
+    </{{ element }}>
+{% endmacro %}

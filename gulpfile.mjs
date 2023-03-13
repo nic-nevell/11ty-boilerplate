@@ -17,6 +17,7 @@ import sitemap from 'gulp-sitemap'
 import { config } from './gulp.config.mjs'
 import sassImportJson from 'gulp-sass-import-json'
 import minifyClassNames from './my-modules/minifyClassNames.js'
+import sourcemaps from 'gulp-sourcemaps'
 
 const { src, series, parallel, dest, watch } = gulp
 const sass = gulpsass(dartsass)
@@ -142,23 +143,27 @@ export const copy = () => {
 
 // CSS
 //----------------------------------
-export function compileCss () {
+export function compileCss() {
   return src(config.styles.src)
+  
+    .pipe(gulpif(env != 'production', sourcemaps.init()))
+
     .pipe(sassImportJson({ isScss: true, cache: false }))
     .pipe(sass.sync({ outputStyle: 'expanded' }).on('error', sass.logError))
+
+    .pipe(gulpif(env != 'production', sourcemaps.write('../maps')))
+
     .pipe(
       gulpif(
         env === 'production',
         purgecss({
-          content: ['src/**/*.njk', 'src/**/*.js'],
-          sourceMap: true
+          content: ['src/**/*.njk', 'src/**/*.js']
         })
       )
     )
     .pipe(gulpif(env == 'production', minifycss()))
 
     .pipe(filelog())
-    .pipe(rename(config.styles.fileName))
     .pipe(dest(config.styles.dest))
 }
 
@@ -226,8 +231,8 @@ export const testJs = () => {
 export const testDev = series(
   clean,
   // compileCss,
-  bundleJs
-  // processImages,
+  // bundleJs,
+  processImages,
   // spriteSvg,
   // minSvg,
   // gulpWatch,
@@ -236,15 +241,16 @@ export const testDev = series(
 
 export const testBuild = series(
   clean,
-  // compileCss
-  bundleJs
-  // processImages,
+  // compileCss,
+  // bundleJs,
+  processImages,
   // spriteSv,
 )
 
 export const serve = series(gulpWatch)
 
 export const dev = series(
+  clean,
   compileCss,
   bundleJs,
   processImages,

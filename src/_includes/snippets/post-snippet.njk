@@ -1,20 +1,32 @@
 <li class="list-style-none">
-	<article class="article-snippet">
-		<div class="content | col-gap-sm">
-			<h3 class="post-heading">{{ post.data.title }}</h3>
-			<span>{{ post.data.author}}</span>
-			<span>{{ post.data.date | postDate}}</span>
-			<p>{{ post.data.description }}</p>
-			<a class="btn btn--primary" href="{{ post.url }}">Read
-				More</a>
+  <article class="article-snippet">
+    <div class="content | col-gap-sm">
+      <h3 class="post-heading">{{ post.data.title }}</h3>
 
-		</div>
+      <span>{{ post.data.author}}</span>
 
-		<picture class="aspect-1-1">
-			<source type="image/webp" srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}.webp">
-			<source type="image/jpeg" srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}.jpg">
+      <span>{{ post.data.date | postDate}}</span>
 
-			<img src="/images/uploads/{{ post.data.image | cleanImageExtension }}.jpg" alt="{{ post.data.imageAlt }}">
-		</picture>
-	</article>
+      <p>{{ post.data.description }}</p>
+
+      <a class="btn btn--primary" href="{{ post.url }}">Read
+        More</a>
+    </div>
+
+    <picture class="picture aspect-1-1">
+      <source media="(max-width: 599px)"
+        srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}-(sm).jpg, /images/uploads/{{ post.data.image | cleanImageExtension }}.jpg 2x"
+        type="image/webp">
+      <source media="(max-width: 599px)"
+        srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}-(sm).webp, images/uploads/{{ post.data.image | cleanImageExtension }}.webp 2x"
+        type="image/webp">
+
+      <source media="(min-width: 600px)" srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}.webp"
+        type="image/webp">
+      <source media="(min-width: 600px)" srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}.jpg"
+        type="image/webp">
+
+      <img loading="lazy" src="/images/uploads/{{ post.data.image | cleanImageExtension }}.jpg" width="600" height="600" alt="{{ post.data.imageAlt  }}">
+    </picture>
+  </article>
 </li>

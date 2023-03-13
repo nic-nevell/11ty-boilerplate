@@ -4,25 +4,25 @@
       "src": "/images/svg/sprite.svg#facebook-icon",
       "link": "https://www.facebook.com",
       "alt": "facebook icon link",
-      "class": "fill-red"
+      "color": "facebook"
     },
     {
       "src": "/images/svg/sprite.svg#twitter-icon",
       "link": "https://www.twitter.com",
       "alt": "twitter icon link",
-      "class": "fill-green"
+      "color": "twitter"
     },
     {
       "src": "/images/svg/sprite.svg#linkedin-icon",
       "link": "https://www.linkedin.com",
       "alt": "linkedin icon link",
-      "class": "fill-blue"
+      "color": "linkedin"
     },
     {
       "src": "/images/svg/sprite.svg#github-icon",
       "link": "https://www.github.com",
       "alt": "github icon link",
-      "class": "fill-black"
+      "color": "github"
     }
   ]
 }

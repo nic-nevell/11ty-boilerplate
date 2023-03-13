@@ -34,6 +34,7 @@
     "gulp-sass-import-json": "^1.0.2",
     "gulp-sharp-responsive": "^0.4.0",
     "gulp-sitemap": "^8.0.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^2.0.1",
     "gulp-svgo": "^2.2.1",
     "html-minifier": "^4.0.0",

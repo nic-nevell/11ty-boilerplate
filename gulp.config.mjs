@@ -46,7 +46,6 @@ export const config = {
     src: './src/sass/**/*.scss',
     watch: './src/sass/**/*.scss',
     dest: './dist/css/',
-    fileName: 'main.css',
     dataSrc: './src/_data/sass/**/*.json',
   },
 }

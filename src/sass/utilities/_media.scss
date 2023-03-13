@@ -128,7 +128,6 @@ svg,
 picture {
   display: block;
   width: 100%;
-  max-height: 0;
   position: relative;
   background-color: white;
 }
@@ -141,11 +140,42 @@ picture img {
   height: 100%;
 }
 
-// aspect
-.aspect-1-1 {
-  padding-bottom: 100%;
-}
+// aspects 
+.aspect {
+  &-1-1 {
+    padding-bottom: 100%;
+    aspect-ratio: 1 / 1;
+  }
+  &-2-1 {
+    padding-bottom: 50%;
+    aspect-ratio: 2 / 1;
+  }
+  &-1-2 {
+    padding-bottom: 200%;
+    aspect-ratio: 1 / 2;
+  }
+  &-3-2 {
+    padding-bottom: 66.66%;
+    aspect-ratio: 3 / 2;
+  }
+  &-2-3 {
+    padding-bottom: 150%;
+    aspect-ratio: 2 / 3;
+  }
 
-.aspect-3-2 {
-  padding-bottom: 66.66%;
+  &-4-3 {
+    padding-bottom: 75%;
+    aspect-ratio: 4 / 3;
+  }
+
+  &-3-4 {
+    padding-bottom: 125%;
+    aspect-ratio: 3 / 4;
+  }
+
+
+  &-16-9 {
+    padding-bottom: 56.25%;
+    aspect-ratio: 16 / 9;
+  }
 }

@@ -1,0 +1,15 @@
+{% macro data(image_url, class="", width="1800", height="1800", alt="a random image") %}
+
+<picture class="picture {{ class }}">
+  <source media="(max-width: 599px)" srcset="/images/{{ image_url }}-(sm).jpg, /images/{{ image_url }}.jpg 2x" type="image/webp">
+  <source media="(max-width: 599px)" srcset="/images/{{ image_url }}-(sm).webp, images/{{ image_url }}.webp 2x" type="image/webp">
+  
+  <source media="(min-width: 600px)" srcset="/images/{{ image_url }}.webp" type="image/webp">
+  <source media="(min-width: 600px)" srcset="/images/{{ image_url }}.jpg" type="image/webp">
+
+  <img src="/images/{{ image_url }}.jpg" width="{{ width }}" height="{{ height }}" alt="{{ alt }}">
+</picture>
+{% endmacro %}
+
+{# https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images #}
+{# https://iainbean.com/posts/2020/flexible-components-in-eleventy-with-nunjucks-macros/ #}

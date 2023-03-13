@@ -10,7 +10,7 @@ display_url: "https://11ty-boilerplate.netlify.app/"
 publish_mode: editorial_workflow
 
 collections:
-# Accordions
+  # Accordions
   - label: "Accordions"
     name: "Accordions"
     preview_path: /documents.html
@@ -24,11 +24,11 @@ collections:
             name: list
             widget: list
             fields:
-              - {label: Question , name: question, widget: string}
-              - {label: heading, name: heading, widget: string}
-              - {label: Content, name: content, widget: text}
+              - { label: Question, name: question, widget: string }
+              - { label: heading, name: heading, widget: string }
+              - { label: Content, name: content, widget: text }
 
-# posts
+  # posts
   - label: "Posts"
     name: "posts"
     folder: "src/posts"
@@ -37,17 +37,45 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{page_name}}"
     preview_path: posts/{{page_name}}
     fields:
-      - {label: "Page Name", name: "page_name", widget: "string", hint: Page Name will be used as page Url so keep it SEO friendly }
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Short Description", name: "description", widget: "text", pattern: ['^.{160,220}$', "Between 160-220 characters"], description: Used to display snippets of the main article, hint: Between 160 and 220 characters}
-      - {label: "Featured", name: "featured", widget: "boolean", required: false, description: Choose whether to display snippet of this article in the featured section}
-      - {label: "Featured Image", name: "image", widget: "image", hint: Whether or no to include article snippet in featured section }
-      - {label: "Image Description", name: "imageAlt", widget: "string" , description: "Not visible when published"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {
+          label: "Page Name",
+          name: "page_name",
+          widget: "string",
+          hint: Page Name will be used as page Url so keep it SEO friendly,
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Short Description",
+          name: "description",
+          widget: "text",
+          pattern: ["^.{160,220}$", "Between 160-220 characters"],
+          description: Used to display snippets of the main article,
+          hint: Between 160 and 220 characters,
+        }
+      - {
+          label: "Featured",
+          name: "featured",
+          widget: "boolean",
+          required: false,
+          description: Choose whether to display snippet of this article in the featured section,
+        }
+      - {
+          label: "Featured Image",
+          name: "image",
+          widget: "image",
+          hint: Whether or no to include article snippet in featured section,
+        }
+      - {
+          label: "Image Description",
+          name: "imageAlt",
+          widget: "string",
+          description: "Not visible when published",
+        }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
-# Widgets
+  # Widgets
   - label: "Widgets"
     name: "widgets"
     description: "Edit Widgets"
@@ -57,11 +85,11 @@ collections:
         file: "src/_data/widgets/banner_widget.json"
         preview_path: /index.html
         fields:
-          - {label: Banner Text, name: text, widget: text}
-          - {label: Background Color, name: bg_color, widget: color}
-          - {label: Text Color, name: text_color, widget: color}
-          - {label: Font Family, name: font_family, widget: string}
- 
+          - { label: Banner Text, name: text, widget: text }
+          - { label: Background Color, name: bg_color, widget: color }
+          - { label: Text Color, name: text_color, widget: color }
+          - { label: Font Family, name: font_family, widget: string }
+
       - label: "Reviews Widget"
         name: "reviews_widget"
         file: "src/_data/widgets/reviews_widget.json"
@@ -70,12 +98,17 @@ collections:
             name: info
             widget: list
             fields:
-              - {label: Heading, name: heading, widget: string}
-              - {label: Text , name: text, widget: text, pattern: ['.{0,150}', "No more than 150 characters long"]}
-              - {label: Author, name: author, widget: string}
-              - {label: Rating, name: rating, widget: number}
+              - { label: Heading, name: heading, widget: string }
+              - {
+                  label: Text,
+                  name: text,
+                  widget: text,
+                  pattern: [".{0,150}", "No more than 150 characters long"],
+                }
+              - { label: Author, name: author, widget: string }
+              - { label: Rating, name: rating, widget: number }
 
-# Meta Tags
+  # Meta Tags
   - label: "Meta Tags"
     name: "meta_tags"
     preview_path: /index.html
@@ -89,8 +122,8 @@ collections:
             name: list
             widget: list
             fields:
-              - {label: Name , name: name, widget: string}
-              - {label: Content, name: content, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Content, name: content, widget: text }
 
       - label: "Blog Page"
         name: "blog"
@@ -101,8 +134,8 @@ collections:
             name: list
             widget: list
             fields:
-              - {label: Name , name: name, widget: string}
-              - {label: Content, name: content, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Content, name: content, widget: text }
 
       - label: "Global"
         name: "global"
@@ -113,8 +146,8 @@ collections:
             name: tags
             widget: list
             fields:
-              - {label: Name , name: name, widget: string}
-              - {label: Content, name: content, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Content, name: content, widget: text }
 
       - label: "Home"
         name: "home"
@@ -125,8 +158,8 @@ collections:
             name: list
             widget: list
             fields:
-              - {label: Name , name: name, widget: string}
-              - {label: Content, name: content, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Content, name: content, widget: text }
 
       - label: "Store"
         name: "Store"
@@ -137,10 +170,10 @@ collections:
             name: list
             widget: list
             fields:
-              - {label: Name , name: name, widget: string}
-              - {label: Content, name: content, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Content, name: content, widget: text }
 
-# Blog
+  # Blog
   - label: "Blog"
     name: "blog"
     folder: "src/blog"
@@ -149,17 +182,43 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     preview_path: blog/{{slug}}
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string", pattern: ['^.{50,80}$', "Between 50-80 characters"]}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
-      - {label: "Featured Image", name: "image", widget: "image", hint: Whether or no to include article snippet in featured section }
-      - {label: "Image Description", name: "imageAlt", widget: "string" , description: "Not visible when published"}
-      - {label: "Tags", name: "tags", widget: "string", default: ["post"], hide: true }
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          pattern: ["^.{50,80}$", "Between 50-80 characters"],
+        }
+      - {
+          label: "Featured",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
+      - {
+          label: "Featured Image",
+          name: "image",
+          widget: "image",
+          hint: Whether or no to include article snippet in featured section,
+        }
+      - {
+          label: "Image Description",
+          name: "imageAlt",
+          widget: "string",
+          description: "Not visible when published",
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "string",
+          default: ["post"],
+          hide: true,
+        }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
-# Themes
+  # Themes
   - label: "Themes"
     name: "themes"
     description: "Custom Themes"
@@ -172,13 +231,13 @@ collections:
             name: "bg-color"
             widget: "list"
             fields:
-              - {label: "Base", name: "base", widget: "color"}
-              - {label: "Primary", name: "primary", widget: "color"}
-              - {label: "Secondary", name: "secondary", widget: "color"}
+              - { label: "Base", name: "base", widget: "color" }
+              - { label: "Primary", name: "primary", widget: "color" }
+              - { label: "Secondary", name: "secondary", widget: "color" }
           - label: "Text Colors"
             name: "text-color"
             widget: "list"
             fields:
-              - {label: "Base", name: "base", widget: "color"}
-              - {label: "Primary", name: "primary", widget: "color"}
-              - {label: "Secondary", name: "secondary", widget: "color"}
+              - { label: "Base", name: "base", widget: "color" }
+              - { label: "Primary", name: "primary", widget: "color" }
+              - { label: "Secondary", name: "secondary", widget: "color" }

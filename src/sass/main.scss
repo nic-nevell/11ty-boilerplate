@@ -23,6 +23,10 @@
 // utilities
 @use './utilities/' as *;
 
+// body {
+//   padding: 3rem;
+// }
+
 // custom
 //=========================================
 /*! purgecss start ignore */
@@ -77,6 +81,11 @@ $text-base: map-get($text-color, base);
 $text-primary: map-get($text-color, primary);
 $text-secondary: map-get($text-color, secondary);
 
+$facebook-brand-color: map-get($icon-colors, facebook);
+$twitter-brand-color: map-get($icon-colors, twitter);
+$linkedin-brand-color: map-get($icon-colors, linkedin);
+$github-brand-color: map-get($icon-colors, github);
+
 .theme-base {
   background-color: $bg-base;
   color: $text-base;
@@ -92,4 +101,21 @@ $text-secondary: map-get($text-color, secondary);
   color: $text-secondary;
 }
 
+.icon-fill-facebook {
+  fill: $facebook-brand-color;
+} 
+.icon-fill-twitter {
+  fill: $twitter-brand-color;
+} 
+.icon-fill-linkedin {
+  fill: $linkedin-brand-color;
+} 
+.icon-fill-github {
+  fill: $github-brand-color;
+} 
 /*! purgecss end ignore */
+
+// test for purgecss
+.some-unused-selector {
+  background: red;
+}

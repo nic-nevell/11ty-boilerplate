@@ -1,4 +1,4 @@
-<!-- c-button -->
+<!-- button -->
 <button class="btn-burger | auto-left" aria-expanded="false" aria-controls="navMenu" id="navMenuToggle"
   aria-label="toggle for navigation menu">
   <span class="bar bar-top"></span>
@@ -6,11 +6,11 @@
   <span class="bar bar-bottom"></span>
 </button>
 
-<!-- c-nav-menu -->
+<!-- nav-menu -->
 <nav class="nav-menu | font-lg | col-gap | p-lg | dark-theme" id="navMenu" aria-expanded="false">
   {% include "./page-links.njk" %}
 
-  <div class="icon-list icon-xs | f-column col-gap-xs | fill-white | on-hover--fill-red">
+  <div class="icon-list icon-xs | f-column col-gap-xs | on-hover--fill-red">
     {% include "widgets/media-icons-widget.njk" %}
   </div>
 </nav>
