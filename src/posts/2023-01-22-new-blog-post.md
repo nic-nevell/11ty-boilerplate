@@ -5,7 +5,7 @@ description: Blog writing is a form of online content creation that involves
   creating and publishing written content on a website or platform. Blogs can be
   written on a wide range of topics, including personal experiences.
 featured: true
-image: hero-001.jpg
+image: cat-stretching.jpg
 imageAlt: Cat Stretching
 author: Nic Nevell
 date: 2023-01-22T08:29:43.231Z

@@ -3,7 +3,7 @@ page_name: Review Post
 title: This is a Review Post
 featured: true
 description: "This post is a review post With the online text generator you can process your. simply dummy text of the printing"
-image: default-600x400.jpg
+image: hero.jpg
 imageAlt: brain
 author: Nic Nev
 date: 2023-02-05T10:44:23.046Z

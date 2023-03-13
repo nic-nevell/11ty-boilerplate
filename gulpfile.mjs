@@ -88,22 +88,32 @@ export const processImages = () => {
       gulpif(
         env === 'production',
         sharp({
-          includeOriginalFile: true,
+          includeOriginalFile: false,
           formats: [
             {
-              width: 600,
-              rename: { suffix: '-(sm)' },
+              width: 800,
+              rename: { suffix: '-(800)' },
               jpegOptions: { quality: 80, progressive: true }
+            },
+            {
+              width: 1200,
+              rename: { suffix: '-(1200)' },
+              jpegOptions: { quality: 80, progressive: true }
+            },
+
+
+            {
+              format: 'webp',
+              width: 800,
+              rename: { suffix: '-(800)' },
+              webpOptions: { quality: 80 }
             },
 
             {
               format: 'webp',
-              webpOptions: { quality: 80 }
-            },
-            {
-              format: 'webp',
-              width: metadata => metadata.width * 0.5,
-              rename: { suffix: '-(sm)' },
+              width: 1200,
+              // width: metadata => metadata.width * 0.5,
+              rename: { suffix: '-(1200)' },
               webpOptions: { quality: 80 }
             }
           ]

@@ -14,19 +14,18 @@
     </div>
 
     <picture class="picture aspect-1-1">
-      <source media="(max-width: 599px)"
-        srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}-(sm).jpg, /images/uploads/{{ post.data.image | cleanImageExtension }}.jpg 2x"
+      <source media="(max-width: 399px)" srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}-(800).webp"
         type="image/webp">
-      <source media="(max-width: 599px)"
-        srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}-(sm).webp, images/uploads/{{ post.data.image | cleanImageExtension }}.webp 2x"
+      <source media="(max-width: 399px)" srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}-(800).jpg"
         type="image/webp">
 
-      <source media="(min-width: 600px)" srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}.webp"
-        type="image/webp">
-      <source media="(min-width: 600px)" srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}.jpg"
+      <source media="(min-width: 400px)"
+        srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}-(1200).webp" type="image/webp">
+      <source media="(min-width: 400px)" srcset="/images/uploads/{{ post.data.image | cleanImageExtension }}-(1200).jpg"
         type="image/webp">
 
-      <img loading="lazy" src="/images/uploads/{{ post.data.image | cleanImageExtension }}.jpg" width="600" height="600" alt="{{ post.data.imageAlt  }}">
+      <img loading="lazy" src="/images/uploads/{{ post.data.image | cleanImageExtension }}.jpg" width="1200"
+        height="1200" alt="{{ post.data.imageAlt  }}">
     </picture>
   </article>
 </li>

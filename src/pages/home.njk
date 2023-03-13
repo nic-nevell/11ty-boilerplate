@@ -3,6 +3,8 @@ page_name: home
 page_title: Weberdy home page
 ---
 
+{% import "macros/picture.njk" as picture %}
+
 <section class="section | ptb-lg | theme-primary">
 	<div class=" wrapper | col-gap">
 		<h1>Content Heading</h1>
@@ -13,12 +15,8 @@ page_title: Weberdy home page
 			excepturi
 			totam?</p>
 
-		<picture class="aspect-3-2">
-			<source type="image/webp" srcset="/images/uploads/article-1.webp">
-			<source type="image/jpeg" srcset="/images/uploads/blog/article-1.jpg">
 
-			<img src="/images/uploads/article-1.jpg" alt="a laptop on a chair">
-		</picture>
+		{{ picture.data(image_url="uploads/hero", class="aspect-3-2", width="600", height="400", alt="laptop" ) }}
 
 	</div>
 </section>
