@@ -26,11 +26,11 @@ let production = false
 
 // development
 //----------------------------------
-gulp.task('minify-css-names', done => {
+gulp.task('minify-css-names', (done) => {
   minifyClassNames([
     { input: 'index.html', output: 'build/index.html' },
     // { input: 'src/assets/js/app.js', output: 'build/assets/js/app.js' },
-    { input: 'main.css', output: 'build/assets/css/main.css' }
+    { input: 'main.css', output: 'build/assets/css/main.css' },
   ])
 
   done()
@@ -64,15 +64,15 @@ export const spriteSvg = async () => {
           namespaceIDs: true, // Add namespace token to all IDs in SVG shapes
           namespaceIDPrefix: '', // Add a prefix to the automatically generated namespaceIDs
           namespaceClassnames: false, // Add namespace token to all CSS class names in SVG shapes
-          dimensionAttributes: true // Width and height attributes on the sprite
+          dimensionAttributes: true, // Width and height attributes on the sprite
         },
 
         mode: {
           symbol: {
             sprite: config.svg.sprite.fileName,
-            dest: config.svg.sprite.dest
-          }
-        }
+            dest: config.svg.sprite.dest,
+          },
+        },
       })
     )
     .pipe(filelog())
@@ -93,20 +93,19 @@ export const processImages = () => {
             {
               width: 800,
               rename: { suffix: '-(800)' },
-              jpegOptions: { quality: 80, progressive: true }
+              jpegOptions: { quality: 80, progressive: true },
             },
             {
               width: 1200,
               rename: { suffix: '-(1200)' },
-              jpegOptions: { quality: 80, progressive: true }
+              jpegOptions: { quality: 80, progressive: true },
             },
-
 
             {
               format: 'webp',
               width: 800,
               rename: { suffix: '-(800)' },
-              webpOptions: { quality: 80 }
+              webpOptions: { quality: 80 },
             },
 
             {
@@ -114,9 +113,9 @@ export const processImages = () => {
               width: 1200,
               // width: metadata => metadata.width * 0.5,
               rename: { suffix: '-(1200)' },
-              webpOptions: { quality: 80 }
-            }
-          ]
+              webpOptions: { quality: 80 },
+            },
+          ],
         })
       )
     )
@@ -129,9 +128,9 @@ export const processImages = () => {
           formats: [
             {
               format: 'webp',
-              webpOptions: { lossless: true }
-            }
-          ]
+              webpOptions: { lossless: true },
+            },
+          ],
         })
       ),
       filelog()
@@ -155,7 +154,6 @@ export const copy = () => {
 //----------------------------------
 export function compileCss() {
   return src(config.styles.src)
-  
     .pipe(gulpif(env != 'production', sourcemaps.init()))
 
     .pipe(sassImportJson({ isScss: true, cache: false }))
@@ -167,7 +165,7 @@ export function compileCss() {
       gulpif(
         env === 'production',
         purgecss({
-          content: ['src/**/*.njk', 'src/**/*.js']
+          content: ['src/**/*.njk', 'src/**/*.js'],
         })
       )
     )
@@ -213,7 +211,7 @@ export const cleanIndexJs = async () => {
 export const clean = async () => {
   await Promise.resolve(deleteAsync(['dist'], { dryRun: false }))
 
-  await new Promise(resolve => {
+  await new Promise((resolve) => {
     resolve(deleteAsync(['./dist', './public'], { dryRun: false }))
   })
 }
@@ -222,11 +220,11 @@ export const clean = async () => {
 //----------------------------------
 export const siteMap = async () => {
   src('./dist/**/*.html', {
-    read: false
+    read: false,
   })
     .pipe(
       sitemap({
-        siteUrl: 'https://11ty-boilerplate.netlify.app/'
+        siteUrl: 'https://11ty-boilerplate.netlify.app/',
       })
     )
     .pipe(dest('./dist'))
@@ -239,10 +237,10 @@ export const testJs = () => {
 }
 
 export const testDev = series(
-  clean,
+  // clean,
   // compileCss,
   // bundleJs,
-  processImages,
+  processImages
   // spriteSvg,
   // minSvg,
   // gulpWatch,
@@ -250,17 +248,17 @@ export const testDev = series(
 )
 
 export const testBuild = series(
-  clean,
+  // clean,
   // compileCss,
   // bundleJs,
-  processImages,
+  processImages
   // spriteSv,
 )
 
 export const serve = series(gulpWatch)
 
 export const dev = series(
-  clean,
+  // clean,
   compileCss,
   bundleJs,
   processImages,

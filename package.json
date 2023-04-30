@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "comment": {
-    "start": "gulp build & gulp serve & eleventy --serve"
-  },
   "scripts": {
     "clean": "rm -rf dist ",
     "testDev": "NODE_ENV=development gulp testDev",
